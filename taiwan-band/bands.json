@@ -1,0 +1,1343 @@
+[
+  {
+    "id": 0,
+    "name": "草東沒有派對",
+    "en": "No Party For Cao Dong",
+    "genres": [
+      "獨立搖滾"
+    ],
+    "moods": [
+      "憂鬱",
+      "宣洩"
+    ],
+    "energy": 4,
+    "song": "山海",
+    "desc": "失真吉他與鮮明的強弱對比，適合想把悶住的情緒放出來的時候。",
+    "source": "https://streetvoice.com/nopartyforcd/",
+    "aliases": [
+      "No Party For Cao Dong",
+      "草東"
+    ]
+  },
+  {
+    "id": 1,
+    "name": "落日飛車",
+    "en": "Sunset Rollercoaster",
+    "genres": [
+      "迷幻搖滾"
+    ],
+    "moods": [
+      "放鬆",
+      "浪漫"
+    ],
+    "energy": 2,
+    "song": "My Jinji",
+    "desc": "溫暖的復古音色與悠晃律動，適合夜晚散步時慢慢聽。",
+    "source": "https://streetvoice.com/SRollercoaster/",
+    "aliases": [
+      "Sunset Rollercoaster",
+      "飛車",
+      "Sunset"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "告五人",
+    "en": "Accusefive",
+    "genres": [
+      "獨立搖滾"
+    ],
+    "moods": [
+      "浪漫",
+      "憂鬱"
+    ],
+    "energy": 3,
+    "song": "披星戴月的想你",
+    "desc": "男女聲交織與容易跟唱的旋律，適合想聽有故事感的流行搖滾。",
+    "source": "https://www.bin-music.com.tw/artist/Accusefive",
+    "aliases": [
+      "Accusefive"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "甜約翰",
+    "en": "Sweet John",
+    "genres": [
+      "獨立搖滾"
+    ],
+    "moods": [
+      "放鬆",
+      "浪漫"
+    ],
+    "energy": 2,
+    "song": "失蹤人口",
+    "desc": "細緻的器樂層次與輕盈律動，讓溫柔旋律也有值得細聽的編排。",
+    "source": "https://streetvoice.com/sweetjohnband/about/",
+    "aliases": [
+      "Sweet John"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "大象體操",
+    "en": "Elephant Gym",
+    "genres": [
+      "獨立搖滾"
+    ],
+    "moods": [
+      "專注",
+      "放鬆"
+    ],
+    "energy": 3,
+    "song": "頭",
+    "desc": "以貝斯主導、變拍與樂器對話為特色，適合喜歡拆解節奏與編曲的你。",
+    "source": "https://elephantgym.co/bio/",
+    "aliases": [
+      "Elephant Gym",
+      "大象"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "拍謝少年",
+    "en": "Sorry Youth",
+    "genres": [
+      "獨立搖滾"
+    ],
+    "moods": [
+      "熱血",
+      "宣洩"
+    ],
+    "energy": 4,
+    "song": "暗流",
+    "desc": "三件式搖滾的直接力道，讓台語敘事兼有粗獷聲響與細膩情感。",
+    "source": "https://streetvoice.com/SorryYouth/about/",
+    "aliases": [
+      "Sorry Youth"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "康士坦的變化球",
+    "en": "KST",
+    "genres": [
+      "後搖滾",
+      "獨立搖滾"
+    ],
+    "moods": [
+      "宣洩",
+      "憂鬱"
+    ],
+    "energy": 5,
+    "song": "擱淺的人",
+    "desc": "層層推進的吉他聲牆與情緒爆發，適合想被音樂完整包圍的時候。",
+    "source": "https://streetvoice.com/ConstantanChange/",
+    "aliases": [
+      "KST",
+      "康士坦"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "美秀集團",
+    "en": "Amazing Show",
+    "genres": [
+      "獨立搖滾"
+    ],
+    "moods": [
+      "熱血",
+      "宣洩"
+    ],
+    "energy": 4,
+    "song": "捲菸",
+    "desc": "實驗樂器、民謠與搖滾相遇，適合想聽帶有鮮明台味的聲響。",
+    "source": "https://streetvoice.com/bisiugroup/about/",
+    "aliases": [
+      "Amazing Show"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "茄子蛋",
+    "en": "EggPlantEgg",
+    "genres": [
+      "獨立搖滾"
+    ],
+    "moods": [
+      "憂鬱",
+      "熱血"
+    ],
+    "energy": 3,
+    "song": "浪子回頭",
+    "desc": "帶有藍調色彩的搖滾與人生敘事，適合喜歡濃厚情感和大合唱旋律的你。",
+    "source": "https://streetvoice.com/EggPlantEgg/about/",
+    "aliases": [
+      "EggPlantEgg"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "deca joins",
+    "en": "deca joins",
+    "genres": [
+      "迷幻搖滾",
+      "獨立搖滾"
+    ],
+    "moods": [
+      "憂鬱",
+      "放鬆"
+    ],
+    "energy": 2,
+    "song": "浴室",
+    "desc": "鬆散的吉他線條與低迴氛圍，適合留一點空間給自己的夜晚。",
+    "source": "https://streetvoice.com/fubarsound/",
+    "aliases": [
+      "Deca Joins",
+      "deca"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "老王樂隊",
+    "en": "Your Woman Sleep with Others",
+    "genres": [
+      "民謠"
+    ],
+    "moods": [
+      "憂鬱",
+      "宣洩"
+    ],
+    "energy": 3,
+    "song": "我還年輕 我還年輕",
+    "desc": "木吉他、大提琴與搖滾編制交織，適合喜歡生活敘事和直白情緒的你。",
+    "source": "https://streetvoice.com/wearewang/",
+    "aliases": [
+      "Your Woman Sleep with Others",
+      "老王"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "滅火器",
+    "en": "Fire EX.",
+    "genres": [
+      "龐克"
+    ],
+    "moods": [
+      "熱血",
+      "宣洩"
+    ],
+    "energy": 5,
+    "song": "島嶼天光",
+    "desc": "快速推進的節奏與有力旋律，適合需要一點向前走的勇氣時聽。",
+    "source": "https://www.fireex.com.tw/",
+    "aliases": [
+      "Fire EX."
+    ]
+  },
+  {
+    "id": 12,
+    "name": "血肉果汁機",
+    "en": "Flesh Juicer",
+    "genres": [
+      "金屬"
+    ],
+    "moods": [
+      "宣洩",
+      "熱血"
+    ],
+    "energy": 5,
+    "song": "深海洋",
+    "desc": "重型吉他、強力鼓點與嘶吼，適合想體驗高強度聲響衝擊的你。",
+    "source": "https://streetvoice.com/fleshjuicer/about/",
+    "aliases": [
+      "Flesh Juicer",
+      "血肉"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "怕胖團",
+    "en": "PAPUN BAND",
+    "genres": [
+      "龐克"
+    ],
+    "moods": [
+      "熱血",
+      "宣洩"
+    ],
+    "energy": 4,
+    "song": "魚",
+    "desc": "明亮而直接的旋律與青春感，適合想把日常煩惱唱出來的時候。",
+    "source": "https://streetvoice.com/papun_band/about/",
+    "aliases": [
+      "PAPUN BAND",
+      "怕胖"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Hello Nico",
+    "en": "Hello Nico",
+    "genres": [
+      "獨立搖滾",
+      "迷幻搖滾"
+    ],
+    "moods": [
+      "憂鬱",
+      "宣洩"
+    ],
+    "energy": 4,
+    "song": "花",
+    "desc": "情緒濃烈的人聲與電子、搖滾音色，適合沉入帶有張力的旋律。",
+    "source": "https://packer.streetvoice.com/317",
+    "aliases": []
+  },
+  {
+    "id": 15,
+    "name": "理想混蛋",
+    "en": "Bestards",
+    "genres": [
+      "民謠"
+    ],
+    "moods": [
+      "浪漫",
+      "放鬆"
+    ],
+    "energy": 2,
+    "song": "不是因為天氣晴朗才愛你",
+    "desc": "從溫柔民謠出發的旋律與情感，適合想聽親近、容易共鳴的故事。",
+    "source": "https://www.mtv.com.tw/news/newsdetail/9284",
+    "aliases": [
+      "Bestards"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "溫蒂漫步",
+    "en": "Wendy Wander",
+    "genres": [
+      "迷幻搖滾"
+    ],
+    "moods": [
+      "浪漫",
+      "放鬆"
+    ],
+    "energy": 2,
+    "song": "我想和你一起",
+    "desc": "柔軟人聲與夢幻吉他色彩，適合把步調放慢、待在浪漫氛圍裡。",
+    "source": "https://meet.eslite.com/tw/tc/article/202302080001",
+    "aliases": [
+      "Wendy Wander"
+    ]
+  },
+  {
+    "id": 17,
+    "name": "冰球樂團",
+    "en": "icyball",
+    "genres": [
+      "獨立搖滾"
+    ],
+    "moods": [
+      "浪漫",
+      "放鬆"
+    ],
+    "energy": 3,
+    "song": "能不能和我留在台北（陪我幾天）",
+    "desc": "復古合成器與律動感情歌，適合喜歡都會夜色與輕鬆搖擺的你。",
+    "source": "https://www.vogue.com.tw/article/icyball-picnic-playlist",
+    "aliases": [
+      "icyball",
+      "冰球"
+    ]
+  },
+  {
+    "id": 18,
+    "name": "宇宙人",
+    "en": "Cosmos People",
+    "genres": [
+      "獨立搖滾"
+    ],
+    "moods": [
+      "熱血",
+      "放鬆"
+    ],
+    "energy": 4,
+    "song": "一起去跑步",
+    "desc": "放克吉他與有彈性的節奏，適合喜歡一聽就想跟著動起來的音樂。",
+    "source": "https://www.kiss.com.tw/music/artist.php?id=1012",
+    "aliases": [
+      "Cosmos People"
+    ]
+  },
+  {
+    "id": 19,
+    "name": "椅子樂團",
+    "en": "The Chairs",
+    "genres": [
+      "迷幻搖滾"
+    ],
+    "moods": [
+      "放鬆",
+      "浪漫"
+    ],
+    "energy": 2,
+    "song": "Rollin’ On",
+    "desc": "復古吉他與和聲的溫暖質感，適合喜歡輕盈、悠閒聽感的你。",
+    "source": "https://blow.streetvoice.com/t/椅子樂團/",
+    "aliases": [
+      "The Chairs",
+      "椅子"
+    ]
+  },
+  {
+    "id": 20,
+    "name": "傻子與白痴",
+    "en": "Fool and Idiot",
+    "genres": [
+      "獨立搖滾"
+    ],
+    "moods": [
+      "放鬆",
+      "憂鬱"
+    ],
+    "energy": 3,
+    "song": "5:10a.m.",
+    "desc": "從搖滾到電氣氛圍的多面聲響，適合喜歡敘事人聲與深夜聽感的你。",
+    "source": "https://www.taisounds.com/news/content/118/38593",
+    "aliases": [
+      "Fool and Idiot",
+      "傻白",
+      "Fool and Idiots"
+    ]
+  },
+  {
+    "id": 21,
+    "name": "透明雜誌",
+    "en": "Touming Magazine",
+    "genres": [
+      "獨立搖滾"
+    ],
+    "moods": [
+      "熱血",
+      "宣洩"
+    ],
+    "energy": 5,
+    "song": "我們的靈魂樂",
+    "desc": "直線前進的鼓貝斯與噪音吉他，適合偏愛九〇年代另類搖滾質地的你。",
+    "source": "https://cngrecords.bandcamp.com/album/--2",
+    "aliases": [
+      "Touming Magazine",
+      "TOUMING MAGAZINE"
+    ]
+  },
+  {
+    "id": 22,
+    "name": "TRASH",
+    "en": "TRASH",
+    "genres": [
+      "獨立搖滾"
+    ],
+    "moods": [
+      "熱血",
+      "宣洩"
+    ],
+    "energy": 4,
+    "song": "終究還是因為愛",
+    "desc": "英式與油漬搖滾元素加上鮮明旋律，適合喜歡大合唱與吉他力道的你。",
+    "source": "https://www.hitoradio.com/newweb/6505singer",
+    "aliases": []
+  },
+  {
+    "id": 23,
+    "name": "無妄合作社",
+    "en": "No-nonsense Collective",
+    "genres": [
+      "獨立搖滾",
+      "龐克"
+    ],
+    "moods": [
+      "熱血",
+      "宣洩"
+    ],
+    "energy": 4,
+    "song": "開店歌",
+    "desc": "粗獷搖滾與生活觀察交織，適合想在直接的吉他聲裡聽見日常的你。",
+    "source": "https://streetvoice.com/nononsensecollective/",
+    "aliases": [
+      "No-nonsense Collective"
+    ]
+  },
+  {
+    "id": 24,
+    "name": "八十八顆芭樂籽",
+    "en": "88balaz",
+    "genres": [
+      "獨立搖滾",
+      "龐克"
+    ],
+    "moods": [
+      "熱血",
+      "宣洩"
+    ],
+    "energy": 5,
+    "song": "野球乾一杯",
+    "desc": "藍調、龐克與民謠混合的野放搖滾，適合想感受現場般熱鬧能量的你。",
+    "source": "https://blow.streetvoice.com/78271/",
+    "aliases": [
+      "88balaz"
+    ]
+  },
+  {
+    "id": 25,
+    "name": "百合花",
+    "en": "Lilium",
+    "genres": [
+      "獨立搖滾"
+    ],
+    "moods": [
+      "熱血",
+      "宣洩"
+    ],
+    "energy": 4,
+    "song": "醫生",
+    "desc": "傳統台灣曲調與現代搖滾交錯，適合想探索台語聲響新可能的你。",
+    "source": "https://streetvoice.com/liliumtaiwan/",
+    "aliases": [
+      "Lilium"
+    ]
+  },
+  {
+    "id": 26,
+    "name": "當代電影大師",
+    "en": "Modern Cinema Master",
+    "genres": [
+      "獨立搖滾",
+      "龐克"
+    ],
+    "moods": [
+      "憂鬱",
+      "宣洩"
+    ],
+    "energy": 4,
+    "song": "那些事情是真的有意思嗎",
+    "desc": "後龐克、直線噪音與低傳真質感，適合喜歡冷調敘事和粗礪吉他的你。",
+    "source": "https://streetvoice.com/MCMTW/",
+    "aliases": [
+      "Modern Cinema Master"
+    ]
+  },
+  {
+    "id": 27,
+    "name": "我是機車少女",
+    "en": "I'mdifficult",
+    "genres": [
+      "獨立搖滾"
+    ],
+    "moods": [
+      "放鬆",
+      "浪漫"
+    ],
+    "energy": 3,
+    "song": "Last Summer（月亮惹的禍）",
+    "desc": "獨立流行混入靈魂、放克與實驗編排，適合喜歡律動中藏著意外轉折的你。",
+    "source": "https://blow.streetvoice.com/70862/",
+    "aliases": [
+      "I'mdifficult",
+      "機少",
+      "im difficult",
+      "imdifficult"
+    ]
+  },
+  {
+    "id": 28,
+    "name": "應聲倒地",
+    "en": "On the Floor",
+    "genres": [
+      "獨立搖滾"
+    ],
+    "moods": [
+      "熱血",
+      "浪漫"
+    ],
+    "energy": 3,
+    "song": "爾爾",
+    "desc": "以 Indie Rock 為底的青春生活感，適合想聽直接、自由又真誠的創作。",
+    "source": "https://streetvoice.com/ysddtw/",
+    "aliases": [
+      "On the Floor",
+      "onthefloortw"
+    ]
+  },
+  {
+    "id": 29,
+    "name": "JADE",
+    "en": "JADE",
+    "genres": [
+      "獨立搖滾"
+    ],
+    "moods": [
+      "熱血",
+      "宣洩"
+    ],
+    "energy": 4,
+    "song": "玻璃屋",
+    "desc": "俐落的鼓點與吉他、人聲張力，適合喜歡鮮明節奏輪廓的你。",
+    "source": "https://streetvoice.com/JADE_official_tw/",
+    "aliases": []
+  },
+  {
+    "id": 30,
+    "name": "先知瑪莉",
+    "en": "Mary See the Future",
+    "genres": [
+      "獨立搖滾"
+    ],
+    "moods": [
+      "憂鬱",
+      "宣洩"
+    ],
+    "energy": 4,
+    "song": "心痛會不會",
+    "desc": "英式搖滾結合古典結構感，在陰鬱優雅與激昂聲響之間轉換。",
+    "source": "https://simplelife.streetvoice.com/2012/mary-see-the-future/",
+    "aliases": [
+      "Mary See the Future"
+    ]
+  },
+  {
+    "id": 31,
+    "name": "芒果醬",
+    "en": "Mango Jump",
+    "genres": [
+      "獨立搖滾"
+    ],
+    "moods": [
+      "熱血",
+      "浪漫"
+    ],
+    "energy": 4,
+    "song": "我喜歡你",
+    "desc": "直率的旋律與青春感，適合想跟著唱、替生活補充勇氣的時候。",
+    "source": "https://streetvoice.com/MangoJump/",
+    "aliases": [
+      "Mango Jump",
+      "MangoJump"
+    ]
+  },
+  {
+    "id": 32,
+    "name": "上山",
+    "en": "Over The Top",
+    "genres": [
+      "獨立搖滾",
+      "龐克"
+    ],
+    "moods": [
+      "憂鬱",
+      "宣洩"
+    ],
+    "energy": 5,
+    "song": "得到平靜",
+    "desc": "以 Emo Punk 的壓抑與爆發表達內心，適合想讓沉重情緒找到出口的你。",
+    "source": "https://blow.streetvoice.com/75531/",
+    "aliases": [
+      "Over The Top"
+    ]
+  },
+  {
+    "id": 33,
+    "name": "巨大的轟鳴",
+    "en": "Gigantic Roar",
+    "genres": [
+      "迷幻搖滾",
+      "獨立搖滾"
+    ],
+    "moods": [
+      "熱血",
+      "宣洩"
+    ],
+    "energy": 4,
+    "song": "突然決定去泡溫泉",
+    "desc": "迷幻吉他與不按牌理的搖滾表情，適合想讓耳朵離開日常路線的你。",
+    "source": "https://streetvoice.com/giganticroar/",
+    "aliases": [
+      "Gigantic Roar"
+    ]
+  },
+  {
+    "id": 34,
+    "name": "恐龍的皮",
+    "en": "The Dinosaur's Skin",
+    "genres": [
+      "迷幻搖滾"
+    ],
+    "moods": [
+      "放鬆",
+      "憂鬱"
+    ],
+    "energy": 2,
+    "song": "All My Friends Are Dead",
+    "desc": "夢幻又帶復古感的聲音，適合喜歡柔軟旋律與奇想世界的你。",
+    "source": "https://streetvoice.com/thedinosaursskin/",
+    "aliases": [
+      "The Dinosaur's Skin"
+    ]
+  },
+  {
+    "id": 35,
+    "name": "I Mean Us",
+    "en": "I Mean Us",
+    "genres": [
+      "迷幻搖滾",
+      "後搖滾"
+    ],
+    "moods": [
+      "憂鬱",
+      "浪漫"
+    ],
+    "energy": 3,
+    "song": "24 Years Old of You",
+    "desc": "男女聲與夢幻聲牆交織，適合喜歡迷幻、瞪鞋與後搖元素交會的你。",
+    "source": "https://packer.streetvoice.com/3690",
+    "aliases": []
+  },
+  {
+    "id": 36,
+    "name": "聲子蟲",
+    "en": "Bugs of Phonon",
+    "genres": [
+      "後搖滾"
+    ],
+    "moods": [
+      "專注",
+      "憂鬱"
+    ],
+    "energy": 4,
+    "song": "秘事",
+    "desc": "用器樂層次與動態推進敘事，適合想沉進大篇幅聲音空間的你。",
+    "source": "https://streetvoice.com/bugsofphonon/",
+    "aliases": [
+      "Bugs of Phonon"
+    ]
+  },
+  {
+    "id": 37,
+    "name": "晨曦光廊",
+    "en": "Sunrise",
+    "genres": [
+      "後搖滾"
+    ],
+    "moods": [
+      "放鬆",
+      "熱血"
+    ],
+    "energy": 3,
+    "song": "光合作用",
+    "desc": "細膩樂句慢慢堆疊出明亮開闊感，適合想在器樂裡感受情緒起伏的你。",
+    "source": "https://streetvoice.com/sunrisemusic/",
+    "aliases": [
+      "Sunrise"
+    ]
+  },
+  {
+    "id": 38,
+    "name": "阿飛西雅",
+    "en": "APHASIA",
+    "genres": [
+      "後搖滾"
+    ],
+    "moods": [
+      "專注",
+      "宣洩"
+    ],
+    "energy": 4,
+    "song": "無用的",
+    "desc": "以器樂密度、節奏與張力留出想像空間，適合喜歡無歌詞敘事的你。",
+    "source": "https://streetvoice.com/APHASIAtw/",
+    "aliases": [
+      "APHASIA"
+    ]
+  },
+  {
+    "id": 39,
+    "name": "甜梅號",
+    "en": "Sugar Plum Ferry",
+    "genres": [
+      "後搖滾"
+    ],
+    "moods": [
+      "放鬆",
+      "憂鬱"
+    ],
+    "energy": 3,
+    "song": "南方蝶道",
+    "desc": "鮮明旋律與層層擴張的吉他聲響，適合想從台灣後搖經典開始探索的你。",
+    "source": "https://streetvoice.com/sugarplumferry/",
+    "note": "經典作品收錄；樂團已停止活動。",
+    "aliases": [
+      "Sugar Plum Ferry"
+    ]
+  },
+  {
+    "id": 40,
+    "name": "荒山茉莉",
+    "en": "Molly in Mountain",
+    "genres": [
+      "後搖滾"
+    ],
+    "moods": [
+      "憂鬱",
+      "專注"
+    ],
+    "energy": 3,
+    "song": "重生總在夕陽時",
+    "desc": "雙吉他、合成器與細密鼓點交織，適合喜歡有畫面感器樂篇章的你。",
+    "source": "https://streetvoice.com/MIMwatercity/",
+    "aliases": [
+      "Molly in Mountain"
+    ]
+  },
+  {
+    "id": 41,
+    "name": "步行者",
+    "en": "Pacers",
+    "genres": [
+      "後搖滾"
+    ],
+    "moods": [
+      "宣洩",
+      "熱血"
+    ],
+    "energy": 4,
+    "song": "與低鳴擁抱",
+    "desc": "旋律吉他搭配時而細膩、時而狂野的節奏組，適合偏愛強烈器樂張力的你。",
+    "source": "https://streetvoice.com/pacersbandTW/",
+    "aliases": [
+      "Pacers"
+    ]
+  },
+  {
+    "id": 42,
+    "name": "昆蟲白",
+    "en": "insecteens",
+    "genres": [
+      "後搖滾",
+      "獨立搖滾"
+    ],
+    "moods": [
+      "憂鬱",
+      "放鬆"
+    ],
+    "energy": 3,
+    "song": "瞬間",
+    "desc": "由甜梅號創作人物領軍的樂團編制，讓後搖與九〇年代另類搖滾相遇。",
+    "source": "https://streetvoice.com/insecteens/about/",
+    "note": "以昆蟲白為創作核心的樂團編制。",
+    "aliases": [
+      "insecteens"
+    ]
+  },
+  {
+    "id": 43,
+    "name": "體熊專科",
+    "en": "Major in Body Bear",
+    "genres": [
+      "後搖滾"
+    ],
+    "moods": [
+      "專注",
+      "宣洩"
+    ],
+    "energy": 4,
+    "song": "Little people in the woods",
+    "desc": "日系搖滾、後搖與即興的器樂對話，適合想細聽樂手互相推進的你。",
+    "source": "https://streetvoice.com/shinken/",
+    "aliases": [
+      "Major in Body Bear",
+      "體熊"
+    ]
+  },
+  {
+    "id": 44,
+    "name": "Rainy Knight",
+    "en": "Rainy Knight",
+    "genres": [
+      "後搖滾"
+    ],
+    "moods": [
+      "專注",
+      "宣洩"
+    ],
+    "energy": 4,
+    "song": "Ocean",
+    "desc": "器樂搖滾結合取樣聲景與配樂思維，適合想用聲音開啟想像場景的你。",
+    "source": "https://streetvoice.com/RainyKnight/",
+    "aliases": []
+  },
+  {
+    "id": 45,
+    "name": "Triple Deer",
+    "en": "Triple Deer",
+    "genres": [
+      "後搖滾"
+    ],
+    "moods": [
+      "憂鬱",
+      "放鬆"
+    ],
+    "energy": 3,
+    "song": "成為鯨魚",
+    "desc": "以器樂承載情感，也探索電子與母語創作，適合想沉入細緻敘事的你。",
+    "source": "https://streetvoice.com/TripleDeer/",
+    "aliases": []
+  },
+  {
+    "id": 46,
+    "name": "閃靈",
+    "en": "CHTHONIC",
+    "genres": [
+      "金屬"
+    ],
+    "moods": [
+      "熱血",
+      "宣洩"
+    ],
+    "energy": 5,
+    "song": "皇軍",
+    "desc": "極端金屬與台灣歷史敘事交會，適合喜歡厚重編排、嘶吼與傳統音色的你。",
+    "source": "https://chthonic.tw/bio-concept/",
+    "aliases": [
+      "CHTHONIC",
+      "閃靈樂團",
+      "Chthonic"
+    ]
+  },
+  {
+    "id": 47,
+    "name": "火燒島",
+    "en": "Burning Island",
+    "genres": [
+      "金屬"
+    ],
+    "moods": [
+      "熱血",
+      "宣洩"
+    ],
+    "energy": 5,
+    "song": "若是有一蕊號作正義的花",
+    "desc": "全台語重金屬創作與強烈節奏，適合喜歡直擊人心、充滿力道的聲音。",
+    "source": "https://streetvoice.com/BurningIsland/",
+    "aliases": [
+      "Burning Island"
+    ]
+  },
+  {
+    "id": 48,
+    "name": "FUTURE AFTER A SECOND",
+    "en": "FAAS",
+    "genres": [
+      "金屬"
+    ],
+    "moods": [
+      "宣洩",
+      "熱血"
+    ],
+    "energy": 5,
+    "song": "OFiN",
+    "desc": "金屬核的重量結合後硬核旋律，適合喜歡重拍、嘶吼與旋律對比的你。",
+    "source": "https://streetvoice.com/faasofficial/",
+    "aliases": [
+      "FAAS"
+    ]
+  },
+  {
+    "id": 49,
+    "name": "麥琪麥琪",
+    "en": "MakeMake",
+    "genres": [
+      "金屬"
+    ],
+    "moods": [
+      "熱血",
+      "宣洩"
+    ],
+    "energy": 5,
+    "song": "The Clown",
+    "desc": "狂暴段落與旋律並存的全女子金屬聲響，適合想感受鮮明反差的你。",
+    "source": "https://streetvoice.com/makemake_band/",
+    "aliases": [
+      "MakeMake"
+    ]
+  },
+  {
+    "id": 50,
+    "name": "OBSESS",
+    "en": "OBSESS",
+    "genres": [
+      "金屬"
+    ],
+    "moods": [
+      "憂鬱",
+      "宣洩"
+    ],
+    "energy": 5,
+    "song": "野獸",
+    "desc": "Emo 與後硬核影響下的高張力搖滾，適合需要直接、濃烈情緒表達的你。",
+    "source": "https://streetvoice.com/OBSESS/",
+    "aliases": []
+  },
+  {
+    "id": 51,
+    "name": "Beyond Cure",
+    "en": "BC",
+    "genres": [
+      "金屬"
+    ],
+    "moods": [
+      "宣洩",
+      "熱血"
+    ],
+    "energy": 5,
+    "song": "我想你還會是你",
+    "desc": "厚重吉他與極具衝擊的重型聲響，適合想讓情緒跟著強力節奏釋放的你。",
+    "source": "https://streetvoice.com/bcband/",
+    "aliases": [
+      "BC",
+      "beyound cure",
+      "BeyondCure"
+    ]
+  },
+  {
+    "id": 52,
+    "name": "濁水溪公社",
+    "en": "LTK Commune",
+    "genres": [
+      "龐克",
+      "獨立搖滾"
+    ],
+    "moods": [
+      "宣洩",
+      "熱血"
+    ],
+    "energy": 5,
+    "song": "農村出事情",
+    "desc": "粗獷龐克與土地、社會觀察相連，適合喜歡直接、不修邊幅表達的你。",
+    "source": "https://e-info.org.tw/node/86525",
+    "aliases": [
+      "LTK Commune"
+    ]
+  },
+  {
+    "id": 53,
+    "name": "胖虎",
+    "en": "punkhoo",
+    "genres": [
+      "龐克"
+    ],
+    "moods": [
+      "熱血",
+      "宣洩"
+    ],
+    "energy": 4,
+    "song": "Come Back Again",
+    "desc": "明快的龐克節奏與向前推進的旋律，適合需要一點熱血動力的時候。",
+    "source": "https://streetvoice.com/punkhoo/",
+    "aliases": [
+      "punkhoo"
+    ]
+  },
+  {
+    "id": 54,
+    "name": "SADOG",
+    "en": "SADOG",
+    "genres": [
+      "龐克",
+      "獨立搖滾"
+    ],
+    "moods": [
+      "熱血",
+      "宣洩"
+    ],
+    "energy": 4,
+    "song": "就是煞到你",
+    "desc": "直接的搖滾聲響與日常情感，適合喜歡邊唱邊把情緒拋出來的你。",
+    "source": "https://streetvoice.com/SADOG/",
+    "aliases": []
+  },
+  {
+    "id": 55,
+    "name": "普通隊長",
+    "en": "Captain Ordinary",
+    "genres": [
+      "龐克"
+    ],
+    "moods": [
+      "熱血",
+      "宣洩"
+    ],
+    "energy": 5,
+    "song": "另一邊的你",
+    "desc": "以平凡日常為出發點的龐克爆發力，適合想用快速節奏替自己打氣的你。",
+    "source": "https://streetvoice.com/captain2016/",
+    "aliases": [
+      "Captain Ordinary"
+    ]
+  },
+  {
+    "id": 56,
+    "name": "SHOOTUP",
+    "en": "SHOOTUP",
+    "genres": [
+      "龐克"
+    ],
+    "moods": [
+      "熱血",
+      "宣洩"
+    ],
+    "energy": 4,
+    "song": "魚躍龍門",
+    "desc": "直接奔放的龐克能量，適合想在吉他與鼓點裡找回向前衝勁的你。",
+    "source": "https://streetvoice.com/liveddie/",
+    "aliases": [
+      "SHOOT UP",
+      "Shoot Up"
+    ]
+  },
+  {
+    "id": 57,
+    "name": "粗大Band",
+    "en": "Thick Big Band",
+    "genres": [
+      "龐克"
+    ],
+    "moods": [
+      "熱血",
+      "宣洩"
+    ],
+    "energy": 4,
+    "song": "未知的星球",
+    "desc": "明快節奏與朗朗上口的旋律，適合喜歡青春感和不造作情緒的你。",
+    "source": "https://streetvoice.com/thickbigband/",
+    "aliases": [
+      "Thick Big Band",
+      "粗大",
+      "粗大band"
+    ]
+  },
+  {
+    "id": 58,
+    "name": "非人物種",
+    "en": "Inhuman",
+    "genres": [
+      "龐克",
+      "獨立搖滾"
+    ],
+    "moods": [
+      "宣洩",
+      "熱血"
+    ],
+    "energy": 5,
+    "song": "異鄉",
+    "desc": "粗獷吉他與狂放人聲，適合想感受原始、直接搖滾力道的你。",
+    "source": "https://streetvoice.com/punktv/",
+    "aliases": [
+      "Inhuman"
+    ]
+  },
+  {
+    "id": 59,
+    "name": "凹與山",
+    "en": "Our Shame",
+    "genres": [
+      "民謠"
+    ],
+    "moods": [
+      "放鬆",
+      "憂鬱"
+    ],
+    "energy": 2,
+    "song": "理查",
+    "desc": "民謠敘事與電子聲響相遇，適合喜歡輕聲人聲、細節與日常觀察的你。",
+    "source": "https://streetvoice.com/ourshame92/",
+    "aliases": [
+      "Our Shame"
+    ]
+  },
+  {
+    "id": 60,
+    "name": "梁河懸",
+    "en": "Liang-Chord",
+    "genres": [
+      "獨立搖滾"
+    ],
+    "moods": [
+      "憂鬱",
+      "放鬆"
+    ],
+    "energy": 3,
+    "song": "Losing My Way",
+    "desc": "從生活細節捕捉真實情緒，以有畫面感的旋律陪伴心裡說不出的片刻。",
+    "source": "https://streetvoice.com/LIANG_OKOK/",
+    "aliases": [
+      "Liang-Chord"
+    ]
+  },
+  {
+    "id": 61,
+    "name": "草莓救星",
+    "en": "We Save Strawberries",
+    "genres": [
+      "獨立搖滾",
+      "迷幻搖滾"
+    ],
+    "moods": [
+      "憂鬱",
+      "放鬆"
+    ],
+    "energy": 3,
+    "song": "巴士11號",
+    "desc": "以層次豐富的吉他和人聲營造獨特氛圍，適合喜歡在旋律裡慢慢探索的你。",
+    "source": "https://streetvoice.com/wssband/",
+    "aliases": [
+      "We Save Strawberries"
+    ]
+  },
+  {
+    "id": 62,
+    "name": "共振效應",
+    "en": "Resonance Effect",
+    "genres": [
+      "獨立搖滾"
+    ],
+    "moods": [
+      "熱血",
+      "宣洩"
+    ],
+    "energy": 4,
+    "song": "起床 Get Up（Demo）",
+    "desc": "用年輕直接的搖滾能量與節奏變化，為日常注入一點躁動與衝勁。",
+    "source": "https://streetvoice.com/Resonance_Effect/",
+    "aliases": [
+      "Resonance Effect"
+    ]
+  },
+  {
+    "id": 63,
+    "name": "庸俗救星",
+    "en": "Vulgar Savior",
+    "genres": [
+      "獨立搖滾"
+    ],
+    "moods": [
+      "浪漫",
+      "放鬆"
+    ],
+    "energy": 3,
+    "song": "Marry Me",
+    "desc": "搖滾、律動與復古音色交錯，適合喜歡旋律抓耳、情緒有層次的你。",
+    "source": "https://streetvoice.com/VulgarSavior/",
+    "aliases": [
+      "Vulgar Savior"
+    ]
+  },
+  {
+    "id": 64,
+    "name": "hue",
+    "en": "hue",
+    "genres": [
+      "獨立搖滾"
+    ],
+    "moods": [
+      "憂鬱",
+      "宣洩"
+    ],
+    "energy": 4,
+    "song": "爛情歌",
+    "desc": "以聲音描繪情緒的不同色調，適合想聽人聲與樂器一起堆出張力的你。",
+    "source": "https://streetvoice.com/hue1993/",
+    "aliases": [
+      "hue"
+    ]
+  },
+  {
+    "id": 65,
+    "name": "南西肯恩",
+    "en": "NeciKen",
+    "genres": [
+      "民謠"
+    ],
+    "moods": [
+      "放鬆",
+      "浪漫"
+    ],
+    "energy": 2,
+    "song": "煙花",
+    "desc": "細膩人聲與木吉他編織親近的敘事，適合安靜聽旋律、慢慢整理心情的你。",
+    "source": "https://streetvoice.com/nckn/",
+    "aliases": [
+      "NeciKen"
+    ]
+  },
+  {
+    "id": 66,
+    "name": "傷心欲絕",
+    "en": "Wayne’s So Sad",
+    "genres": [
+      "獨立搖滾",
+      "龐克"
+    ],
+    "moods": [
+      "憂鬱",
+      "宣洩"
+    ],
+    "energy": 5,
+    "song": "妳是不是我編出的一個謊？",
+    "desc": "狂放吉他與帶有破嗓的情感表達，適合想把鬱悶與日常的荒謬唱出來的你。",
+    "source": "https://streetvoice.com/waynessosad/",
+    "aliases": [
+      "Wayne’s So Sad"
+    ]
+  },
+  {
+    "id": 67,
+    "name": "鹿洐人",
+    "en": "Human Hart",
+    "genres": [
+      "獨立搖滾",
+      "民謠"
+    ],
+    "moods": [
+      "憂鬱",
+      "放鬆"
+    ],
+    "energy": 3,
+    "song": "爛笑話",
+    "desc": "三人編制裡的木吉他、人聲與節奏相互對話，適合喜歡生活敘事的你。",
+    "source": "https://streetvoice.com/humanhart/",
+    "aliases": [
+      "Human Hart"
+    ],
+    "note": "經典作品收錄。"
+  },
+  {
+    "id": 68,
+    "name": "溫室雜草",
+    "en": "Easy Weeds",
+    "genres": [
+      "獨立搖滾"
+    ],
+    "moods": [
+      "放鬆",
+      "浪漫"
+    ],
+    "energy": 2,
+    "song": "春天有腳",
+    "desc": "鬆軟自在的旋律與生活感，適合想把腳步放慢、讓音樂自然陪伴的時候。",
+    "source": "https://streetvoice.com/easyweeds/",
+    "aliases": [
+      "Easy Weeds"
+    ]
+  }
+]

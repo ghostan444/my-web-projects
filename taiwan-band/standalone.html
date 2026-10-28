@@ -1,0 +1,2385 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="從曲風、心情與喜歡的樂團出發，探索下一個喜歡的台灣樂團。">
+  <title>下一團聽什麼？｜台灣樂團探索器</title>
+  <style>
+    :root {
+      --bg: #fff6f2;
+      --ink: #541b27;
+      --accent: #f0a096;
+      --line: #d9b9bb
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Arial, 'Noto Sans TC', sans-serif
+    }
+
+    button,
+    input,
+    select {
+      font: inherit
+    }
+
+    button,
+    a,
+    input,
+    select {
+      -webkit-tap-highlight-color: transparent
+    }
+
+    button,
+    a {
+      touch-action: manipulation
+    }
+
+    button {
+      cursor: pointer
+    }
+
+    button:focus-visible,
+    a:focus-visible,
+    input:focus-visible,
+    select:focus-visible {
+      outline: 3px solid #80343d;
+      outline-offset: 4px
+    }
+
+    header {
+      max-width: 1320px;
+      margin: auto;
+      padding: 25px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--line)
+    }
+
+    .brand {
+      font-weight: 900;
+      font-size: 20px;
+      letter-spacing: -1px
+    }
+
+    .brand span {
+      display: inline-block;
+      background: var(--ink);
+      color: var(--accent);
+      padding: 5px 7px;
+      margin-right: 9px;
+      font-size: 15px
+    }
+
+    header a {
+      color: inherit;
+      text-decoration: none;
+      font-size: 14px
+    }
+
+    main {
+      max-width: 1240px;
+      margin: auto;
+      padding: 0 30px
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      align-items: center;
+      gap: 40px;
+      padding: 65px 0 50px
+    }
+
+    .eyebrow {
+      font: 11px monospace;
+      letter-spacing: 2px;
+      display: flex;
+      align-items: center;
+      gap: 10px
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      background: #8a3741;
+      border-radius: 50%
+    }
+
+    h1 {
+      font-size: clamp(44px, 5.3vw, 73px);
+      letter-spacing: -4px;
+      line-height: 1.14;
+      margin: 23px 0
+    }
+
+    h1 em {
+      font-style: normal;
+      position: relative;
+      z-index: 0
+    }
+
+    h1 em:before {
+      content: '';
+      position: absolute;
+      bottom: 3px;
+      left: -4px;
+      right: -8px;
+      height: 31px;
+      background: var(--accent);
+      z-index: -1;
+      transform: rotate(-2deg)
+    }
+
+    .intro {
+      font-size: 15px;
+      line-height: 1.9;
+      color: #735357;
+      max-width: 450px
+    }
+
+    .hero-art {
+      height: 300px;
+      position: relative;
+      display: grid;
+      place-items: center
+    }
+
+    .vinyl {
+      width: 270px;
+      height: 270px;
+      border-radius: 50%;
+      background: repeating-radial-gradient(circle, #2e111a 0px, #2e111a 2px, #4b1b28 3px, #2e111a 4px);
+      box-shadow: 10px 16px 26px #30232426;
+      position: relative;
+      transform: rotate(-15deg)
+    }
+
+    .label {
+      position: absolute;
+      inset: 82px;
+      background: var(--accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+      font-size: 10px;
+      letter-spacing: 1px;
+      line-height: 1.6
+    }
+
+    .label b {
+      font-size: 15px;
+      letter-spacing: -.5px
+    }
+
+    .label:after {
+      content: '';
+      width: 10px;
+      height: 10px;
+      background: var(--bg);
+      border: 2px solid #302022;
+      border-radius: 50%;
+      margin-top: 9px
+    }
+
+    .sticker {
+      position: absolute;
+      right: 3px;
+      top: 18px;
+      background: #ef796e;
+      padding: 16px 18px;
+      border: 1px solid var(--ink);
+      transform: rotate(10deg);
+      font-size: 12px;
+      line-height: 1.7
+    }
+
+    .art-note {
+      position: absolute;
+      bottom: 5px;
+      left: 32px;
+      font: 11px monospace;
+      letter-spacing: 2px
+    }
+
+    .workbench {
+      display: grid;
+      grid-template-columns: 370px 1fr;
+      border: 1px solid var(--ink);
+      border-radius: 3px;
+      overflow: hidden;
+      margin-bottom: 50px
+    }
+
+    .controls {
+      background: #f6e5e3;
+      padding: 28px;
+      border-right: 1px solid var(--ink)
+    }
+
+    .step {
+      font: 11px monospace;
+      letter-spacing: 2px;
+      color: #78575b
+    }
+
+    h2 {
+      font-size: 22px;
+      margin: 10px 0 24px;
+      letter-spacing: -1px
+    }
+
+    label,
+    .field-title {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      margin: 23px 0 11px
+    }
+
+    .optional {
+      font-weight: 400;
+      color: #876166;
+      font-size: 11px
+    }
+
+    input[type=text],
+    select {
+      width: 100%;
+      padding: 12px;
+      background: #fffaf7;
+      border: 1px solid #c1aaad;
+      border-radius: 4px;
+      color: var(--ink)
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px
+    }
+
+    .chip {
+      padding: 8px 11px;
+      border: 1px solid #c1aaad;
+      background: transparent;
+      border-radius: 20px;
+      font-size: 12px;
+      color: #64484c
+    }
+
+    .chip[aria-pressed=true] {
+      background: var(--ink);
+      color: var(--accent);
+      border-color: var(--ink)
+    }
+
+    .range-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      color: #7e5b5f
+    }
+
+    input[type=range] {
+      width: 100%;
+      accent-color: var(--ink)
+    }
+
+    .submit {
+      width: 100%;
+      margin-top: 27px;
+      padding: 16px;
+      border: 0;
+      border-radius: 4px;
+      background: var(--ink);
+      color: var(--accent);
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      font-weight: 700
+    }
+
+    .reset {
+      background: none;
+      border: 0;
+      text-decoration: underline;
+      color: #7c595e;
+      font-size: 13px;
+      display: block;
+      margin: 15px auto 0
+    }
+
+    .results {
+      padding: 28px 32px;
+      background: #fffaf7
+    }
+
+    .results-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center
+    }
+
+    .results-top h2 {
+      margin-bottom: 7px
+    }
+
+    .result-meta {
+      font-size: 13px;
+      line-height: 1.7;
+      color: #856065;
+      margin: 0 0 24px
+    }
+
+    .count {
+      font: 11px monospace;
+      border: 1px solid var(--line);
+      padding: 7px
+    }
+
+    .card {
+      border-top: 1px solid var(--line);
+      padding: 22px 0;
+      display: grid;
+      grid-template-columns: 54px 1fr;
+      gap: 16px
+    }
+
+    .cover {
+      width: 54px;
+      height: 67px;
+      background: var(--accent);
+      border: 1px solid #2a1f2044;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 7px;
+      font: 10px monospace;
+      overflow: hidden
+    }
+
+    .cover b {
+      font-size: 29px;
+      line-height: 1
+    }
+
+    .card:nth-child(2) .cover {
+      background: #f2c1ca
+    }
+
+    .card:nth-child(3) .cover {
+      background: #e9a39c
+    }
+
+    .card-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: start
+    }
+
+    h3 {
+      font-size: 21px;
+      letter-spacing: -.6px;
+      margin: 0 0 4px
+    }
+
+    .en {
+      font: 10px monospace;
+      color: #92696e
+    }
+
+    .match {
+      font-size: 10px;
+      color: #683238;
+      white-space: nowrap;
+      background: #f8dfde;
+      padding: 5px 7px
+    }
+
+    .tags {
+      font-size: 10px;
+      color: #78575b;
+      margin: 10px 0
+    }
+
+    .desc {
+      font-size: 13px;
+      line-height: 1.8;
+      margin: 8px 0 12px;
+      color: #705155
+    }
+
+    .song {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      align-items: center;
+      background: #f6e8e5;
+      padding: 10px 12px;
+      font-size: 12px
+    }
+
+    .song small {
+      font-size: 9px;
+      color: #8c656a;
+      display: block;
+      margin-bottom: 4px
+    }
+
+    .song a {
+      color: inherit;
+      text-decoration: none;
+      border: 1px solid #c5aeb1;
+      border-radius: 20px;
+      padding: 7px 10px;
+      white-space: nowrap;
+      font-size: 10px
+    }
+
+    .source {
+      display: inline-block;
+      font-size: 10px;
+      margin-top: 10px;
+      color: #825e63;
+      text-underline-offset: 3px
+    }
+
+    .notice {
+      font-size: 11px;
+      line-height: 1.8;
+      background: #f8e4e2;
+      padding: 12px;
+      margin: 10px 0
+    }
+
+    .bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--line);
+      padding-top: 16px;
+      font-size: 11px;
+      color: #90686d
+    }
+
+    .bottom button {
+      border: 0;
+      background: none;
+      color: var(--ink);
+      text-decoration: underline;
+      font-size: 11px
+    }
+
+    .about {
+      border-top: 1px solid var(--line);
+      padding: 26px 0 45px;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 30px
+    }
+
+    .about h2 {
+      font-size: 17px;
+      margin: 0
+    }
+
+    .about p {
+      font-size: 13px;
+      line-height: 1.9;
+      color: #815e62;
+      margin: 0
+    }
+
+    .catalog {
+      display: none;
+      padding: 0 0 40px
+    }
+
+    .catalog.open {
+      display: block
+    }
+
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px
+    }
+
+    .catalog a {
+      border: 1px solid var(--line);
+      padding: 14px;
+      color: inherit;
+      text-decoration: none;
+      font-size: 13px
+    }
+
+    .catalog small {
+      display: block;
+      font-size: 13px;
+      color: #886367;
+      margin-top: 7px
+    }
+
+    footer {
+      padding: 20px 0;
+      border-top: 1px solid var(--line);
+      font: 10px monospace;
+      color: #91696e;
+      display: flex;
+      justify-content: space-between
+    }
+
+    .empty {
+      padding: 50px 0;
+      color: #805c61;
+      line-height: 1.8
+    }
+
+    @media(max-width:800px) {
+      header {
+        padding: 20px
+      }
+
+      .hero {
+        gap: 0;
+        padding: 40px 0 30px
+      }
+
+      .hero-art {
+        height: 230px
+      }
+
+      .vinyl {
+        width: 200px;
+        height: 200px
+      }
+
+      .label {
+        inset: 57px
+      }
+
+      .sticker {
+        right: 0;
+        top: 0;
+        font-size: 10px;
+        padding: 10px
+      }
+
+      .art-note {
+        display: none
+      }
+
+      h1 {
+        font-size: 47px
+      }
+
+      .workbench {
+        grid-template-columns: 300px 1fr
+      }
+
+      .controls,
+      .results {
+        padding: 22px
+      }
+
+      .card {
+        grid-template-columns: 1fr
+      }
+
+      .cover {
+        display: none
+      }
+
+      .catalog-grid {
+        grid-template-columns: repeat(3, 1fr)
+      }
+    }
+
+    @media(max-width:620px) {
+      main {
+        padding: 0 18px
+      }
+
+      .hero {
+        grid-template-columns: 1fr
+      }
+
+      .hero-art {
+        display: none
+      }
+
+      h1 {
+        font-size: 52px
+      }
+
+      .intro {
+        font-size: 14px
+      }
+
+      .workbench {
+        grid-template-columns: 1fr
+      }
+
+      .controls {
+        border-right: 0;
+        border-bottom: 1px solid var(--ink)
+      }
+
+      .results {
+        padding: 24px 21px
+      }
+
+      .card {
+        grid-template-columns: 42px 1fr;
+        gap: 12px
+      }
+
+      .cover {
+        display: flex;
+        width: 42px;
+        height: 60px
+      }
+
+      .cover b {
+        font-size: 24px
+      }
+
+      .about {
+        grid-template-columns: 1fr;
+        gap: 10px
+      }
+
+      .catalog-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      header a {
+        font-size: 11px
+      }
+
+      .brand {
+        font-size: 17px
+      }
+
+      .song {
+        flex-wrap: wrap
+      }
+
+      .match {
+        font-size: 9px
+      }
+
+      h3 {
+        font-size: 19px
+      }
+    }
+
+    @media(prefers-reduced-motion:no-preference) {
+      .card {
+        animation: rise .4s ease both
+      }
+
+      @keyframes rise {
+        from {
+          opacity: 0;
+          transform: translateY(8px)
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0)
+        }
+      }
+
+      .submit:hover {
+        background: #7f2736
+      }
+
+      .song a:hover {
+        background: var(--accent)
+      }
+    }
+
+    .card-body {
+      min-width: 0
+    }
+
+    .card-head>div {
+      min-width: 0
+    }
+
+    .card-head {
+      flex-wrap: wrap
+    }
+
+    .card-head h3 {
+      overflow-wrap: anywhere
+    }
+
+    .en {
+      overflow-wrap: anywhere
+    }
+
+    .match {
+      white-space: normal;
+      max-width: 100%;
+      line-height: 1.6
+    }
+
+    .song>div {
+      min-width: 0;
+      overflow-wrap: anywhere
+    }
+
+    .band-note {
+      font-size: 10px;
+      color: #7b725c;
+      line-height: 1.6
+    }
+
+    .catalog-tools {
+      display: flex;
+      align-items: end;
+      gap: 15px;
+      margin-bottom: 18px
+    }
+
+    .catalog-tools>div:first-child {
+      flex: 2
+    }
+
+    .catalog-tools>div:nth-child(2) {
+      flex: 1
+    }
+
+    .catalog-tools label {
+      margin-top: 0
+    }
+
+    .catalog-tools>span {
+      font: 11px monospace;
+      white-space: nowrap;
+      padding-bottom: 14px
+    }
+
+    .catalog-grid a {
+      overflow-wrap: anywhere
+    }
+
+    .catalog-grid .empty {
+      grid-column: 1/-1
+    }
+
+    @media(max-width:620px) {
+      .catalog-tools {
+        flex-wrap: wrap
+      }
+
+      .catalog-tools>div:first-child {
+        flex: 1 1 100%
+      }
+
+      .catalog-tools>div:nth-child(2) {
+        flex: 1
+      }
+
+      .card-head {
+        gap: 8px
+      }
+    }
+      .bg-video {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -2;
+        pointer-events: none;
+      }
+
+      .bg-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(20, 0, 5, 0.55);
+        z-index: -1;
+        pointer-events: none;
+      }
+
+      body {
+        position: relative;
+        isolation: isolate;
+        background: #200a10;
+      }
+  </style>
+</head>
+
+<body>
+  <!-- 滿版背景影片 -->
+<video class="bg-video" autoplay muted loop playsinline aria-hidden="true">
+  <source src="./bgmusic.mp4" type="video/mp4">
+</video>
+
+  <header>
+    <div class="brand"><span>↗</span>下一團聽什麼？</div><a href="#about">關於這台選團機 ↗</a>
+  </header>
+  <main>
+    <section class="hero">
+      <div>
+        <div class="eyebrow"><i class="dot"></i> TAIWAN INDIE DISCOVERY / VOL. 03</div>
+        <h1>你的耳朵，<br>值得一點<em>新發現。</em></h1>
+        <p class="intro">從熟悉的旋律出發，遇見還沒愛上的台灣樂團。<br>告訴我們你的口味，下一首就交給這座島。</p>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="vinyl">
+          <div class="label">SIDE A<b>島嶼的聲音</b>MADE IN TAIWAN</div>
+        </div>
+        <div class="sticker">100% 台灣樂團<br><span data-band-count>69</span> 種不同的相遇 ✳</div><span class="art-note">GOOD
+          MUSIC. CLOSE TO HOME.</span>
+      </div>
+    </section>
+    <section class="workbench">
+      <form id="form" class="controls">
+        <div class="step">01 / INPUT</div>
+        <h2>調到你的頻率</h2><label for="favorite">最近喜歡哪一團？ <span class="optional">選填</span></label><input id="favorite"
+          type="text" list="bandnames" placeholder="例如：落日飛車、草東" autocomplete="off"><datalist id="bandnames"></datalist>
+        <div class="field-title" id="genre-label">偏好的曲風 <span class="optional">可複選</span></div>
+        <div class="chips" id="genres" role="group" aria-labelledby="genre-label"></div>
+        <div class="field-title" id="mood-label">今天想聽的感覺 <span class="optional">選一個</span></div>
+        <div class="chips" id="moods" role="group" aria-labelledby="mood-label"></div><label for="energy">聲音能量 <span
+            id="energyvalue" class="optional">3 / 5</span></label><input id="energy" type="range" min="1" max="5"
+          value="3">
+        <div class="range-label"><span>輕輕陪伴</span><span>用力宣洩</span></div><button class="submit" type="submit">尋找我的下一個愛團
+          <span>↗</span></button><button class="reset" type="reset">重新調頻</button>
+      </form>
+      <div class="results">
+        <div class="results-top">
+          <div>
+            <div class="step">02 / OUTPUT</div>
+            <h2 id="result-title">先聽聽這三團</h2>
+          </div><span class="count">3 PICKS</span>
+        </div>
+        <p class="result-meta" id="meta">從三種聲音開始，或在左側調整你的喜好。</p>
+        <div id="message"></div>
+        <div id="cards" aria-live="polite"></div>
+        <div class="bottom"><span>更多好聲音，等你發現。</span><button type="button" id="catalog-toggle" aria-expanded="false">看看全部
+            69 團 ↗</button></div>
+      </div>
+    </section>
+    <section id="catalog" class="catalog">
+      <h2>這一輯的 <span data-band-count>69</span> 組樂團</h2>
+      <div class="catalog-tools">
+        <div><label for="catalog-search">搜尋樂團</label><input id="catalog-search" type="text" placeholder="團名、英文名或簡稱">
+        </div>
+        <div><label for="catalog-genre">依曲風瀏覽</label><select id="catalog-genre">
+            <option value="">全部曲風</option>
+          </select></div><span id="catalog-count" aria-live="polite"></span>
+      </div>
+      <div class="catalog-grid" id="catalog-grid"></div>
+    </section>
+    <section class="about" id="about">
+      <h2>一台有根據的選團機。</h2>
+      <p>這是課堂 Input / Output 作品：依據曲風、心情與能量標籤配對，不是即時 AI 對話，也不分析音訊。樂團資料參考官方網站、StreetVoice
+        街聲與音樂媒體，每張卡片皆附來源。名單由使用者與本站共同整理；曲風、情緒、能量與推薦理由為探索用的編輯標籤，不代表樂團只有一種風格。歌曲是入門選曲，非人氣排名。資料整理：2026.10.28。</p>
+    </section>
+    <footer><span>下一團聽什麼？ / TAIWAN ONLY</span><span>KEEP YOUR EARS CURIOUS. ✳</span></footer>
+  </main>
+  <script>
+    const GENRES = ['獨立搖滾', '迷幻搖滾', '後搖滾', '金屬', '龐克', '民謠'];
+    const MOODS = ['放鬆', '浪漫', '憂鬱', '熱血', '宣洩', '專注'];
+    function normalize(value) {
+      return value.normalize('NFKC').toLowerCase().replace(/[\s’'·.。／/\-]/g, '');
+    }
+    function findFavorite(bands, value) {
+      const q = normalize(value.trim());
+      if (!q) return null;
+      return bands.find(b => [b.name, b.en, ...(b.aliases || [])].some(name => normalize(name) === q)) || null;
+    }
+    function recommend(bands, { favorite = null, genres = [], mood = '', energy = 3 } = {}) {
+      return bands.filter(b => b.id !== favorite?.id)
+        .map(b => {
+          const matchingGenres = b.genres.filter(g => genres.includes(g));
+          const shared = favorite ? b.genres.filter(g => favorite.genres.includes(g)) : [];
+          const moodMatch = !!mood && b.moods.includes(mood);
+          const union = favorite ? new Set([...favorite.genres, ...b.genres]).size : 1;
+          const score = (genres.length ? matchingGenres.length / genres.length * 12 : 0)
+            + (favorite ? shared.length / union * 10 : 0)
+            + (moodMatch ? 6 : 0) + (5 - Math.abs(energy - b.energy));
+          const reason = matchingGenres.length ? matchingGenres.join('・')
+            : shared.length ? '相近曲風：' + shared.join('・')
+              : moodMatch ? mood + '氛圍' : '能量接近';
+          return { band: b, score, reason, matchingGenres };
+        })
+        .sort((a, b) => b.score - a.score || a.band.id - b.band.id).slice(0, 3);
+    }
+
+    let bands = [];
+    const chosen = new Set();
+    let mood = '';
+    const $ = selector => document.querySelector(selector);
+    const escapeHTML = value => String(value).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    function makeChips(list, element, kind) {
+      list.forEach(text => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'chip';
+        button.textContent = text;
+        button.setAttribute('aria-pressed', 'false');
+        button.onclick = () => {
+          if (kind === 'genre') {
+            chosen.has(text) ? chosen.delete(text) : chosen.add(text);
+            button.setAttribute('aria-pressed', chosen.has(text));
+          } else {
+            mood = mood === text ? '' : text;
+            element.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', b.textContent === mood));
+          }
+        };
+        element.append(button);
+      });
+    }
+    makeChips(GENRES, $('#genres'), 'genre');
+    makeChips(MOODS, $('#moods'), 'mood');
+    $('#energy').oninput = () => $('#energyvalue').textContent = `${$('#energy').value} / 5`;
+    function render(items, reasons = []) {
+      $('#cards').innerHTML = items.map((band, i) => `
+    <article class="card" style="animation-delay:${i * .07}s">
+      <div class="cover" aria-hidden="true"><span>SIDE ${i + 1}</span><b>✳</b><span>TW / ${String(band.id + 1).padStart(2, '0')}</span></div>
+      <div class="card-body">
+        <div class="card-head"><div><h3>${escapeHTML(band.name)}</h3><span class="en">${escapeHTML(band.en)}</span></div>
+        <span class="match">${escapeHTML(reasons[i] || '編輯選曲')}</span></div>
+        <div class="tags">${band.genres.map(escapeHTML).join(' / ')}</div>
+        <p class="desc">${escapeHTML(band.desc)}</p>
+        ${band.note ? `<p class="band-note">${escapeHTML(band.note)}</p>` : ''}
+        <div class="song"><div><small>從這首開始聽</small>♪ ${escapeHTML(band.song)}</div>
+        <a href="https://www.youtube.com/results?search_query=${encodeURIComponent(band.name + ' ' + band.song + ' official')}" target="_blank" rel="noopener noreferrer" aria-label="在 YouTube 搜尋 ${escapeHTML(band.name)} ${escapeHTML(band.song)}">YouTube 搜尋 ↗</a></div>
+        <a class="source" href="${escapeHTML(band.source)}" target="_blank" rel="noopener noreferrer">樂團資料來源 ↗</a>
+      </div>
+    </article>`).join('');
+      $('.count').textContent = items.length + ' PICKS';
+    }
+    function showDefault() {
+      $('#result-title').textContent = '先聽聽這三團';
+      $('#meta').textContent = '從三種聲音開始，或在調頻區選擇你的喜好。';
+      $('#message').innerHTML = '';
+      render([bands[1], bands[0], bands[4]]);
+    }
+    $('#form').onsubmit = event => {
+      event.preventDefault();
+      if (!bands.length) return;
+      const raw = $('#favorite').value.trim();
+      const favorite = findFavorite(bands, raw);
+      const energy = Number($('#energy').value);
+      const genres = [...chosen];
+      const results = recommend(bands, { favorite, genres, mood, energy });
+      $('#result-title').textContent = '這次，試試這幾團';
+      $('#meta').textContent = [favorite ? '從 ' + favorite.name + ' 出發' : '依你的聽歌偏好',
+      genres.length ? genres.join('、') : '不限曲風', mood || '不限心情', '能量 ' + energy + '/5'].join(' · ');
+      const messages = [];
+      if (raw && !favorite) messages.push(`目前還沒收錄「${raw}」，這次先依其他選項推薦。可從輸入建議挑選已收錄的樂團。`);
+      if (genres.length && results.some(result => !result.matchingGenres.length)) messages.push('前三組中有其他曲風的探索推薦，依心情或能量補充；每張卡片會標明配對依據。');
+      if (favorite && results.some(result => !result.band.genres.some(g => favorite.genres.includes(g)))) messages.push('部分結果與原樂團沒有相同曲風標籤，屬於其他條件下的延伸探索。');
+      $('#message').innerHTML = messages.map(text => '<p class="notice">' + escapeHTML(text) + '</p>').join('');
+      render(results.map(result => result.band), results.map(result => result.reason));
+      if (innerWidth < 621) $('.results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+    $('#form').onreset = () => {
+      chosen.clear(); mood = '';
+      document.querySelectorAll('.chip').forEach(button => button.setAttribute('aria-pressed', 'false'));
+      $('#energyvalue').textContent = '3 / 5';
+      if (bands.length) showDefault();
+    };
+    $('#catalog-toggle').onclick = () => {
+      const open = $('#catalog').classList.toggle('open');
+      $('#catalog-toggle').setAttribute('aria-expanded', open);
+      $('#catalog-toggle').textContent = open ? '收起樂團清單 ↑' : `看看全部 ${bands.length} 團 ↗`;
+      if (open) $('#catalog').scrollIntoView({ behavior: 'smooth' });
+    };
+    function renderCatalog() {
+      const q = normalize($('#catalog-search').value);
+      const genre = $('#catalog-genre').value;
+      const visible = bands.filter(b => (!genre || b.genres.includes(genre)) &&
+        (!q || [b.name, b.en, ...(b.aliases || [])].some(name => normalize(name).includes(q))));
+      $('#catalog-count').textContent = `${visible.length} / ${bands.length} 組`;
+      $('#catalog-grid').innerHTML = visible.length ? visible.map(b => `
+    <a href="${escapeHTML(b.source)}" target="_blank" rel="noopener noreferrer">${escapeHTML(b.name)} ↗
+    <small>${b.genres.map(escapeHTML).join(' / ')}</small>${b.note ? `<small>${escapeHTML(b.note)}</small>` : ''}</a>`).join('')
+        : '<p class="empty">找不到符合的樂團，試試其他關鍵字或曲風。</p>';
+    }
+    $('#catalog-search').oninput = renderCatalog;
+    $('#catalog-genre').onchange = renderCatalog;
+    Promise.resolve([
+      {
+        "id": 0,
+        "name": "草東沒有派對",
+        "en": "No Party For Cao Dong",
+        "genres": [
+          "獨立搖滾"
+        ],
+        "moods": [
+          "憂鬱",
+          "宣洩"
+        ],
+        "energy": 4,
+        "song": "山海",
+        "desc": "失真吉他與鮮明的強弱對比，適合想把悶住的情緒放出來的時候。",
+        "source": "https://streetvoice.com/nopartyforcd/",
+        "aliases": [
+          "No Party For Cao Dong",
+          "草東"
+        ]
+      },
+      {
+        "id": 1,
+        "name": "落日飛車",
+        "en": "Sunset Rollercoaster",
+        "genres": [
+          "迷幻搖滾"
+        ],
+        "moods": [
+          "放鬆",
+          "浪漫"
+        ],
+        "energy": 2,
+        "song": "My Jinji",
+        "desc": "溫暖的復古音色與悠晃律動，適合夜晚散步時慢慢聽。",
+        "source": "https://streetvoice.com/SRollercoaster/",
+        "aliases": [
+          "Sunset Rollercoaster",
+          "飛車",
+          "Sunset"
+        ]
+      },
+      {
+        "id": 2,
+        "name": "告五人",
+        "en": "Accusefive",
+        "genres": [
+          "獨立搖滾"
+        ],
+        "moods": [
+          "浪漫",
+          "憂鬱"
+        ],
+        "energy": 3,
+        "song": "披星戴月的想你",
+        "desc": "男女聲交織與容易跟唱的旋律，適合想聽有故事感的流行搖滾。",
+        "source": "https://www.bin-music.com.tw/artist/Accusefive",
+        "aliases": [
+          "Accusefive"
+        ]
+      },
+      {
+        "id": 3,
+        "name": "甜約翰",
+        "en": "Sweet John",
+        "genres": [
+          "獨立搖滾"
+        ],
+        "moods": [
+          "放鬆",
+          "浪漫"
+        ],
+        "energy": 2,
+        "song": "失蹤人口",
+        "desc": "細緻的器樂層次與輕盈律動，讓溫柔旋律也有值得細聽的編排。",
+        "source": "https://streetvoice.com/sweetjohnband/about/",
+        "aliases": [
+          "Sweet John"
+        ]
+      },
+      {
+        "id": 4,
+        "name": "大象體操",
+        "en": "Elephant Gym",
+        "genres": [
+          "獨立搖滾"
+        ],
+        "moods": [
+          "專注",
+          "放鬆"
+        ],
+        "energy": 3,
+        "song": "頭",
+        "desc": "以貝斯主導、變拍與樂器對話為特色，適合喜歡拆解節奏與編曲的你。",
+        "source": "https://elephantgym.co/bio/",
+        "aliases": [
+          "Elephant Gym",
+          "大象"
+        ]
+      },
+      {
+        "id": 5,
+        "name": "拍謝少年",
+        "en": "Sorry Youth",
+        "genres": [
+          "獨立搖滾"
+        ],
+        "moods": [
+          "熱血",
+          "宣洩"
+        ],
+        "energy": 4,
+        "song": "暗流",
+        "desc": "三件式搖滾的直接力道，讓台語敘事兼有粗獷聲響與細膩情感。",
+        "source": "https://streetvoice.com/SorryYouth/about/",
+        "aliases": [
+          "Sorry Youth"
+        ]
+      },
+      {
+        "id": 6,
+        "name": "康士坦的變化球",
+        "en": "KST",
+        "genres": [
+          "後搖滾",
+          "獨立搖滾"
+        ],
+        "moods": [
+          "宣洩",
+          "憂鬱"
+        ],
+        "energy": 5,
+        "song": "擱淺的人",
+        "desc": "層層推進的吉他聲牆與情緒爆發，適合想被音樂完整包圍的時候。",
+        "source": "https://streetvoice.com/ConstantanChange/",
+        "aliases": [
+          "KST",
+          "康士坦"
+        ]
+      },
+      {
+        "id": 7,
+        "name": "美秀集團",
+        "en": "Amazing Show",
+        "genres": [
+          "獨立搖滾"
+        ],
+        "moods": [
+          "熱血",
+          "宣洩"
+        ],
+        "energy": 4,
+        "song": "捲菸",
+        "desc": "實驗樂器、民謠與搖滾相遇，適合想聽帶有鮮明台味的聲響。",
+        "source": "https://streetvoice.com/bisiugroup/about/",
+        "aliases": [
+          "Amazing Show"
+        ]
+      },
+      {
+        "id": 8,
+        "name": "茄子蛋",
+        "en": "EggPlantEgg",
+        "genres": [
+          "獨立搖滾"
+        ],
+        "moods": [
+          "憂鬱",
+          "熱血"
+        ],
+        "energy": 3,
+        "song": "浪子回頭",
+        "desc": "帶有藍調色彩的搖滾與人生敘事，適合喜歡濃厚情感和大合唱旋律的你。",
+        "source": "https://streetvoice.com/EggPlantEgg/about/",
+        "aliases": [
+          "EggPlantEgg"
+        ]
+      },
+      {
+        "id": 9,
+        "name": "deca joins",
+        "en": "deca joins",
+        "genres": [
+          "迷幻搖滾",
+          "獨立搖滾"
+        ],
+        "moods": [
+          "憂鬱",
+          "放鬆"
+        ],
+        "energy": 2,
+        "song": "浴室",
+        "desc": "鬆散的吉他線條與低迴氛圍，適合留一點空間給自己的夜晚。",
+        "source": "https://streetvoice.com/fubarsound/",
+        "aliases": [
+          "Deca Joins",
+          "deca"
+        ]
+      },
+      {
+        "id": 10,
+        "name": "老王樂隊",
+        "en": "Your Woman Sleep with Others",
+        "genres": [
+          "民謠"
+        ],
+        "moods": [
+          "憂鬱",
+          "宣洩"
+        ],
+        "energy": 3,
+        "song": "我還年輕 我還年輕",
+        "desc": "木吉他、大提琴與搖滾編制交織，適合喜歡生活敘事和直白情緒的你。",
+        "source": "https://streetvoice.com/wearewang/",
+        "aliases": [
+          "Your Woman Sleep with Others",
+          "老王"
+        ]
+      },
+      {
+        "id": 11,
+        "name": "滅火器",
+        "en": "Fire EX.",
+        "genres": [
+          "龐克"
+        ],
+        "moods": [
+          "熱血",
+          "宣洩"
+        ],
+        "energy": 5,
+        "song": "島嶼天光",
+        "desc": "快速推進的節奏與有力旋律，適合需要一點向前走的勇氣時聽。",
+        "source": "https://www.fireex.com.tw/",
+        "aliases": [
+          "Fire EX."
+        ]
+      },
+      {
+        "id": 12,
+        "name": "血肉果汁機",
+        "en": "Flesh Juicer",
+        "genres": [
+          "金屬"
+        ],
+        "moods": [
+          "宣洩",
+          "熱血"
+        ],
+        "energy": 5,
+        "song": "深海洋",
+        "desc": "重型吉他、強力鼓點與嘶吼，適合想體驗高強度聲響衝擊的你。",
+        "source": "https://streetvoice.com/fleshjuicer/about/",
+        "aliases": [
+          "Flesh Juicer",
+          "血肉"
+        ]
+      },
+      {
+        "id": 13,
+        "name": "怕胖團",
+        "en": "PAPUN BAND",
+        "genres": [
+          "龐克"
+        ],
+        "moods": [
+          "熱血",
+          "宣洩"
+        ],
+        "energy": 4,
+        "song": "魚",
+        "desc": "明亮而直接的旋律與青春感，適合想把日常煩惱唱出來的時候。",
+        "source": "https://streetvoice.com/papun_band/about/",
+        "aliases": [
+          "PAPUN BAND",
+          "怕胖"
+        ]
+      },
+      {
+        "id": 14,
+        "name": "Hello Nico",
+        "en": "Hello Nico",
+        "genres": [
+          "獨立搖滾",
+          "迷幻搖滾"
+        ],
+        "moods": [
+          "憂鬱",
+          "宣洩"
+        ],
+        "energy": 4,
+        "song": "花",
+        "desc": "情緒濃烈的人聲與電子、搖滾音色，適合沉入帶有張力的旋律。",
+        "source": "https://packer.streetvoice.com/317",
+        "aliases": []
+      },
+      {
+        "id": 15,
+        "name": "理想混蛋",
+        "en": "Bestards",
+        "genres": [
+          "民謠"
+        ],
+        "moods": [
+          "浪漫",
+          "放鬆"
+        ],
+        "energy": 2,
+        "song": "不是因為天氣晴朗才愛你",
+        "desc": "從溫柔民謠出發的旋律與情感，適合想聽親近、容易共鳴的故事。",
+        "source": "https://www.mtv.com.tw/news/newsdetail/9284",
+        "aliases": [
+          "Bestards"
+        ]
+      },
+      {
+        "id": 16,
+        "name": "溫蒂漫步",
+        "en": "Wendy Wander",
+        "genres": [
+          "迷幻搖滾"
+        ],
+        "moods": [
+          "浪漫",
+          "放鬆"
+        ],
+        "energy": 2,
+        "song": "我想和你一起",
+        "desc": "柔軟人聲與夢幻吉他色彩，適合把步調放慢、待在浪漫氛圍裡。",
+        "source": "https://meet.eslite.com/tw/tc/article/202302080001",
+        "aliases": [
+          "Wendy Wander"
+        ]
+      },
+      {
+        "id": 17,
+        "name": "冰球樂團",
+        "en": "icyball",
+        "genres": [
+          "獨立搖滾"
+        ],
+        "moods": [
+          "浪漫",
+          "放鬆"
+        ],
+        "energy": 3,
+        "song": "能不能和我留在台北（陪我幾天）",
+        "desc": "復古合成器與律動感情歌，適合喜歡都會夜色與輕鬆搖擺的你。",
+        "source": "https://www.vogue.com.tw/article/icyball-picnic-playlist",
+        "aliases": [
+          "icyball",
+          "冰球"
+        ]
+      },
+      {
+        "id": 18,
+        "name": "宇宙人",
+        "en": "Cosmos People",
+        "genres": [
+          "獨立搖滾"
+        ],
+        "moods": [
+          "熱血",
+          "放鬆"
+        ],
+        "energy": 4,
+        "song": "一起去跑步",
+        "desc": "放克吉他與有彈性的節奏，適合喜歡一聽就想跟著動起來的音樂。",
+        "source": "https://www.kiss.com.tw/music/artist.php?id=1012",
+        "aliases": [
+          "Cosmos People"
+        ]
+      },
+      {
+        "id": 19,
+        "name": "椅子樂團",
+        "en": "The Chairs",
+        "genres": [
+          "迷幻搖滾"
+        ],
+        "moods": [
+          "放鬆",
+          "浪漫"
+        ],
+        "energy": 2,
+        "song": "Rollin’ On",
+        "desc": "復古吉他與和聲的溫暖質感，適合喜歡輕盈、悠閒聽感的你。",
+        "source": "https://blow.streetvoice.com/t/椅子樂團/",
+        "aliases": [
+          "The Chairs",
+          "椅子"
+        ]
+      },
+      {
+        "id": 20,
+        "name": "傻子與白痴",
+        "en": "Fool and Idiot",
+        "genres": [
+          "獨立搖滾"
+        ],
+        "moods": [
+          "放鬆",
+          "憂鬱"
+        ],
+        "energy": 3,
+        "song": "5:10a.m.",
+        "desc": "從搖滾到電氣氛圍的多面聲響，適合喜歡敘事人聲與深夜聽感的你。",
+        "source": "https://www.taisounds.com/news/content/118/38593",
+        "aliases": [
+          "Fool and Idiot",
+          "傻白",
+          "Fool and Idiots"
+        ]
+      },
+      {
+        "id": 21,
+        "name": "透明雜誌",
+        "en": "Touming Magazine",
+        "genres": [
+          "獨立搖滾"
+        ],
+        "moods": [
+          "熱血",
+          "宣洩"
+        ],
+        "energy": 5,
+        "song": "我們的靈魂樂",
+        "desc": "直線前進的鼓貝斯與噪音吉他，適合偏愛九〇年代另類搖滾質地的你。",
+        "source": "https://cngrecords.bandcamp.com/album/--2",
+        "aliases": [
+          "Touming Magazine",
+          "TOUMING MAGAZINE"
+        ]
+      },
+      {
+        "id": 22,
+        "name": "TRASH",
+        "en": "TRASH",
+        "genres": [
+          "獨立搖滾"
+        ],
+        "moods": [
+          "熱血",
+          "宣洩"
+        ],
+        "energy": 4,
+        "song": "終究還是因為愛",
+        "desc": "英式與油漬搖滾元素加上鮮明旋律，適合喜歡大合唱與吉他力道的你。",
+        "source": "https://www.hitoradio.com/newweb/6505singer",
+        "aliases": []
+      },
+      {
+        "id": 23,
+        "name": "無妄合作社",
+        "en": "No-nonsense Collective",
+        "genres": [
+          "獨立搖滾",
+          "龐克"
+        ],
+        "moods": [
+          "熱血",
+          "宣洩"
+        ],
+        "energy": 4,
+        "song": "開店歌",
+        "desc": "粗獷搖滾與生活觀察交織，適合想在直接的吉他聲裡聽見日常的你。",
+        "source": "https://streetvoice.com/nononsensecollective/",
+        "aliases": [
+          "No-nonsense Collective"
+        ]
+      },
+      {
+        "id": 24,
+        "name": "八十八顆芭樂籽",
+        "en": "88balaz",
+        "genres": [
+          "獨立搖滾",
+          "龐克"
+        ],
+        "moods": [
+          "熱血",
+          "宣洩"
+        ],
+        "energy": 5,
+        "song": "野球乾一杯",
+        "desc": "藍調、龐克與民謠混合的野放搖滾，適合想感受現場般熱鬧能量的你。",
+        "source": "https://blow.streetvoice.com/78271/",
+        "aliases": [
+          "88balaz"
+        ]
+      },
+      {
+        "id": 25,
+        "name": "百合花",
+        "en": "Lilium",
+        "genres": [
+          "獨立搖滾"
+        ],
+        "moods": [
+          "熱血",
+          "宣洩"
+        ],
+        "energy": 4,
+        "song": "醫生",
+        "desc": "傳統台灣曲調與現代搖滾交錯，適合想探索台語聲響新可能的你。",
+        "source": "https://streetvoice.com/liliumtaiwan/",
+        "aliases": [
+          "Lilium"
+        ]
+      },
+      {
+        "id": 26,
+        "name": "當代電影大師",
+        "en": "Modern Cinema Master",
+        "genres": [
+          "獨立搖滾",
+          "龐克"
+        ],
+        "moods": [
+          "憂鬱",
+          "宣洩"
+        ],
+        "energy": 4,
+        "song": "那些事情是真的有意思嗎",
+        "desc": "後龐克、直線噪音與低傳真質感，適合喜歡冷調敘事和粗礪吉他的你。",
+        "source": "https://streetvoice.com/MCMTW/",
+        "aliases": [
+          "Modern Cinema Master"
+        ]
+      },
+      {
+        "id": 27,
+        "name": "我是機車少女",
+        "en": "I'mdifficult",
+        "genres": [
+          "獨立搖滾"
+        ],
+        "moods": [
+          "放鬆",
+          "浪漫"
+        ],
+        "energy": 3,
+        "song": "Last Summer（月亮惹的禍）",
+        "desc": "獨立流行混入靈魂、放克與實驗編排，適合喜歡律動中藏著意外轉折的你。",
+        "source": "https://blow.streetvoice.com/70862/",
+        "aliases": [
+          "I'mdifficult",
+          "機少",
+          "im difficult",
+          "imdifficult"
+        ]
+      },
+      {
+        "id": 28,
+        "name": "應聲倒地",
+        "en": "On the Floor",
+        "genres": [
+          "獨立搖滾"
+        ],
+        "moods": [
+          "熱血",
+          "浪漫"
+        ],
+        "energy": 3,
+        "song": "爾爾",
+        "desc": "以 Indie Rock 為底的青春生活感，適合想聽直接、自由又真誠的創作。",
+        "source": "https://streetvoice.com/ysddtw/",
+        "aliases": [
+          "On the Floor",
+          "onthefloortw"
+        ]
+      },
+      {
+        "id": 29,
+        "name": "JADE",
+        "en": "JADE",
+        "genres": [
+          "獨立搖滾"
+        ],
+        "moods": [
+          "熱血",
+          "宣洩"
+        ],
+        "energy": 4,
+        "song": "玻璃屋",
+        "desc": "俐落的鼓點與吉他、人聲張力，適合喜歡鮮明節奏輪廓的你。",
+        "source": "https://streetvoice.com/JADE_official_tw/",
+        "aliases": []
+      },
+      {
+        "id": 30,
+        "name": "先知瑪莉",
+        "en": "Mary See the Future",
+        "genres": [
+          "獨立搖滾"
+        ],
+        "moods": [
+          "憂鬱",
+          "宣洩"
+        ],
+        "energy": 4,
+        "song": "心痛會不會",
+        "desc": "英式搖滾結合古典結構感，在陰鬱優雅與激昂聲響之間轉換。",
+        "source": "https://simplelife.streetvoice.com/2012/mary-see-the-future/",
+        "aliases": [
+          "Mary See the Future"
+        ]
+      },
+      {
+        "id": 31,
+        "name": "芒果醬",
+        "en": "Mango Jump",
+        "genres": [
+          "獨立搖滾"
+        ],
+        "moods": [
+          "熱血",
+          "浪漫"
+        ],
+        "energy": 4,
+        "song": "我喜歡你",
+        "desc": "直率的旋律與青春感，適合想跟著唱、替生活補充勇氣的時候。",
+        "source": "https://streetvoice.com/MangoJump/",
+        "aliases": [
+          "Mango Jump",
+          "MangoJump"
+        ]
+      },
+      {
+        "id": 32,
+        "name": "上山",
+        "en": "Over The Top",
+        "genres": [
+          "獨立搖滾",
+          "龐克"
+        ],
+        "moods": [
+          "憂鬱",
+          "宣洩"
+        ],
+        "energy": 5,
+        "song": "得到平靜",
+        "desc": "以 Emo Punk 的壓抑與爆發表達內心，適合想讓沉重情緒找到出口的你。",
+        "source": "https://blow.streetvoice.com/75531/",
+        "aliases": [
+          "Over The Top"
+        ]
+      },
+      {
+        "id": 33,
+        "name": "巨大的轟鳴",
+        "en": "Gigantic Roar",
+        "genres": [
+          "迷幻搖滾",
+          "獨立搖滾"
+        ],
+        "moods": [
+          "熱血",
+          "宣洩"
+        ],
+        "energy": 4,
+        "song": "突然決定去泡溫泉",
+        "desc": "迷幻吉他與不按牌理的搖滾表情，適合想讓耳朵離開日常路線的你。",
+        "source": "https://streetvoice.com/giganticroar/",
+        "aliases": [
+          "Gigantic Roar"
+        ]
+      },
+      {
+        "id": 34,
+        "name": "恐龍的皮",
+        "en": "The Dinosaur's Skin",
+        "genres": [
+          "迷幻搖滾"
+        ],
+        "moods": [
+          "放鬆",
+          "憂鬱"
+        ],
+        "energy": 2,
+        "song": "All My Friends Are Dead",
+        "desc": "夢幻又帶復古感的聲音，適合喜歡柔軟旋律與奇想世界的你。",
+        "source": "https://streetvoice.com/thedinosaursskin/",
+        "aliases": [
+          "The Dinosaur's Skin"
+        ]
+      },
+      {
+        "id": 35,
+        "name": "I Mean Us",
+        "en": "I Mean Us",
+        "genres": [
+          "迷幻搖滾",
+          "後搖滾"
+        ],
+        "moods": [
+          "憂鬱",
+          "浪漫"
+        ],
+        "energy": 3,
+        "song": "24 Years Old of You",
+        "desc": "男女聲與夢幻聲牆交織，適合喜歡迷幻、瞪鞋與後搖元素交會的你。",
+        "source": "https://packer.streetvoice.com/3690",
+        "aliases": []
+      },
+      {
+        "id": 36,
+        "name": "聲子蟲",
+        "en": "Bugs of Phonon",
+        "genres": [
+          "後搖滾"
+        ],
+        "moods": [
+          "專注",
+          "憂鬱"
+        ],
+        "energy": 4,
+        "song": "秘事",
+        "desc": "用器樂層次與動態推進敘事，適合想沉進大篇幅聲音空間的你。",
+        "source": "https://streetvoice.com/bugsofphonon/",
+        "aliases": [
+          "Bugs of Phonon"
+        ]
+      },
+      {
+        "id": 37,
+        "name": "晨曦光廊",
+        "en": "Sunrise",
+        "genres": [
+          "後搖滾"
+        ],
+        "moods": [
+          "放鬆",
+          "熱血"
+        ],
+        "energy": 3,
+        "song": "光合作用",
+        "desc": "細膩樂句慢慢堆疊出明亮開闊感，適合想在器樂裡感受情緒起伏的你。",
+        "source": "https://streetvoice.com/sunrisemusic/",
+        "aliases": [
+          "Sunrise"
+        ]
+      },
+      {
+        "id": 38,
+        "name": "阿飛西雅",
+        "en": "APHASIA",
+        "genres": [
+          "後搖滾"
+        ],
+        "moods": [
+          "專注",
+          "宣洩"
+        ],
+        "energy": 4,
+        "song": "無用的",
+        "desc": "以器樂密度、節奏與張力留出想像空間，適合喜歡無歌詞敘事的你。",
+        "source": "https://streetvoice.com/APHASIAtw/",
+        "aliases": [
+          "APHASIA"
+        ]
+      },
+      {
+        "id": 39,
+        "name": "甜梅號",
+        "en": "Sugar Plum Ferry",
+        "genres": [
+          "後搖滾"
+        ],
+        "moods": [
+          "放鬆",
+          "憂鬱"
+        ],
+        "energy": 3,
+        "song": "南方蝶道",
+        "desc": "鮮明旋律與層層擴張的吉他聲響，適合想從台灣後搖經典開始探索的你。",
+        "source": "https://streetvoice.com/sugarplumferry/",
+        "note": "經典作品收錄；樂團已停止活動。",
+        "aliases": [
+          "Sugar Plum Ferry"
+        ]
+      },
+      {
+        "id": 40,
+        "name": "荒山茉莉",
+        "en": "Molly in Mountain",
+        "genres": [
+          "後搖滾"
+        ],
+        "moods": [
+          "憂鬱",
+          "專注"
+        ],
+        "energy": 3,
+        "song": "重生總在夕陽時",
+        "desc": "雙吉他、合成器與細密鼓點交織，適合喜歡有畫面感器樂篇章的你。",
+        "source": "https://streetvoice.com/MIMwatercity/",
+        "aliases": [
+          "Molly in Mountain"
+        ]
+      },
+      {
+        "id": 41,
+        "name": "步行者",
+        "en": "Pacers",
+        "genres": [
+          "後搖滾"
+        ],
+        "moods": [
+          "宣洩",
+          "熱血"
+        ],
+        "energy": 4,
+        "song": "與低鳴擁抱",
+        "desc": "旋律吉他搭配時而細膩、時而狂野的節奏組，適合偏愛強烈器樂張力的你。",
+        "source": "https://streetvoice.com/pacersbandTW/",
+        "aliases": [
+          "Pacers"
+        ]
+      },
+      {
+        "id": 42,
+        "name": "昆蟲白",
+        "en": "insecteens",
+        "genres": [
+          "後搖滾",
+          "獨立搖滾"
+        ],
+        "moods": [
+          "憂鬱",
+          "放鬆"
+        ],
+        "energy": 3,
+        "song": "瞬間",
+        "desc": "由甜梅號創作人物領軍的樂團編制，讓後搖與九〇年代另類搖滾相遇。",
+        "source": "https://streetvoice.com/insecteens/about/",
+        "note": "以昆蟲白為創作核心的樂團編制。",
+        "aliases": [
+          "insecteens"
+        ]
+      },
+      {
+        "id": 43,
+        "name": "體熊專科",
+        "en": "Major in Body Bear",
+        "genres": [
+          "後搖滾"
+        ],
+        "moods": [
+          "專注",
+          "宣洩"
+        ],
+        "energy": 4,
+        "song": "Little people in the woods",
+        "desc": "日系搖滾、後搖與即興的器樂對話，適合想細聽樂手互相推進的你。",
+        "source": "https://streetvoice.com/shinken/",
+        "aliases": [
+          "Major in Body Bear",
+          "體熊"
+        ]
+      },
+      {
+        "id": 44,
+        "name": "Rainy Knight",
+        "en": "Rainy Knight",
+        "genres": [
+          "後搖滾"
+        ],
+        "moods": [
+          "專注",
+          "宣洩"
+        ],
+        "energy": 4,
+        "song": "Ocean",
+        "desc": "器樂搖滾結合取樣聲景與配樂思維，適合想用聲音開啟想像場景的你。",
+        "source": "https://streetvoice.com/RainyKnight/",
+        "aliases": []
+      },
+      {
+        "id": 45,
+        "name": "Triple Deer",
+        "en": "Triple Deer",
+        "genres": [
+          "後搖滾"
+        ],
+        "moods": [
+          "憂鬱",
+          "放鬆"
+        ],
+        "energy": 3,
+        "song": "成為鯨魚",
+        "desc": "以器樂承載情感，也探索電子與母語創作，適合想沉入細緻敘事的你。",
+        "source": "https://streetvoice.com/TripleDeer/",
+        "aliases": []
+      },
+      {
+        "id": 46,
+        "name": "閃靈",
+        "en": "CHTHONIC",
+        "genres": [
+          "金屬"
+        ],
+        "moods": [
+          "熱血",
+          "宣洩"
+        ],
+        "energy": 5,
+        "song": "皇軍",
+        "desc": "極端金屬與台灣歷史敘事交會，適合喜歡厚重編排、嘶吼與傳統音色的你。",
+        "source": "https://chthonic.tw/bio-concept/",
+        "aliases": [
+          "CHTHONIC",
+          "閃靈樂團",
+          "Chthonic"
+        ]
+      },
+      {
+        "id": 47,
+        "name": "火燒島",
+        "en": "Burning Island",
+        "genres": [
+          "金屬"
+        ],
+        "moods": [
+          "熱血",
+          "宣洩"
+        ],
+        "energy": 5,
+        "song": "若是有一蕊號作正義的花",
+        "desc": "全台語重金屬創作與強烈節奏，適合喜歡直擊人心、充滿力道的聲音。",
+        "source": "https://streetvoice.com/BurningIsland/",
+        "aliases": [
+          "Burning Island"
+        ]
+      },
+      {
+        "id": 48,
+        "name": "FUTURE AFTER A SECOND",
+        "en": "FAAS",
+        "genres": [
+          "金屬"
+        ],
+        "moods": [
+          "宣洩",
+          "熱血"
+        ],
+        "energy": 5,
+        "song": "OFiN",
+        "desc": "金屬核的重量結合後硬核旋律，適合喜歡重拍、嘶吼與旋律對比的你。",
+        "source": "https://streetvoice.com/faasofficial/",
+        "aliases": [
+          "FAAS"
+        ]
+      },
+      {
+        "id": 49,
+        "name": "麥琪麥琪",
+        "en": "MakeMake",
+        "genres": [
+          "金屬"
+        ],
+        "moods": [
+          "熱血",
+          "宣洩"
+        ],
+        "energy": 5,
+        "song": "The Clown",
+        "desc": "狂暴段落與旋律並存的全女子金屬聲響，適合想感受鮮明反差的你。",
+        "source": "https://streetvoice.com/makemake_band/",
+        "aliases": [
+          "MakeMake"
+        ]
+      },
+      {
+        "id": 50,
+        "name": "OBSESS",
+        "en": "OBSESS",
+        "genres": [
+          "金屬"
+        ],
+        "moods": [
+          "憂鬱",
+          "宣洩"
+        ],
+        "energy": 5,
+        "song": "野獸",
+        "desc": "Emo 與後硬核影響下的高張力搖滾，適合需要直接、濃烈情緒表達的你。",
+        "source": "https://streetvoice.com/OBSESS/",
+        "aliases": []
+      },
+      {
+        "id": 51,
+        "name": "Beyond Cure",
+        "en": "BC",
+        "genres": [
+          "金屬"
+        ],
+        "moods": [
+          "宣洩",
+          "熱血"
+        ],
+        "energy": 5,
+        "song": "我想你還會是你",
+        "desc": "厚重吉他與極具衝擊的重型聲響，適合想讓情緒跟著強力節奏釋放的你。",
+        "source": "https://streetvoice.com/bcband/",
+        "aliases": [
+          "BC",
+          "beyound cure",
+          "BeyondCure"
+        ]
+      },
+      {
+        "id": 52,
+        "name": "濁水溪公社",
+        "en": "LTK Commune",
+        "genres": [
+          "龐克",
+          "獨立搖滾"
+        ],
+        "moods": [
+          "宣洩",
+          "熱血"
+        ],
+        "energy": 5,
+        "song": "農村出事情",
+        "desc": "粗獷龐克與土地、社會觀察相連，適合喜歡直接、不修邊幅表達的你。",
+        "source": "https://e-info.org.tw/node/86525",
+        "aliases": [
+          "LTK Commune"
+        ]
+      },
+      {
+        "id": 53,
+        "name": "胖虎",
+        "en": "punkhoo",
+        "genres": [
+          "龐克"
+        ],
+        "moods": [
+          "熱血",
+          "宣洩"
+        ],
+        "energy": 4,
+        "song": "Come Back Again",
+        "desc": "明快的龐克節奏與向前推進的旋律，適合需要一點熱血動力的時候。",
+        "source": "https://streetvoice.com/punkhoo/",
+        "aliases": [
+          "punkhoo"
+        ]
+      },
+      {
+        "id": 54,
+        "name": "SADOG",
+        "en": "SADOG",
+        "genres": [
+          "龐克",
+          "獨立搖滾"
+        ],
+        "moods": [
+          "熱血",
+          "宣洩"
+        ],
+        "energy": 4,
+        "song": "就是煞到你",
+        "desc": "直接的搖滾聲響與日常情感，適合喜歡邊唱邊把情緒拋出來的你。",
+        "source": "https://streetvoice.com/SADOG/",
+        "aliases": []
+      },
+      {
+        "id": 55,
+        "name": "普通隊長",
+        "en": "Captain Ordinary",
+        "genres": [
+          "龐克"
+        ],
+        "moods": [
+          "熱血",
+          "宣洩"
+        ],
+        "energy": 5,
+        "song": "另一邊的你",
+        "desc": "以平凡日常為出發點的龐克爆發力，適合想用快速節奏替自己打氣的你。",
+        "source": "https://streetvoice.com/captain2016/",
+        "aliases": [
+          "Captain Ordinary"
+        ]
+      },
+      {
+        "id": 56,
+        "name": "SHOOTUP",
+        "en": "SHOOTUP",
+        "genres": [
+          "龐克"
+        ],
+        "moods": [
+          "熱血",
+          "宣洩"
+        ],
+        "energy": 4,
+        "song": "魚躍龍門",
+        "desc": "直接奔放的龐克能量，適合想在吉他與鼓點裡找回向前衝勁的你。",
+        "source": "https://streetvoice.com/liveddie/",
+        "aliases": [
+          "SHOOT UP",
+          "Shoot Up"
+        ]
+      },
+      {
+        "id": 57,
+        "name": "粗大Band",
+        "en": "Thick Big Band",
+        "genres": [
+          "龐克"
+        ],
+        "moods": [
+          "熱血",
+          "宣洩"
+        ],
+        "energy": 4,
+        "song": "未知的星球",
+        "desc": "明快節奏與朗朗上口的旋律，適合喜歡青春感和不造作情緒的你。",
+        "source": "https://streetvoice.com/thickbigband/",
+        "aliases": [
+          "Thick Big Band",
+          "粗大",
+          "粗大band"
+        ]
+      },
+      {
+        "id": 58,
+        "name": "非人物種",
+        "en": "Inhuman",
+        "genres": [
+          "龐克",
+          "獨立搖滾"
+        ],
+        "moods": [
+          "宣洩",
+          "熱血"
+        ],
+        "energy": 5,
+        "song": "異鄉",
+        "desc": "粗獷吉他與狂放人聲，適合想感受原始、直接搖滾力道的你。",
+        "source": "https://streetvoice.com/punktv/",
+        "aliases": [
+          "Inhuman"
+        ]
+      },
+      {
+        "id": 59,
+        "name": "凹與山",
+        "en": "Our Shame",
+        "genres": [
+          "民謠"
+        ],
+        "moods": [
+          "放鬆",
+          "憂鬱"
+        ],
+        "energy": 2,
+        "song": "理查",
+        "desc": "民謠敘事與電子聲響相遇，適合喜歡輕聲人聲、細節與日常觀察的你。",
+        "source": "https://streetvoice.com/ourshame92/",
+        "aliases": [
+          "Our Shame"
+        ]
+      },
+      {
+        "id": 60,
+        "name": "梁河懸",
+        "en": "Liang-Chord",
+        "genres": [
+          "獨立搖滾"
+        ],
+        "moods": [
+          "憂鬱",
+          "放鬆"
+        ],
+        "energy": 3,
+        "song": "Losing My Way",
+        "desc": "從生活細節捕捉真實情緒，以有畫面感的旋律陪伴心裡說不出的片刻。",
+        "source": "https://streetvoice.com/LIANG_OKOK/",
+        "aliases": [
+          "Liang-Chord"
+        ]
+      },
+      {
+        "id": 61,
+        "name": "草莓救星",
+        "en": "We Save Strawberries",
+        "genres": [
+          "獨立搖滾",
+          "迷幻搖滾"
+        ],
+        "moods": [
+          "憂鬱",
+          "放鬆"
+        ],
+        "energy": 3,
+        "song": "巴士11號",
+        "desc": "以層次豐富的吉他和人聲營造獨特氛圍，適合喜歡在旋律裡慢慢探索的你。",
+        "source": "https://streetvoice.com/wssband/",
+        "aliases": [
+          "We Save Strawberries"
+        ]
+      },
+      {
+        "id": 62,
+        "name": "共振效應",
+        "en": "Resonance Effect",
+        "genres": [
+          "獨立搖滾"
+        ],
+        "moods": [
+          "熱血",
+          "宣洩"
+        ],
+        "energy": 4,
+        "song": "起床 Get Up（Demo）",
+        "desc": "用年輕直接的搖滾能量與節奏變化，為日常注入一點躁動與衝勁。",
+        "source": "https://streetvoice.com/Resonance_Effect/",
+        "aliases": [
+          "Resonance Effect"
+        ]
+      },
+      {
+        "id": 63,
+        "name": "庸俗救星",
+        "en": "Vulgar Savior",
+        "genres": [
+          "獨立搖滾"
+        ],
+        "moods": [
+          "浪漫",
+          "放鬆"
+        ],
+        "energy": 3,
+        "song": "Marry Me",
+        "desc": "搖滾、律動與復古音色交錯，適合喜歡旋律抓耳、情緒有層次的你。",
+        "source": "https://streetvoice.com/VulgarSavior/",
+        "aliases": [
+          "Vulgar Savior"
+        ]
+      },
+      {
+        "id": 64,
+        "name": "hue",
+        "en": "hue",
+        "genres": [
+          "獨立搖滾"
+        ],
+        "moods": [
+          "憂鬱",
+          "宣洩"
+        ],
+        "energy": 4,
+        "song": "爛情歌",
+        "desc": "以聲音描繪情緒的不同色調，適合想聽人聲與樂器一起堆出張力的你。",
+        "source": "https://streetvoice.com/hue1993/",
+        "aliases": [
+          "hue"
+        ]
+      },
+      {
+        "id": 65,
+        "name": "南西肯恩",
+        "en": "NeciKen",
+        "genres": [
+          "民謠"
+        ],
+        "moods": [
+          "放鬆",
+          "浪漫"
+        ],
+        "energy": 2,
+        "song": "煙花",
+        "desc": "細膩人聲與木吉他編織親近的敘事，適合安靜聽旋律、慢慢整理心情的你。",
+        "source": "https://streetvoice.com/nckn/",
+        "aliases": [
+          "NeciKen"
+        ]
+      },
+      {
+        "id": 66,
+        "name": "傷心欲絕",
+        "en": "Wayne’s So Sad",
+        "genres": [
+          "獨立搖滾",
+          "龐克"
+        ],
+        "moods": [
+          "憂鬱",
+          "宣洩"
+        ],
+        "energy": 5,
+        "song": "妳是不是我編出的一個謊？",
+        "desc": "狂放吉他與帶有破嗓的情感表達，適合想把鬱悶與日常的荒謬唱出來的你。",
+        "source": "https://streetvoice.com/waynessosad/",
+        "aliases": [
+          "Wayne’s So Sad"
+        ]
+      },
+      {
+        "id": 67,
+        "name": "鹿洐人",
+        "en": "Human Hart",
+        "genres": [
+          "獨立搖滾",
+          "民謠"
+        ],
+        "moods": [
+          "憂鬱",
+          "放鬆"
+        ],
+        "energy": 3,
+        "song": "爛笑話",
+        "desc": "三人編制裡的木吉他、人聲與節奏相互對話，適合喜歡生活敘事的你。",
+        "source": "https://streetvoice.com/humanhart/",
+        "aliases": [
+          "Human Hart"
+        ],
+        "note": "經典作品收錄。"
+      },
+      {
+        "id": 68,
+        "name": "溫室雜草",
+        "en": "Easy Weeds",
+        "genres": [
+          "獨立搖滾"
+        ],
+        "moods": [
+          "放鬆",
+          "浪漫"
+        ],
+        "energy": 2,
+        "song": "春天有腳",
+        "desc": "鬆軟自在的旋律與生活感，適合想把腳步放慢、讓音樂自然陪伴的時候。",
+        "source": "https://streetvoice.com/easyweeds/",
+        "aliases": [
+          "Easy Weeds"
+        ]
+      }
+    ]
+    ).then(data => {
+      bands = data;
+      document.querySelectorAll('[data-band-count]').forEach(el => el.textContent = bands.length);
+      $('#catalog-toggle').textContent = `看看全部 ${bands.length} 團 ↗`;
+      $('#bandnames').innerHTML = bands.map(b => `<option value="${escapeHTML(b.name)}">${escapeHTML(b.en)}</option>`).join('');
+      GENRES.forEach(genre => {
+        const option = document.createElement('option');
+        option.textContent = genre; option.value = genre;
+        $('#catalog-genre').append(option);
+      });
+      renderCatalog(); showDefault();
+    }).catch(() => {
+      $('#cards').innerHTML = '<p class="empty">資料暫時無法載入，請重新整理再試一次。</p>';
+      $('.submit').disabled = true;
+    });
+
+  </script>
+</body>
+
+</html>

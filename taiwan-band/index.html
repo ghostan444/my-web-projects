@@ -1,0 +1,876 @@
+<!doctype html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="從曲風、心情與喜歡的樂團出發，探索下一個喜歡的台灣樂團。">
+    <title>下一團聽什麼？｜台灣樂團探索器</title>
+    <style>
+        :root {
+            --bg: #fff6f2;
+            --ink: #541b27;
+            --accent: #ffb5a6;
+            --line: #d9b9bb
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--ink);
+            font-family: Arial, 'Noto Sans TC', sans-serif
+        }
+
+        button,
+        input,
+        select {
+            font: inherit
+        }
+
+        button,
+        a,
+        input,
+        select {
+            -webkit-tap-highlight-color: transparent
+        }
+
+        button,
+        a {
+            touch-action: manipulation
+        }
+
+        button {
+            cursor: pointer
+        }
+
+        button:focus-visible,
+        a:focus-visible,
+        input:focus-visible,
+        select:focus-visible {
+            outline: 3px solid #80343d;
+            outline-offset: 4px
+        }
+
+        header {
+            max-width: 1320px;
+            margin: auto;
+            padding: 25px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--line)
+        }
+
+        .brand {
+            font-weight: 900;
+            font-size: 20px;
+            letter-spacing: -1px
+        }
+
+        .brand span {
+            display: inline-block;
+            background: var(--ink);
+            color: var(--accent);
+            padding: 5px 7px;
+            margin-right: 9px;
+            font-size: 15px
+        }
+
+        header a {
+            color: inherit;
+            text-decoration: none;
+            font-size: 13px
+        }
+
+        main {
+            max-width: 1240px;
+            margin: auto;
+            padding: 0 30px
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            align-items: center;
+            gap: 40px;
+            padding: 65px 0 50px
+        }
+
+        .eyebrow {
+            font: 11px monospace;
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            gap: 10px
+        }
+
+        .dot {
+            width: 7px;
+            height: 7px;
+            background: #8a3741;
+            border-radius: 50%
+        }
+
+        h1 {
+            font-size: clamp(44px, 5.3vw, 73px);
+            letter-spacing: -4px;
+            line-height: 1.14;
+            margin: 23px 0
+        }
+
+        h1 em {
+            font-style: normal;
+            position: relative;
+            z-index: 0
+        }
+
+        h1 em:before {
+            content: '';
+            position: absolute;
+            bottom: 3px;
+            left: -4px;
+            right: -8px;
+            height: 31px;
+            background: var(--accent);
+            z-index: -1;
+            transform: rotate(-2deg)
+        }
+
+        .intro {
+            font-size: 15px;
+            line-height: 1.9;
+            color: #735357;
+            max-width: 450px
+        }
+
+        .hero-art {
+            height: 300px;
+            position: relative;
+            display: grid;
+            place-items: center
+        }
+
+        .vinyl {
+            width: 270px;
+            height: 270px;
+            border-radius: 50%;
+            background: repeating-radial-gradient(circle, #2e111a 0px, #2e111a 2px, #4b1b28 3px, #2e111a 4px);
+            box-shadow: 10px 16px 26px #30232426;
+            position: relative;
+            transform: rotate(-15deg)
+        }
+
+        .label {
+            position: absolute;
+            inset: 82px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            font-size: 10px;
+            letter-spacing: 1px;
+            line-height: 1.6
+        }
+
+        .label b {
+            font-size: 15px;
+            letter-spacing: -.5px
+        }
+
+        .label:after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: var(--bg);
+            border: 2px solid #302022;
+            border-radius: 50%;
+            margin-top: 9px
+        }
+
+        .sticker {
+            position: absolute;
+            right: 3px;
+            top: 18px;
+            background: #ef796e;
+            padding: 16px 18px;
+            border: 1px solid var(--ink);
+            transform: rotate(10deg);
+            font-size: 12px;
+            line-height: 1.7
+        }
+
+        .art-note {
+            position: absolute;
+            bottom: 5px;
+            left: 32px;
+            font: 11px monospace;
+            letter-spacing: 2px
+        }
+
+        .workbench {
+            display: grid;
+            grid-template-columns: 370px 1fr;
+            border: 1px solid var(--ink);
+            border-radius: 3px;
+            overflow: hidden;
+            margin-bottom: 50px
+        }
+
+        .controls {
+            background: #f6e5e3;
+            padding: 28px;
+            border-right: 1px solid var(--ink)
+        }
+
+        .step {
+            font: 11px monospace;
+            letter-spacing: 2px;
+            color: #78575b
+        }
+
+        h2 {
+            font-size: 22px;
+            margin: 10px 0 24px;
+            letter-spacing: -1px
+        }
+
+        label,
+        .field-title {
+            display: block;
+            font-size: 13px;
+            font-weight: 700;
+            margin: 23px 0 11px
+        }
+
+        .optional {
+            font-weight: 400;
+            color: #876166;
+            font-size: 11px
+        }
+
+        input[type=text],
+        select {
+            width: 100%;
+            padding: 12px;
+            background: #fffaf7;
+            border: 1px solid #c1aaad;
+            border-radius: 4px;
+            color: var(--ink)
+        }
+
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px
+        }
+
+        .chip {
+            padding: 8px 11px;
+            border: 1px solid #c1aaad;
+            background: transparent;
+            border-radius: 20px;
+            font-size: 12px;
+            color: #64484c
+        }
+
+        .chip[aria-pressed=true] {
+            background: var(--ink);
+            color: var(--accent);
+            border-color: var(--ink)
+        }
+
+        .range-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            color: #7e5b5f
+        }
+
+        input[type=range] {
+            width: 100%;
+            accent-color: var(--ink)
+        }
+
+        .submit {
+            width: 100%;
+            margin-top: 27px;
+            padding: 16px;
+            border: 0;
+            border-radius: 4px;
+            background: var(--ink);
+            color: var(--accent);
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            font-weight: 700
+        }
+
+        .reset {
+            background: none;
+            border: 0;
+            text-decoration: underline;
+            color: #7c595e;
+            font-size: 11px;
+            display: block;
+            margin: 15px auto 0
+        }
+
+        .results {
+            padding: 28px 32px;
+            background: #fffaf7
+        }
+
+        .results-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center
+        }
+
+        .results-top h2 {
+            margin-bottom: 7px
+        }
+
+        .result-meta {
+            font-size: 12px;
+            line-height: 1.7;
+            color: #856065;
+            margin: 0 0 24px
+        }
+
+        .count {
+            font: 11px monospace;
+            border: 1px solid var(--line);
+            padding: 7px
+        }
+
+        .card {
+            border-top: 1px solid var(--line);
+            padding: 22px 0;
+            display: grid;
+            grid-template-columns: 54px 1fr;
+            gap: 16px
+        }
+
+        .cover {
+            width: 54px;
+            height: 67px;
+            background: var(--accent);
+            border: 1px solid #2a1f2044;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 7px;
+            font: 10px monospace;
+            overflow: hidden
+        }
+
+        .cover b {
+            font-size: 29px;
+            line-height: 1
+        }
+
+        .card:nth-child(2) .cover {
+            background: #f2c1ca
+        }
+
+        .card:nth-child(3) .cover {
+            background: #e9a39c
+        }
+
+        .card-head {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            align-items: start
+        }
+
+        h3 {
+            font-size: 21px;
+            letter-spacing: -.6px;
+            margin: 0 0 4px
+        }
+
+        .en {
+            font: 10px monospace;
+            color: #92696e
+        }
+
+        .match {
+            font-size: 10px;
+            color: #683238;
+            white-space: nowrap;
+            background: #f8dfde;
+            padding: 5px 7px
+        }
+
+        .tags {
+            font-size: 10px;
+            color: #78575b;
+            margin: 10px 0
+        }
+
+        .desc {
+            font-size: 13px;
+            line-height: 1.8;
+            margin: 8px 0 12px;
+            color: #705155
+        }
+
+        .song {
+            display: flex;
+            justify-content: space-between;
+            gap: 8px;
+            align-items: center;
+            background: #f6e8e5;
+            padding: 10px 12px;
+            font-size: 12px
+        }
+
+        .song small {
+            font-size: 9px;
+            color: #8c656a;
+            display: block;
+            margin-bottom: 4px
+        }
+
+        .song a {
+            color: inherit;
+            text-decoration: none;
+            border: 1px solid #c5aeb1;
+            border-radius: 20px;
+            padding: 7px 10px;
+            white-space: nowrap;
+            font-size: 10px
+        }
+
+        .source {
+            display: inline-block;
+            font-size: 10px;
+            margin-top: 10px;
+            color: #825e63;
+            text-underline-offset: 3px
+        }
+
+        .notice {
+            font-size: 11px;
+            line-height: 1.8;
+            background: #f8e4e2;
+            padding: 12px;
+            margin: 10px 0
+        }
+
+        .bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--line);
+            padding-top: 16px;
+            font-size: 11px;
+            color: #90686d
+        }
+
+        .bottom button {
+            border: 0;
+            background: none;
+            color: var(--ink);
+            text-decoration: underline;
+            font-size: 11px
+        }
+
+        .about {
+            border-top: 1px solid var(--line);
+            padding: 26px 0 45px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 30px
+        }
+
+        .about h2 {
+            font-size: 17px;
+            margin: 0
+        }
+
+        .about p {
+            font-size: 12px;
+            line-height: 1.9;
+            color: #815e62;
+            margin: 0
+        }
+
+        .catalog {
+            display: none;
+            padding: 0 0 40px
+        }
+
+        .catalog.open {
+            display: block
+        }
+
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px
+        }
+
+        .catalog a {
+            border: 1px solid var(--line);
+            padding: 14px;
+            color: inherit;
+            text-decoration: none;
+            font-size: 13px
+        }
+
+        .catalog small {
+            display: block;
+            font-size: 10px;
+            color: #886367;
+            margin-top: 7px
+        }
+
+        footer {
+            padding: 20px 0;
+            border-top: 1px solid var(--line);
+            font: 10px monospace;
+            color: #91696e;
+            display: flex;
+            justify-content: space-between
+        }
+
+        .empty {
+            padding: 50px 0;
+            color: #805c61;
+            line-height: 1.8
+        }
+
+        @media(max-width:800px) {
+            header {
+                padding: 20px
+            }
+
+            .hero {
+                gap: 0;
+                padding: 40px 0 30px
+            }
+
+            .hero-art {
+                height: 230px
+            }
+
+            .vinyl {
+                width: 200px;
+                height: 200px
+            }
+
+            .label {
+                inset: 57px
+            }
+
+            .sticker {
+                right: 0;
+                top: 0;
+                font-size: 10px;
+                padding: 10px
+            }
+
+            .art-note {
+                display: none
+            }
+
+            h1 {
+                font-size: 47px
+            }
+
+            .workbench {
+                grid-template-columns: 300px 1fr
+            }
+
+            .controls,
+            .results {
+                padding: 22px
+            }
+
+            .card {
+                grid-template-columns: 1fr
+            }
+
+            .cover {
+                display: none
+            }
+
+            .catalog-grid {
+                grid-template-columns: repeat(3, 1fr)
+            }
+        }
+
+        @media(max-width:620px) {
+            main {
+                padding: 0 18px
+            }
+
+            .hero {
+                grid-template-columns: 1fr
+            }
+
+            .hero-art {
+                display: none
+            }
+
+            h1 {
+                font-size: 52px
+            }
+
+            .intro {
+                font-size: 14px
+            }
+
+            .workbench {
+                grid-template-columns: 1fr
+            }
+
+            .controls {
+                border-right: 0;
+                border-bottom: 1px solid var(--ink)
+            }
+
+            .results {
+                padding: 24px 21px
+            }
+
+            .card {
+                grid-template-columns: 42px 1fr;
+                gap: 12px
+            }
+
+            .cover {
+                display: flex;
+                width: 42px;
+                height: 60px
+            }
+
+            .cover b {
+                font-size: 24px
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+                gap: 10px
+            }
+
+            .catalog-grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            header a {
+                font-size: 11px
+            }
+
+            .brand {
+                font-size: 17px
+            }
+
+            .song {
+                flex-wrap: wrap
+            }
+
+            .match {
+                font-size: 9px
+            }
+
+            h3 {
+                font-size: 19px
+            }
+        }
+
+        @media(prefers-reduced-motion:no-preference) {
+            .card {
+                animation: rise .4s ease both
+            }
+
+            @keyframes rise {
+                from {
+                    opacity: 0;
+                    transform: translateY(8px)
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0)
+                }
+            }
+
+            .submit:hover {
+                background: #7f2736
+            }
+
+            .song a:hover {
+                background: var(--accent)
+            }
+        }
+
+        .card-body {
+            min-width: 0
+        }
+
+        .card-head>div {
+            min-width: 0
+        }
+
+        .card-head {
+            flex-wrap: wrap
+        }
+
+        .card-head h3 {
+            overflow-wrap: anywhere
+        }
+
+        .en {
+            overflow-wrap: anywhere
+        }
+
+        .match {
+            white-space: normal;
+            max-width: 100%;
+            line-height: 1.6
+        }
+
+        .song>div {
+            min-width: 0;
+            overflow-wrap: anywhere
+        }
+
+        .band-note {
+            font-size: 10px;
+            color: #7b725c;
+            line-height: 1.6
+        }
+
+        .catalog-tools {
+            display: flex;
+            align-items: end;
+            gap: 15px;
+            margin-bottom: 18px
+        }
+
+        .catalog-tools>div:first-child {
+            flex: 2
+        }
+
+        .catalog-tools>div:nth-child(2) {
+            flex: 1
+        }
+
+        .catalog-tools label {
+            margin-top: 0
+        }
+
+        .catalog-tools>span {
+            font: 11px monospace;
+            white-space: nowrap;
+            padding-bottom: 14px
+        }
+
+        .catalog-grid a {
+            overflow-wrap: anywhere
+        }
+
+        .catalog-grid .empty {
+            grid-column: 1/-1
+        }
+
+        @media(max-width:620px) {
+            .catalog-tools {
+                flex-wrap: wrap
+            }
+
+            .catalog-tools>div:first-child {
+                flex: 1 1 100%
+            }
+
+            .catalog-tools>div:nth-child(2) {
+                flex: 1
+            }
+
+            .card-head {
+                gap: 8px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="brand"><span>↗</span>下一團聽什麼？</div><a href="#about">關於這台選團機 ↗</a>
+    </header>
+    <main>
+        <section class="hero">
+            <div>
+                <div class="eyebrow"><i class="dot"></i> TAIWAN INDIE DISCOVERY / VOL. 03</div>
+                <h1>你的耳朵，<br>值得一點<em>新發現。</em></h1>
+                <p class="intro">從熟悉的旋律出發，遇見還沒愛上的台灣樂團。<br>告訴我們你的口味，下一首就交給這座島。</p>
+            </div>
+            <div class="hero-art" aria-hidden="true">
+                <div class="vinyl">
+                    <div class="label">SIDE A<b>島嶼的聲音</b>MADE IN TAIWAN</div>
+                </div>
+                <div class="sticker">100% 台灣樂團<br><span data-band-count>69</span> 種不同的相遇 ✳</div><span
+                    class="art-note">GOOD MUSIC. CLOSE TO HOME.</span>
+            </div>
+        </section>
+        <section class="workbench">
+            <form id="form" class="controls">
+                <div class="step">01 / INPUT</div>
+                <h2>調到你的頻率</h2><label for="favorite">最近喜歡哪一團？ <span class="optional">選填</span></label><input
+                    id="favorite" type="text" list="bandnames" placeholder="例如：落日飛車、草東" autocomplete="off"><datalist
+                    id="bandnames"></datalist>
+                <div class="field-title" id="genre-label">偏好的曲風 <span class="optional">可複選</span></div>
+                <div class="chips" id="genres" role="group" aria-labelledby="genre-label"></div>
+                <div class="field-title" id="mood-label">今天想聽的感覺 <span class="optional">選一個</span></div>
+                <div class="chips" id="moods" role="group" aria-labelledby="mood-label"></div><label for="energy">聲音能量
+                    <span id="energyvalue" class="optional">3 / 5</span></label><input id="energy" type="range" min="1"
+                    max="5" value="3">
+                <div class="range-label"><span>輕輕陪伴</span><span>用力宣洩</span></div><button class="submit"
+                    type="submit">尋找我的下一個愛團 <span>↗</span></button><button class="reset" type="reset">重新調頻</button>
+            </form>
+            <div class="results">
+                <div class="results-top">
+                    <div>
+                        <div class="step">02 / OUTPUT</div>
+                        <h2 id="result-title">先聽聽這三團</h2>
+                    </div><span class="count">3 PICKS</span>
+                </div>
+                <p class="result-meta" id="meta">從三種聲音開始，或在左側調整你的喜好。</p>
+                <div id="message"></div>
+                <div id="cards" aria-live="polite"></div>
+                <div class="bottom"><span>更多好聲音，等你發現。</span><button type="button" id="catalog-toggle"
+                        aria-expanded="false">看看全部 69 團 ↗</button></div>
+            </div>
+        </section>
+        <section id="catalog" class="catalog">
+            <h2>這一輯的 <span data-band-count>69</span> 組樂團</h2>
+            <div class="catalog-tools">
+                <div><label for="catalog-search">搜尋樂團</label><input id="catalog-search" type="text"
+                        placeholder="團名、英文名或簡稱"></div>
+                <div><label for="catalog-genre">依曲風瀏覽</label><select id="catalog-genre">
+                        <option value="">全部曲風</option>
+                    </select></div><span id="catalog-count" aria-live="polite"></span>
+            </div>
+            <div class="catalog-grid" id="catalog-grid"></div>
+        </section>
+        <section class="about" id="about">
+            <h2>一台有根據的選團機。</h2>
+            <p>這是課堂 Input / Output 作品：依據曲風、心情與能量標籤配對，不是即時 AI 對話，也不分析音訊。樂團資料參考官方網站、StreetVoice
+                街聲與音樂媒體，每張卡片皆附來源。名單由使用者與本站共同整理；曲風、情緒、能量與推薦理由為探索用的編輯標籤，不代表樂團只有一種風格。歌曲是入門選曲，非人氣排名。資料整理：2026.10.28。</p>
+        </section>
+        <footer><span>下一團聽什麼？ / TAIWAN ONLY</span><span>KEEP YOUR EARS CURIOUS. ✳</span></footer>
+    </main>
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>
