@@ -1,0 +1,401 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" xmlns:og="http://ogp.me/ns#"
+  xmlns:fb="http://www.facebook.com/2008/fbml" itemscope itemtype="http://schema.org/cafe">
+
+<head>
+  <!-- 此頁保留參考網站版型；樣式在 css，圖片在 images，三頁可直接互相連結。 -->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="keywords" content="ほしの,星の,星乃珈琲店,スフレ,コーヒー" />
+
+  <meta property="og:title" content="メニュー ｜ 星乃珈琲店 オフィシャルサイト" />
+  <meta property="og:description" content="一杯ずつ丁寧に淹れたハンドドリップコーヒーとスフレパンケーキでゆっくりした時間が流れる喫茶店" />
+  <meta property="og:type" content="cafe" />
+  <meta property="og:url" content="/menu.html" />
+  <meta property="og:image" content="/images/parts/top_img_reco01.jpg" />
+  <meta property="og:site_name" content="星乃珈琲店 オフィシャルサイト" />
+  <meta property="fb:admins" content="1417217948" />
+  <meta itemprop="name" content="メニュー ｜ 星乃珈琲店 オフィシャルサイト" />
+  <meta itemprop="description" content="一杯ずつ丁寧に淹れたハンドドリップコーヒーとスフレパンケーキでゆっくりした時間が流れる喫茶店" />
+  <meta itemprop="image" content="/images/parts/top_img_reco01.jpg" />
+
+  <title>メニュー ｜ 星乃珈琲店 オフィシャルサイト</title>
+
+  <link href="css/import.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="css/jquery.slider.css" rel="stylesheet" type="text/css" media="all" />
+
+
+  <script language="JavaScript" type="text/JavaScript" src="js/jquery-1.7.1.min.js" charset="UTF-8"></script>
+
+
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="stylesheet" href="css/language.css" />
+  <script defer src="js/translations.js"></script>
+  <script defer src="js/language.js"></script>
+  <link rel="stylesheet" href="css/ambience.css" />
+  <script defer src="js/ambience.js"></script>
+</head>
+
+<body>
+  <!-- 固定影片底圖；淺色區與內容會顯示在影片前方。 -->
+  <div class="site-ambience" aria-hidden="true">
+    <video id="ambience-video" autoplay muted loop playsinline preload="metadata" poster="video/library-poster.jpg">
+      <source src="video/library-background.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <button id="ambience-toggle" type="button" aria-label="暫停背景影片 / Pause background video">Ⅱ</button>
+  <a id="pagetop" name="pagetop"></a>
+
+  <div id="wrapper">
+
+
+
+
+
+
+
+    <div id="header_wrapper">
+      <div id="header" class="cbox">
+        <div id="language-switch" role="group" aria-label="語言 / Language"><button type="button" data-language="ja"
+            aria-pressed="true">日本語</button><button type="button" data-language="zh-Hant" aria-pressed="false"
+            title="圖片內文字與門市名稱、地址保留原文">繁體中文</button></div>
+        <h1 class="png_bg"><a href="index.html">星乃珈琲店</a></h1>
+        <ul id="all_nav">
+          <li id="navi_home"><a href="index.html">ホーム</a></li>
+          <li id="navi_menu"><a href="menu.html">メニュー</a></li>
+          <li id="navi_shop"><a href="shop.html">店舗情報</a></li>
+
+
+
+
+        </ul>
+      </div>
+    </div>
+
+
+
+    <div id="main_bg_wrapper">
+
+
+      <div id="contents_wrapper">
+        <div id="contents">
+          <ol class="cbox">
+            <li><a href="index.html">ホーム</a></li>
+            <li class="now">メニュー</li>
+          </ol>
+
+
+
+          <p class="mt20" id="menu_txt_caution">※メニューの一部です。店舗により取り扱いの無いメニューもございますのでご了承下さい。</p>
+
+          <style type="text/css">
+            .menu_ttl {
+              font-size: 18px;
+              font-weight: 700;
+              border-bottom: 1px solid #fff;
+              padding: 0 0 5px;
+              margin: 40px 0 20px;
+            }
+
+            #menu ul {
+              display: grid;
+              grid-template-columns: repeat(4, 1fr);
+              gap: 20px 20px;
+            }
+
+            #menu ul li span {
+              display: inline-block;
+            }
+
+            #menu ul li img {
+              width: 100%;
+            }
+
+            #menu ul li .menu_txt {
+              margin: 5px 0 0;
+            }
+          </style>
+          <div id="menu">
+
+            <div class="menu_ttl" id="seasonal">季節限定商品 <span class="fontsizes fontb">2026/9/18(金)～</span></div>
+            <ul>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img01_2026summer.jpg" alt="" /></span>
+                <span class="menu_txt">3種きのことベーコンのポルチーニクリーム</span>
+              </li>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img02_2026summer.jpg" alt="" /></span>
+                <span class="menu_txt">たっぷりチーズのカルボナーラドリア＆パンケーキプレート</span>
+              </li>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img03_2026summer.jpg" alt="" /></span>
+                <span class="menu_txt">栗のスフレパンケーキ</span>
+              </li>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img04_2026summer.jpg" alt="" /></span>
+                <span class="menu_txt">モンブランプリン<br>
+                  <span class="fontsizes fontb">※一部店舗</span>
+                </span>
+              </li>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img05_2026summer.jpg" alt="" /></span>
+                <span class="menu_txt">モンブランブリュレ<br>
+                  <span class="fontsizes fontb">※一部店舗</span>
+                </span>
+              </li>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img06_2026summer.jpg" alt="" /></span>
+                <span class="menu_txt">季節のコーヒーゼリー<br>～モカブレンド豆使用～<br>コーヒーシロップ添え</span>
+              </li>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img07_2026summer.jpg" alt="" /></span>
+                <span class="menu_txt">たっぷりココア</span>
+              </li>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img08_2026summer.jpg" alt="" /></span>
+                <span class="menu_txt">ココアフロート</span>
+              </li>
+            </ul>
+
+
+
+
+            <div class="menu_ttl" id="drink">ドリンク</div>
+            <ul>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img01_drink.jpg" alt="" /></span>
+                <span class="menu_txt">ハンドドリップ珈琲<br>
+                  （星乃ブレンド・彦星ブレンド・織姫ブレンド）</span>
+              </li>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img02_drink.jpg" alt="" /></span>
+                <span class="menu_txt">アイスコーヒー</span>
+              </li>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img03_drink.jpg" alt="" /></span>
+                <span class="menu_txt">紅茶（ポットサービス）</span>
+              </li>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img04_drink.jpg" alt="" /></span>
+                <span class="menu_txt">スパークリングレモネード</span>
+              </li>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img05_drink.jpg" alt="" /></span>
+                <span class="menu_txt">ジャンボクリームソーダ</span>
+              </li>
+            </ul>
+
+
+
+
+            <div class="menu_ttl" id="sweets">スイーツ</div>
+            <ul>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img04_sweets.jpg" alt="" /></span>
+                <span class="menu_txt">窯焼きスフレパンケーキ</span>
+              </li>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img05_sweets.jpg" alt="" /></span>
+                <span class="menu_txt">窯焼きバニラスフレ</span>
+              </li>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img06_sweets.jpg" alt="" /></span>
+                <span class="menu_txt">フレンチトースト（ホイップのせ）</span>
+              </li>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img01_sweets.jpg" alt="" /></span>
+                <span class="menu_txt">昭和のプリン</span>
+              </li>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img02_sweets.jpg" alt="" /></span>
+                <span class="menu_txt">バスクチーズケーキ<br>
+                  フランボワーズソルベ添え</span>
+              </li>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img03_sweets.jpg" alt="" /></span>
+                <span class="menu_txt">たっぷりクリームの<br>
+                  北海道ロールケーキ<br>
+                  キャラメルアイス添え</span>
+              </li>
+            </ul>
+
+
+
+
+            <div class="menu_ttl" id="spaghetti">スパゲッティー</div>
+            <ul>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img01_spaghetti.jpg" alt="" /></span>
+                <span class="menu_txt">ふわふわチーズのミートソース</span>
+              </li>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img02_spaghetti.jpg" alt="" /></span>
+                <span class="menu_txt">星乃スパゲッティー<br>
+                  （具だくさん醤油バター）</span>
+              </li>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img03_spaghetti.jpg" alt="" /></span>
+                <span class="menu_txt">ごちそうナポリタン</span>
+              </li>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img04_spaghetti.jpg" alt="" /></span>
+                <span class="menu_txt">グリルチキンととろーりチーズのカルボナーラ</span>
+              </li>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img05_spaghetti.jpg" alt="" /></span>
+                <span class="menu_txt">たっぷり海老とモッツァレラチーズのトマトクリーム</span>
+              </li>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img06_spaghetti.jpg" alt="" /></span>
+                <span class="menu_txt">たっぷり海老のペペロンチーノ</span>
+              </li>
+            </ul>
+
+
+
+
+            <div class="menu_ttl" id="curry">オムライス、カレー、グラタン</div>
+            <ul>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img01_curry.jpg" alt="" /></span>
+                <span class="menu_txt">洋食屋さんのオムライス</span>
+              </li>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img02_curry.jpg" alt="" /></span>
+                <span class="menu_txt">とろーりチーズのビーフシチューオムライスドリア</span>
+              </li>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img03_curry.jpg" alt="" /></span>
+                <span class="menu_txt">海老とモッツァレラチーズのグラタン</span>
+              </li>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img04_curry.jpg" alt="" /></span>
+                <span class="menu_txt">星乃ビーフカレー</span>
+              </li>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img05_curry.jpg" alt="" /></span>
+                <span class="menu_txt">カツカレー</span>
+              </li>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img06_curry.jpg" alt="" /></span>
+                <span class="menu_txt">ビーフシチューオムライス＆パンケーキプレート</span>
+              </li>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img07_curry.jpg" alt="" /></span>
+                <span class="menu_txt">ビーフシチューハンバーグライス＆パンケーキプレート</span>
+              </li>
+            </ul>
+
+
+
+
+            <div class="menu_ttl" id="lightmeal">軽食</div>
+            <ul>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img01_lightmeal.jpg" alt="" /></span>
+                <span class="menu_txt">厚切りカツサンド＆ポテト</span>
+              </li>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img02_lightmeal.jpg" alt="" /></span>
+                <span class="menu_txt">たまごサンド</span>
+              </li>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img03_lightmeal.jpg" alt="" /></span>
+                <span class="menu_txt">星乃ホットドッグ＆ポテト</span>
+              </li>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img04_lightmeal.jpg" alt="" /></span>
+                <span class="menu_txt">クラブハウスサンド＆ポテト<br>
+                  ～スモークチキンとベーコン～</span>
+              </li>
+            </ul>
+
+
+
+
+            <div class="menu_ttl" id="morning">モーニング</div>
+            <ul>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img01_morning.jpg" alt="" /></span>
+                <span class="menu_txt">厚切りトースト＆ゆで卵</span>
+              </li>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img02_morning.jpg" alt="" /></span>
+                <span class="menu_txt">ミニパンケーキ</span>
+              </li>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img03_morning.jpg" alt="" /></span>
+                <span class="menu_txt">国産はちみつチーズトースト</span>
+              </li>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img04_morning.jpg" alt="" /></span>
+                <span class="menu_txt">たまごサンド</span>
+              </li>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img05_morning.jpg" alt="" /></span>
+                <span class="menu_txt">ハムチーズトースト</span>
+              </li>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img06_morning.jpg" alt="" /></span>
+                <span class="menu_txt">アサイーヨーグルト</span>
+              </li>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img07_morning.jpg" alt="" /></span>
+                <span class="menu_txt">サラダ＆パンケーキ</span>
+              </li>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img08_morning.jpg" alt="" /></span>
+                <span class="menu_txt">朝カレー</span>
+              </li>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img09_morning.jpg" alt="" /></span>
+                <span class="menu_txt">フレンチトースト</span>
+              </li>
+              <li>
+                <span class="menu_img"><img src="images/parts/menu/menu_img10_morning.jpg" alt="" /></span>
+                <span class="menu_txt">パンケーキプレート</span>
+              </li>
+            </ul>
+
+
+          </div>
+
+          <div id="all_pagetop_btn"><a href="#pagetop"><img src="images/parts/all_pagetop.png" alt="このページの先頭へ" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style type="text/css">
+      #footer .sns {
+        text-align: center;
+        padding-bottom: 20px;
+      }
+    </style>
+
+    <div id="footer_wrapper">
+      <div id="footer">
+
+        <div class="sns">
+          <div class="instagram"><a href="https://www.instagram.com/hoshino_coffee_official" target="_blank"
+              rel="noopener noreferrer"><img src="images/bnr/sns_instagram.jpg" alt="" /></a></div>
+        </div>
+
+        <ul class="cbox fontsizes">
+          <li>｜&nbsp;<a href="index.html">ホーム</a>&nbsp;｜</li>
+          <li>&nbsp;<a href="menu.html">メニュー</a>&nbsp;</li>
+          <li>｜&nbsp;<a href="shop.html">店舗情報</a>&nbsp;｜</li>
+
+
+        </ul>
+        <p class="fontsizes">Copyrights Nippon Restaurant System,INC All Rights Reserved.</p>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>

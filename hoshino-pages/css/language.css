@@ -1,0 +1,60 @@
+/* 語言按鈕不改動原網站的固定寬度與版面。 */
+#header {
+    position: relative;
+}
+
+#language-switch {
+    position: absolute;
+    right: 12px;
+    top: 27px;
+    display: flex;
+    gap: 5px;
+    z-index: 10;
+    text-indent: 0;
+}
+
+#language-switch button {
+    border: 1px solid #9d8061;
+    border-radius: 3px;
+    background: #352217;
+    color: #e7d5b6;
+    font-size: 13px;
+    line-height: 30px;
+    padding: 0 12px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+#language-switch button[aria-pressed="true"] {
+    background: #e8d5b1;
+    color: #352217;
+}
+
+#language-switch button:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 3px;
+}
+
+html[lang="zh-Hant"] #header ul#all_nav li a {
+    position: relative;
+}
+
+html[lang="zh-Hant"] #header ul#all_nav li a:after {
+    content: attr(data-zh-label);
+    position: absolute;
+    bottom: 8px;
+    left: 1px;
+    right: 1px;
+    height: 25px;
+    line-height: 25px;
+    background: #3b291c;
+    color: #ecdfcb;
+    text-indent: 0;
+    text-align: center;
+    font-size: 13px;
+}
+
+html[lang="zh-Hant"] #header ul#all_nav li a:hover:after {
+    color: white;
+    background: #533a25;
+}

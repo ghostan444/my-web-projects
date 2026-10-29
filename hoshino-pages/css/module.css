@@ -1,0 +1,709 @@
+@charset "utf-8";
+/*-----------------------------------
+CSS information
+ file name  :module.css
+ author     :T&N netservice
+-----------------------------------*/
+body,
+#wrapper {
+	background: #341b0b;
+}
+p {
+	background-image: url(images);
+}
+#headertop_wrapper {
+	background: url(../images/parts/all_bg_headertop.png) repeat-x bottom;
+}
+#headertop {
+	width: 980px;
+	height: 22px;
+	margin: 0 auto;
+}
+#headertop p {
+	color: #ce9a78;
+	line-height: 1.9em;
+	text-align: right;
+}
+
+
+#header_wrapper {
+	background: url(../images/parts/all_bg_header.png) repeat-x;
+}
+#header {
+	width: 980px;
+	height: 90px;
+	margin: 0 auto;
+}
+#header h1 {
+	float: left;
+	width: 273px;
+	text-indent: -9998px;
+	margin: 10px 40px 0 0;
+}
+#header h1 a {
+	display: block;
+	height: 70px;
+	background: url(../images/parts/logo.png) no-repeat top left;
+}
+#header ul#all_nav li {
+	float: left;
+	text-indent: -9998px;
+}
+#header ul#all_nav li a {
+	display: block;
+	height: 90px;
+}
+#header ul#all_nav li#navi_home a {
+	width: 76px;
+	background: url(../images/parts/all_navi.jpg) no-repeat 0 0;
+}
+#header ul#all_nav li#navi_menu a {
+	width: 86px;
+	background: url(../images/parts/all_navi.jpg) no-repeat -76px 0;
+}
+#header ul#all_nav li#navi_shop a {
+	width: 83px;
+	background: url(../images/parts/all_navi.jpg) no-repeat -162px 0;
+}
+#header ul#all_nav li#navi_contact a {
+	width: 107px;
+	background: url(../images/parts/all_navi.jpg) no-repeat -245px 0;
+}
+#header ul#all_nav li#navi_recruit a {
+	width: 78px;
+	background: url(../images/parts/all_navi.jpg) no-repeat -352px 0;
+}
+#header ul#all_nav li#navi_fc a {
+	width: 123px;
+	background: url(../images/parts/all_navi.jpg) no-repeat -430px 0;
+}
+#header ul#all_nav li#navi_ricchi a {
+	width: 114px;
+	background: url(../images/parts/all_navi.jpg) no-repeat -553px 0;
+}
+
+#header ul#all_nav li#navi_home a:hover {
+	background: url(../images/parts/all_navi.jpg) no-repeat 0 -90px;
+}
+#header ul#all_nav li#navi_menu a:hover {
+	background: url(../images/parts/all_navi.jpg) no-repeat -76px -90px;
+}
+#header ul#all_nav li#navi_shop a:hover {
+	background: url(../images/parts/all_navi.jpg) no-repeat -162px -90px;
+}
+#header ul#all_nav li#navi_contact a:hover {
+	background: url(../images/parts/all_navi.jpg) no-repeat -245px -90px;
+}
+#header ul#all_nav li#navi_recruit a:hover {
+	background: url(../images/parts/all_navi.jpg) no-repeat -352px -90px;
+}
+#header ul#all_nav li#navi_fc a:hover {
+	background: url(../images/parts/all_navi.jpg) no-repeat -430px -90px;
+}
+#header ul#all_nav li#navi_ricchi a:hover {
+	background: url(../images/parts/all_navi.jpg) no-repeat -553px -90px;
+}
+
+
+
+
+#top_bg_wrapper {
+	background: #301f15 url(../images/parts/top_bg_main.png) no-repeat top center;
+}
+#topslider_inner {
+	width: 980px;
+	margin: 0 auto;
+	position: relative;
+}
+#topslider {
+	height: 430px!important;
+}
+#topslider div {
+	text-indent: -9998px;
+}
+#topslider #topslider01_christmas {
+	background: url(../images/parts/top_main_2023christmas.jpg) no-repeat top center;
+}
+#topslider #topslider01_hotcake {
+	background: url(../images/parts/top_main_hotcake.jpg) no-repeat top center;
+}
+#topslider #topslider01_purin {
+	background: url(../images/parts/top_main01_purin.jpg?200629) no-repeat top center;
+}
+#topslider #topslider01 {
+	background: url(../images/parts/top_main01.jpg?240301) no-repeat top center;
+}
+#topslider #topslider02 {
+	background: url(../images/parts/top_main02.jpg) no-repeat top center;
+}
+#topslider #topslider03 {
+	background: url(../images/parts/top_main03.jpg) no-repeat top center;
+}
+#topslider #topslider04 {
+	background: url(../images/parts/top_main04.jpg) no-repeat top center;
+}
+#topslider #topslider05 {
+	background: url(../images/parts/top_main05.jpg) no-repeat top center;
+}
+#topslider #topslider_artcontest {
+	background: url(../images/parts/top_main_11thcontest.webp) no-repeat top center;
+}
+#topslider #topslider_fc {
+	background: url(../images/parts/top_main_fc2.jpg) no-repeat top center;
+}
+#topslider #topslider_morning {
+	background: url(../images/parts/top_main_morning.jpg) no-repeat top center;
+}
+#topslider #topslider_valentine {
+	background: url(../images/parts/top_main_valentine.jpg) no-repeat top center;
+}
+#topslider #topslider_tanabata {
+	background: url(../images/parts/top_main_tanabata.jpg) no-repeat top center;
+}
+#topslider #topslider_summerdrink01 {
+	background: url(../images/parts/top_main_2024summer_drink01.jpg) no-repeat top center;
+}
+#topslider #topslider_summerdrink02 {
+	background: url(../images/parts/top_main_2024summer_drink02.jpg) no-repeat top center;
+}
+#topslider #topslider_summerpancake {
+	background: url(../images/parts/top_main_2024summer_pancake.jpg) no-repeat top center;
+}
+#topslider #topslider_moca {
+	background: url(../images/parts/top_main_moca.jpg) no-repeat top center;
+}
+#topslider #topslider_2024autumn_pancake {
+	background: url(../images/parts/top_main_2024autumn_pancake.jpg) no-repeat top center;
+}
+#topslider #topslider_2024halloween {
+	background: url(../images/parts/top_main_2024halloween.jpg) no-repeat top center;
+}
+#topslider #topslider_2024coffeeday {
+	background: url(../images/parts/top_main_2024coffeeday.jpg) no-repeat top center;
+}
+#topslider #topslider_2024coffeeday2 {
+	background: url(../images/parts/top_main_2024coffeeday2.jpg) no-repeat top center;
+}
+
+#topslider #topslider_2024winter_pancake {
+	background: url(../images/parts/top_main_2024winter_pancake.jpg) no-repeat top center;
+}
+#topslider #topslider_2024winter_bluemountain {
+	background: url(../images/parts/top_main_2024winter_bluemountain.jpg) no-repeat top center;
+}
+#topslider #topslider_2024winter_christmas {
+	background: url(../images/parts/top_main_2024winter_christmas.jpg) no-repeat top center;
+}
+#topslider #topslider_2024onengacoffee {
+	background: url(../images/bnr/241226onengacoffee980430.jpg) no-repeat top center;
+}
+#topslider #topslider_2024fukubukuro {
+	background: url(../images/bnr/241226fukubukuro980430.jpg) no-repeat top center;
+}
+#topslider #topslider_2025coffeeday {
+	background: url(../images/bnr/250130coffeeday980430.jpg) no-repeat top center;
+}
+#topslider #topslider_2025valentine {
+	background: url(../images/bnr/250130valentine980430.jpg) no-repeat top center;
+}
+#topslider #topslider_2025mandelin {
+	background: url(../images/bnr/250304mandelin980430.jpg) no-repeat top center;
+}
+#topslider #topslider_2025spring_pancake {
+	background: url(../images/parts/top_main_2025spring_pancake.jpg) no-repeat top center;
+}
+#topslider #topslider_2025icefloat {
+	background: url(../images/bnr/250610icefloat980515.jpg) no-repeat top center;
+}
+#topslider #topslider_2025summer_pancake {
+	background: url(../images/parts/top_main_2025summer_pancake.jpg) no-repeat top center;
+}
+#topslider #topslider_2025summer_acai {
+	background: url(../images/parts/top_main_2025summer_acai.jpg) no-repeat top center;
+}
+#topslider #topslider_2025moca {
+	background: url(../images/bnr/250901moca980430.jpg) no-repeat top center;
+}
+#topslider #topslider_2025autumn_pancake {
+	background: url(../images/parts/top_main_2025autumn_pancake.jpg) no-repeat top center;
+}
+#topslider #topslider_2025autumn_food {
+	background: url(../images/parts/top_main_2025autumn_food.jpg) no-repeat top center;
+}
+#topslider #topslider_2025coffeeday2 {
+	background: url(../images/parts/top_main_2025coffeeday.jpg) no-repeat top center;
+}
+#topslider #topslider_2025winter_bluemountain {
+	background: url(../images/parts/top_main_2025winter_bluemountain.jpg) no-repeat top center;
+}
+#topslider #topslider_2025winter_christmaspancake {
+	background: url(../images/parts/top_main_2025winter_christmaspancake.jpg) no-repeat top center;
+}
+#topslider #topslider_2025winter_pancake {
+	background: url(../images/parts/top_main_2025winter_pancake.jpg) no-repeat top center;
+}
+#topslider #topslider_2025winter_food {
+	background: url(../images/parts/top_main_2025winter_food.jpg) no-repeat top center;
+}
+#topslider #topslider_2025fukubukuro {
+	background: url(../images/parts/top_main_2025fukubukuro.jpg) no-repeat top center;
+}
+#topslider #topslider_2025pancakeday {
+	background: url(../images/parts/top_main_2025pancakeday.jpg) no-repeat top center;
+}
+#topslider #topslider_2025onengacoffee {
+	background: url(../images/parts/top_main_2025onengacoffee.jpg) no-repeat top center;
+}
+#topslider #topslider_2026coffeeday {
+	background: url(../images/parts/top_main_2026coffeeday.jpg) no-repeat top center;
+}
+#topslider #topslider_2026spring_pancake {
+	background: url(../images/parts/top_main_2026spring_pancake.webp) no-repeat top center;
+}
+#topslider #topslider_2026summer_pancake {
+	background: url(../images/parts/top_main_2026summer_pancake.webp) no-repeat top center;
+}
+#topslider #topslider_2026summer_coffeejelly {
+	background: url(../images/parts/top_main_2026summer_coffeejelly.webp) no-repeat top center;
+}
+#topslider #topslider_2026autumn {
+	background: url(../images/parts/top_main_2026autumn.webp) no-repeat top center;
+}
+
+
+/* 季節おすすめ用 */
+#topslider #topslider01_osusume {
+	background: url(../images/parts/top_main_osusume01.jpg) no-repeat top center;
+}
+#topslider #topslider02_osusume {
+	background: url(../images/parts/top_main_osusume02.jpg) no-repeat top center;
+}
+
+#topslider_inner #news {
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+}
+#topslider_inner #news .tickercontainer {
+	height:32px;
+	overflow:hidden;
+	width: 940px;
+	margin:0 auto;
+	padding:0;
+	background: url(../images/parts/top_bg_news.png) no-repeat top left;
+}
+#topslider_inner #news .tickercontainer .mask { /* that serves as a mask. so you get a sort of padding both left and right */
+	position: relative;
+	left: 85px;
+	top: 7px;
+	width: 840px;
+	overflow: hidden;
+}
+#topslider_inner #news ul.newsticker { /* that's your list */
+	position: relative;
+	left: 940px;
+	margin: 0;
+	padding: 0;
+}
+#topslider_inner #news ul.newsticker li {
+	float: left; /* important: display inline gives incorrect results when you check for elem's width */
+	margin: 0 50px 0 0;
+	color: #000;
+	white-space: nowrap;
+}
+#topslider_inner #news ul.newsticker span {
+	color: #5b2418;
+} 
+
+
+#contents_wrapper {
+	padding: 20px 0 0;
+}
+#contents {
+	width: 980px;
+	margin: 0 auto;
+	position:relative;
+}
+#contents #top_sns {
+	position: absolute;
+	top: 0;
+	right: 0;
+	text-align: right;
+}
+#contents #top_sns div {
+	float: left;
+	padding: 0;
+	margin: 0;
+}
+#contents #top_sns div.sns_twitter {
+	width: 110px;
+	margin-right: 6px;
+}
+#contents #top_sns div.sns_hatena {
+	width: 60px;
+	margin-right: 6px;
+}
+#contents #top_sns div.sns_facebook {
+	width: 117px;
+	text-align: left;
+}
+#contents #top_sns div.sns_google {
+	width: 85px;
+}
+
+#contents h2#top_ttl_reco {
+	text-indent: -9998px;
+	height: 52px;
+	background: url(../images/parts/top_ttl_reco.png) no-repeat top left;
+}
+#contents #top_reco {
+	padding: 0 0 20px;
+}
+#contents #top_reco ul {
+	width: 980px;
+	padding: 0 0 10px 0;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+#contents #top_reco ul li {
+	width: 19%;
+	margin: 0 0 10px;
+	background: #fff;
+	text-align: center;
+}
+#contents #top_reco ul li p {
+	color: #643024;
+	padding: 10px;
+	line-height: 1.3em;
+	text-align: center;
+}
+#contents #top_reco #top_reco_btn {
+	text-align: right;
+	margin: 15px 20px 0 0;
+}
+#contents #all_pagetop_btn {
+	padding: 30px 0 10px;
+	text-align: right;
+}
+#footer_wrapper {
+	background: #20150d;
+	padding: 15px 0 0;
+}
+#footer {
+	width: 980px;
+	margin: 0 auto;
+	padding: 0 0 20px;
+}
+#footer ul {
+	text-align: center;
+}
+#footer ul li {
+	display: inline;
+	color: #f7cdaa;
+}
+#footer ul li a {
+	color: #f7cdaa;
+	text-decoration: none;
+}
+#footer ul li a:hover {
+	text-decoration: underline;
+}
+#footer p {
+	text-align: center;
+	margin: 10px 0 0;
+	color: #5b3f29;
+}
+
+
+#main_bg_wrapper {
+	background: #271709 url(../images/parts/all_bg_main.jpg) repeat-x top;
+}
+#main_bg_wrapper ol {
+	margin-top: -5px;
+	padding: 0 0 40px;
+}
+#main_bg_wrapper ol li {
+	float: left;
+}
+#main_bg_wrapper ol li a {
+	color: #713012;
+}
+#main_bg_wrapper ol li a:hover {
+	color: #9a4721;
+}
+#main_bg_wrapper ol li.now {
+	padding-left: 30px;
+	background: url(../images/parts/all_ico_allow_black.gif) no-repeat 10px 5px;
+	font-size: 140%;
+	font-weight: bold;
+}
+#main_bg_wrapper #contents #top_sns {
+	position: absolute;
+	width: 500px;
+	top: 5px;
+	right: 0;
+	text-align: right;
+}
+#menu {
+	color: #fff;
+}
+#menu .menu_area {
+	padding: 18px 20px 18px 100px;
+}
+#menu .menu_area p.menu_name {
+	color: #ce9a78;
+}
+#menu .menu_area p.menu_name img {
+	vertical-align: text-bottom;
+}
+#menu .menu_area p.menu_text {
+	margin-top: 7px;
+}
+
+#menu .img_hoshinobrend {
+	background: url(../images/parts/menu_img_hoshinobrend.png) no-repeat 0 0;
+}
+#menu .img_baisencoffee {
+	background: url(../images/parts/menu_img_baisencoffee.png) no-repeat 0 0;
+}
+#menu .img_icecoffee {
+	background: url(../images/parts/menu_img_icecoffee.png) no-repeat 0 0;
+}
+#menu .img_icetea {
+	background: url(../images/parts/menu_img_icetea.png) no-repeat 0 0;
+}
+#menu .img_sufure {
+	background: url(../images/parts/menu_img_sufure.png) no-repeat 0 0;
+}
+#menu .img_buttertoast {
+	background: url(../images/parts/menu_img_buttertoast.png) no-repeat 0 0;
+}
+#menu .img_hamcheesetoast {
+	background: url(../images/parts/menu_img_hamcheesetoast.png) no-repeat 0 0;
+}
+#menu .img_katusand {
+	background: url(../images/parts/menu_img_katusand.png) no-repeat 0 0;
+}
+#menu .img_morningset {
+	background: url(../images/parts/menu_img_morningset.png) no-repeat 0 0;
+}
+#menu .img_lunchset {
+	background: url(../images/parts/menu_img_lunchset.png) no-repeat 0 0;
+}
+
+#menu .menu_bgcolor {
+	background-color: #201104;
+	border-top: 1px solid #32200f;
+	border-bottom: 1px solid #32200f;
+}
+#menu .menu_nameonly {
+	padding: 30px 20px 30px 100px;
+}
+
+
+p#menu_txt_caution {
+	line-height: 1.2em;
+	color: #fff;
+	margin-bottom: 20px;
+}
+
+/* 店舗一覧 */
+#shop .shop_ttl_search {
+	color: #ce9a78;
+	padding: 0 0 5px;
+	margin: 0 0 15px;
+	border-bottom: 3px solid #402819; 
+}
+#shop .shop_search_ken {
+	margin: 0 0 30px;
+}
+#shop .shop_search_ken ul {
+	margin: 0 0 10px;
+}
+#shop .shop_search_ken ul li {
+	display: inline;
+	float: left;
+	margin: 0 20px 0 0;
+	color: #524230;
+}
+#shop .shop_area {
+	padding: 15px 20px 20px;
+	background: url(../images/parts/shop_bg_wrap.png) repeat;
+}
+#shop .shop_area table {
+	width: 100%;
+}
+#shop .shop_area table caption {
+	font-size: 24px;
+	color: #efecd6;
+	padding: 0 0 18px 5px;
+}
+#shop .shop_area table thead tr th {
+	background: #190c03;
+	padding: 10px 0;
+	text-align: center;
+	color: #a88064;
+	position: sticky;
+	top: 0;
+	z-index: 1;
+}
+#shop .shop_area table tbody tr {
+	background: #f1efdb;
+	border-top: 1px solid #cec3b9;
+}
+#shop .shop_area table tbody tr th,
+#shop .shop_area table tbody tr td {
+	padding: 5px 8px;
+	vertical-align: top;
+	line-height: 1.3em;
+}
+#shop .shop_area table tbody tr th {
+	color: #4e1e03;
+	display: flex;
+	justify-content: space-between;
+}
+#shop .shop_area table tbody tr th .shop_name {
+	padding: 0 0 0 21px;
+	background: url(../images/parts/shop_ico_allow.png) no-repeat 0 4px;
+}
+
+#shop .shop_area table tbody tr th .btn_map {
+	text-indent: -9998px;
+	width: 59px;
+	margin: 0;
+}
+#shop .shop_area table tbody tr th .btn_map a {
+	display: block;
+width: 59px;
+	height: 20px;
+	background: url(../images/parts/shop_btn_map.png) no-repeat top left;
+}
+#shop .shop_area table tbody tr td {
+	font-size: 12px;
+}
+
+
+
+/* FCオーナー募集 */
+#fc {
+	padding: 0 20px 0;
+}
+#fc #fc_header {
+	margin: 0 0 20px;
+}
+#fc #fc_contents {
+	padding: 30px;
+	background: #6f4f37 url(../images/parts/fc_work.jpg) no-repeat 620px 30px;
+	color: #fff;
+}
+#fc #fc_contents #fc_cont {
+	width: 564px;
+}
+#fc #fc_contents #fc_cont p {
+	margin: 0 0 10px;
+	line-height: 1.6em;
+	font-size: 13px;
+}
+#fc #fc_contents #fc_cont_f {
+	padding: 20px 0 0;
+	border-top: 1px dotted #fff;
+	text-align: center;
+}
+#fc #fc_contents p {
+	font-size: 13px;
+	line-height: 1.3em;
+}
+#fc #fc_contents p.fc_tel {
+	font-size: 160%;
+}
+
+
+
+
+/* 地図 */
+#wrapper_map {
+	padding-bottom: 40px;
+	text-align: center;
+}
+#wrapper_map p#ttl {
+	margin: 15px 0;
+	color: #fff;
+}
+#wrapper_map #gmap {
+width: 90%;
+height: 400px;
+margin: 0 5% 30px;
+border: 8px solid #ccc;
+-webkit-box-sizing: border-box; 
+box-sizing: border-box;
+}
+
+#wrapper_map p#btn_buck a {
+	position: relative;
+	display: inline-block;
+	width: 180px;
+	height: 40px;
+	background-color: #f56778;
+	background-image: -webkit-linear-gradient(top, #f997b0, #f56778);
+	background-image: linear-gradient(to bottom, #f997b0, #f56778);
+	box-shadow: inset 1px 1px 0 #fbc1d0;
+	border-bottom: 4px solid #cb5462;
+	border-radius: 4px;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #f56778;
+	line-height: 46px;
+	outline: none;
+}
+#wrapper_map p#btn_buck a::before,
+#wrapper_map p#btn_buck a::after {
+	position: absolute;
+	bottom: -1px;
+	left: -1px;
+	z-index: -1;
+	display: block;
+	content: '';
+	width: 180px;
+	height: 40px;
+	border: 1px solid #ee8090;
+	border-bottom: 1px solid #b84d5a;
+	border-radius: 4px;
+}
+#wrapper_map p#btn_buck a::before {
+	height: 38x;
+	bottom: -4px;
+	border-top: 0;
+	border-radius: 0 0 4px 4px;
+	box-shadow: 0 1px 1px 0px #bfbfbf;
+}
+
+.ico_freewifi {
+	display: block;
+	margin: 2px 0 0;
+}
+.ico_freewifi img {
+	width: 90%;
+	cursor: pointer;
+}
+.coffeeday,
+.seniorday,
+.pancakeday {
+	font-size: 18px!important;
+	vertical-align: middle!important;
+	text-align: center;
+}
+.coffeeday a:link,
+.coffeeday a:visited,
+.seniorday a:link,
+.seniorday a:visited,
+.pancakeday a:link,
+.pancakeday a:visited {
+	color: #4e1e03;
+}
+.coffeeday a:hover,
+.seniorday a:hover,
+.pancakeday a:hover {
+	text-decoration: underline;
+}

@@ -1,0 +1,21 @@
+@charset "utf-8";
+/*-----------------------------------
+CSS information
+ file name  :import.css
+ author     :T&N netservice
+-----------------------------------*/
+
+/* default style - リセット及びbody基本設定*/
+@import url("default.css");
+
+
+/* 共通のスタイル指定(ヘッダー、フッター)*/
+@import url("module.css");
+
+/* all style*/
+@import url("style.css");
+
+
+/* print style - 印刷用スタイル*/
+@import url("print.css");
+

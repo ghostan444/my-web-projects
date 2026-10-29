@@ -1,0 +1,433 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" xmlns:og="http://ogp.me/ns#"
+  xmlns:fb="http://www.facebook.com/2008/fbml" itemscope itemtype="http://schema.org/cafe">
+
+<head>
+  <!-- 此頁保留參考網站版型；樣式在 css，圖片在 images，三頁可直接互相連結。 -->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="description" content="一杯ずつ丁寧に淹れたハンドドリップコーヒーとスフレパンケーキでゆっくりした時間が流れる喫茶店" />
+  <meta name="keywords" content="ほしの,星の,星乃珈琲店,スフレ,コーヒー" />
+  <meta property="og:title" content="星乃珈琲店" />
+  <meta property="og:description" content="一杯ずつ丁寧に淹れたハンドドリップコーヒーとスフレパンケーキでゆっくりした時間が流れる喫茶店" />
+  <meta property="og:type" content="cafe" />
+  <meta property="og:url" content="/" />
+  <meta property="og:image" content="/images/parts/top_img_reco01.jpg" />
+  <meta property="og:site_name" content="星乃珈琲店 オフィシャルサイト" />
+  <meta property="fb:admins" content="1417217948" />
+  <meta itemprop="name" content="星乃珈琲店オフィシャルサイト" />
+  <meta itemprop="description" content="一杯ずつ丁寧に淹れたハンドドリップコーヒーとスフレパンケーキでゆっくりした時間が流れる喫茶店" />
+  <meta itemprop="image" content="/images/parts/top_img_reco01.jpg" />
+  <meta http-equiv="Cache-Control" content="no-cache">
+
+  <title>星乃珈琲店 オフィシャルサイト</title>
+
+  <link href="css/default.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="css/module.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="css/print.css" rel="stylesheet" type="text/css" media="all" />
+
+  <link href="css/jquery.slider.css" rel="stylesheet" type="text/css" media="all" />
+
+
+
+  <script language="JavaScript" type="text/JavaScript" src="js/jquery-1.7.1.min.js" charset="UTF-8"></script>
+
+  <script language="JavaScript" type="text/JavaScript" src="js/jquery.slider.js" charset="UTF-8"></script>
+  <script type="text/javascript">
+    $(function () {
+      $('#topslider').slider({
+        showControls: true, // <<　>>を表示するか
+        autoplay: true, //自動再生
+        showPosition: true, //何枚目を見ているかを表示
+        hoverPause: true, //マウスオーバーでストップ
+        wait: 8000, //停止時間
+        fade: 600, //フェード時間
+        direction: "left" //移動方向
+      });
+    });
+  </script>
+
+
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="stylesheet" href="css/language.css" />
+  <script defer src="js/translations.js"></script>
+  <script defer src="js/language.js"></script>
+  <link rel="stylesheet" href="css/ambience.css" />
+  <script defer src="js/ambience.js"></script>
+</head>
+
+<body>
+  <!-- 固定影片底圖；淺色區與內容會顯示在影片前方。 -->
+  <div class="site-ambience" aria-hidden="true">
+    <video id="ambience-video" autoplay muted loop playsinline preload="metadata" poster="video/library-poster.jpg">
+      <source src="video/library-background.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <button id="ambience-toggle" type="button" aria-label="暫停背景影片 / Pause background video">Ⅱ</button>
+  <a id="pagetop" name="pagetop"></a>
+
+
+
+  <div id="wrapper">
+
+
+
+
+
+
+
+    <div id="header_wrapper">
+      <div id="header" class="cbox">
+        <div id="language-switch" role="group" aria-label="語言 / Language"><button type="button" data-language="ja"
+            aria-pressed="true">日本語</button><button type="button" data-language="zh-Hant" aria-pressed="false"
+            title="圖片內文字與門市名稱、地址保留原文">繁體中文</button></div>
+        <h1 class="png_bg"><a href="index.html">星乃珈琲店</a></h1>
+        <ul id="all_nav">
+          <li id="navi_home"><a href="index.html">ホーム</a></li>
+          <li id="navi_menu"><a href="menu.html">メニュー</a></li>
+          <li id="navi_shop"><a href="shop.html">店舗情報</a></li>
+
+
+
+
+        </ul>
+      </div>
+    </div>
+
+
+    <div id="top_bg_wrapper">
+
+
+      <div id="topslider_inner">
+        <div id="topslider">
+
+          <div id="topslider_2026autumn" class="png_bg"><a href="menu.html"
+              style="display: block; width: 980px; height: 430px;">秋のおすすめ</a></div>
+          <div id="topslider_2026coffeeday" class="png_bg"><a href="shop.html"
+              style="display: block; height: 430px;">珈琲の日</a></div>
+          <div id="topslider01_purin" class="png_bg">昭和のプリン</div>
+          <div id="topslider03" class="png_bg">珈琲の味で勝負：一杯ずつ真心を込めて淹れております。ハンドドリップだからこそコーヒーの味と香りが際立ちます。</div>
+
+
+          <div id="topslider02" class="png_bg">窯焼きスフレパンケーキ：ふわふわの生地にとろーりシロップを。一枚一枚丁寧に窯で焼き上げています。</div>
+          <div id="topslider04" class="png_bg">珈琲とご一緒にお食事も：窯焼きカレー、スフレドリア、ハンバーグ、パスタなどをご用意。</div>
+          <div id="topslider_morning" class="png_bg">モーニング、軽食も：トーストやホットドッグ、サンドイッチをご用意。</div>
+          <div id="topslider05" class="png_bg">くつろぎの空間：アンティークのソファや時計をあしらった店内は、ゆったりとくつろげる空間。美味しい珈琲を心ゆくまでお楽しみいただけます。</div>
+        </div>
+
+      </div>
+
+
+      <div id="contents_wrapper">
+
+        <div id="contents">
+
+
+
+
+          <style type="text/css">
+            h2.top_cont_ttl {
+              font-size: 18px;
+              color: #fff;
+              border-bottom: 1px solid #fff;
+              padding: 0 0 5px;
+              margin: 0 0 10px;
+            }
+
+            #news {
+              margin-bottom: 40px;
+            }
+
+            #news ul#newslist {
+              height: 150px;
+              overflow: scroll;
+              overflow-x: hidden;
+            }
+
+            #news ul#newslist li {
+              display: table;
+              margin-bottom: 7px;
+            }
+
+            #news ul#newslist li span {
+              display: table-cell;
+              color: #fff;
+            }
+
+            #news ul#newslist li span.news_day {
+              padding-right: 15px;
+            }
+          </style>
+
+          <h2 class="top_cont_ttl">お知らせ</h2>
+          <div id="news">
+            <ul id="newslist" tabindex="0" aria-label="最新消息，可上下捲動">
+
+
+              <li><span class="news_day">2026.09.11</span><span class="news_txt"><a
+                    href="menu.html">2026年9月18日（金）より秋のおすすめメニューを販売開始します。</a></span></li>
+              <li><span class="news_day">2026.09.02</span><span class="news_txt"><a
+                    href="images/pdf/260902news.pdf">9月から「阿佐ヶ谷・巣鴨・行徳・伊勢佐木町・洛北」の5店舗で新たにシニアDayを実施します。詳しくはこちら（PDF:275KB）</a></span>
+              </li>
+              <li><span class="news_day">2026.08.03</span><span class="news_txt"><a
+                    href="shop.html#rockwellcenter">星乃珈琲店 Hoshino Coffee Rockwell Power Plant Mall
+                    店（フィリピン）が2026/8/3にオープンします。</a></span></li>
+              <li><span class="news_day">2026.06.23</span><span class="news_txt">2026年6月23日（火）より珈琲ゼリーフェアを開始します。</span>
+              </li>
+              <li><span class="news_day">2026.06.23</span><span
+                  class="news_txt">2026年6月23日（火）より夏のおすすめメニューを販売開始します。</span></li>
+              <li><span class="news_day">2026.05.08</span><span class="news_txt"><a href="shop.html">星乃珈琲店
+                    鳥取トリニティーモール店が2026/5/20にオープンします。</a></span></li>
+              <li><span class="news_day">2026.04.11</span><span class="news_txt"><a
+                    href="shop.html">星乃珈琲店キャナルシティ博多店が5/11～5/26の期間休業いたします。</a></span></li>
+              <li><span class="news_day">2026.03.24</span><span
+                  class="news_txt">2026年3月24日（火）より春のおすすめメニューを販売開始します。</span></li>
+
+              <li><span class="news_day">2026.03.02</span><span class="news_txt">星乃珈琲店 ヒビエ堺東店が2026/3/1にオープンします。</span>
+              </li>
+              <li><span class="news_day">2026.02.20</span><span class="news_txt"><a
+                    href="images/pdf/260220news.pdf">2026年3月1日（日）から「珈琲の日」の特典がさらにお得になります。詳しくはこちら（PDF:2.1MB）</a></span>
+              </li>
+              <li><span class="news_day">2026.02.03</span><span class="news_txt">Hoshino Coffee SM Megamall
+                  店（フィリピン）が2026/2/3にオープンします。</span></li>
+              <li><span class="news_day">2026.01.21</span><span class="news_txt">星乃珈琲店 Hoshino Coffee SM North EDSA
+                  店（フィリピン）が2026/1/21にオープンします。</span></li>
+              <li><span class="news_day">2025.12.22</span><span class="news_txt"><a
+                    href="shop.html">毎月10日にパンケーキの日を実施します。対象店舗は店舗情報をご確認ください。</a></span></li>
+              <li><span class="news_day">2025.12.22</span><span class="news_txt"><a
+                    href="images/pdf/260106fukubukuro.pdf">2026年1月1日（木）から一部店舗で福袋の販売をします。詳細はこちら（PDF:2.4MB）をご確認ください。</a></span>
+              </li>
+              <li><span class="news_day">2025.12.13</span><span
+                  class="news_txt">2025年12月16日（火）より冬のおすすめメニューを販売開始します。</span></li>
+
+              <li><span class="news_day">2025.12.03</span><span class="news_txt">星乃珈琲店
+                  草加ヴァリエ店が2025/12/10にオープンします。</span></li>
+              <li><span class="news_day">2025.11.26</span><span
+                  class="news_txt">2025年12月5日（金）より「クリスマススフレパンケーキ」を販売開始します。</span></li>
+              <li><span class="news_day">2025.11.26</span><span
+                  class="news_txt">2025年12月1日（月）より「ブルーマウンテンブレンド」を販売開始します。</span></li>
+              <li><span class="news_day">2025.11.03</span><span class="news_txt">星乃珈琲店 SM City
+                  Cebu店（フィリピン）が2025/11/3にオープンします。</span></li>
+              <li><span class="news_day">2025.09.18</span><span
+                  class="news_txt">2025年9月18日（木）より秋のおすすめメニューを販売開始します。</span></li>
+              <li><span class="news_day">2025.09.01</span><span
+                  class="news_txt">2025年9月1日より季節のコーヒー「モカブレンド」の販売を開始します。</span></li>
+              <li><span class="news_day">2025.08.29</span><span class="news_txt">星乃珈琲店
+                  ららぽーとTOKYO-BAY店が2025/9/5にオープンします。</span></li>
+              <li><span class="news_day">2025.08.25</span><span class="news_txt">星乃珈琲店 名寄店が2025/9/25にオープンします。</span>
+              </li>
+              <li><span class="news_day">2025.06.13</span><span
+                  class="news_txt">2025年6月16日（月）より夏のおすすめメニューを販売開始します。</span></li>
+              <li><span class="news_day">2025.06.12</span><span class="news_txt">星乃珈琲店 SM East
+                  Ortigas店（フィリピン）が2025/6/19にオープンします。</span></li>
+              <li><span class="news_day">2025.06.05</span><span class="news_txt">星乃珈琲店 SM Mall of
+                  Asia店（フィリピン）が2025/6/7にオープンします。</span></li>
+              <li><span class="news_day">2025.06.03</span><span
+                  class="news_txt">2025年6月3日（火）からおすすめアイスフロート・アイス玉露の販売を開始します。</span></li>
+              <li><span class="news_day">2025.05.01</span><span class="news_txt">星乃珈琲店 小牧山東公園店が2025/6/1にオープンします。</span>
+              </li>
+              <li><span class="news_day">2025.03.18</span><span
+                  class="news_txt">2025年3月21日（金）より春のおすすめメニューを販売開始します。</span></li>
+              <li><span class="news_day">2025.03.07</span><span class="news_txt">星乃珈琲店 北中城店が2025/3/31にオープンします。</span>
+              </li>
+              <li><span class="news_day">2025.03.04</span><span
+                  class="news_txt">2025年3月5日（水）から季節のおすすめコーヒー「マンデリンブレンド」を販売いたします。</span></li>
+              <li><span class="news_day">2025.02.06</span><span class="news_txt">星乃珈琲店 SM J
+                  Mall店（フィリピン）が2025/2/6にオープンします。</span></li>
+              <li><span class="news_day">2025.01.30</span><span class="news_txt"><a
+                    href="images/pdf/250130news.pdf">毎月1日・15日にロードサイド店限定のお得なサービスが始まります。詳しくはこちら（PDF:1.44MB）</a></span>
+              </li>
+              <li><span class="news_day">2024.12.26</span><span class="news_txt"><a
+                    href="images/pdf/241226fukubukuro.pdf">2025年1月1日（水）から一部店舗で福袋の販売をします。詳細はこちらをご確認ください。</a></span></li>
+              <li><span class="news_day">2024.12.26</span><span
+                  class="news_txt">2025年1月1日（水）〜10日（金）まで御年賀珈琲を数量限定で販売いたします。</span></li>
+              <li><span class="news_day">2024.12.26</span><span class="news_txt">星乃珈琲店 岡山津島店が2025/1/29にオープンします。</span>
+              </li>
+              <li><span class="news_day">2024.12.10</span><span class="news_txt">星乃珈琲店 Greenbelt店（フィリピン）がオープン。</span>
+              </li>
+              <li><span class="news_day">2024.12.03</span><span
+                  class="news_txt">2024年12月6日（金）から冬のおすすめ「キャラメルりんごと苺のスフレパンケーキ」を販売開始します。</span></li>
+              <li><span class="news_day">2024.12.03</span><span
+                  class="news_txt">2024年12月6日（金）から「ブルーマウンテンブレンド」を販売開始します。</span></li>
+              <li><span class="news_day">2024.12.03</span><span
+                  class="news_txt">2024年12月6日（金）から「クリスマススフレパンケーキ」を販売開始します。</span></li>
+              <li><span class="news_day">2024.10.21</span><span class="news_txt">星乃珈琲店 ROBINSONS
+                  OPUS店（フィリピン）がオープン。</span></li>
+              <li><span class="news_day">2024.10.01</span><span
+                  class="news_txt">10月1日(火)～14日(月)までコーヒーの日にちなみお得なキャンペーンを実施いたします。</span></li>
+              <li><span class="news_day">2024.10.01</span><span
+                  class="news_txt">期間限定（10月11日～10月31日）で「ハロウィンスフレパンケーキ」を販売いたいします。</span></li>
+              <li><span class="news_day">2024.09.25</span><span class="news_txt"><a
+                    href="https://www.instagram.com/hoshino_coffee_official" target="_blank"
+                    rel="noopener noreferrer">公式インスタグラムを開始しました。</a></span></li>
+              <li><span class="news_day">2024.09.20</span><span class="news_txt">秋のおすすめ「栗のスフレパンケーキ」が販売開始致します。</span>
+              </li>
+              <li><span class="news_day">2024.09.13</span><span class="news_txt">星乃珈琲店 アリオ亀有店がオープン。</span></li>
+              <li><span class="news_day">2024.09.11</span><span class="news_txt"><a
+                    href="shop.html">一部店舗でフリーWi-Fiを導入しました。実施店舗は店舗情報をご確認ください。</a></span></li>
+              <li><span class="news_day">2024.09.10</span><span class="news_txt">懐かしの昭和の香り「炭火焙煎モカブレンド」販売開始。</span></li>
+              <li><span class="news_day">2024.06.04</span><span class="news_txt">夏のおすすめ ザクザクコーヒー氷のカフェ・オレ フロートと京都・宇治上辻園
+                  宇治玉露（冷）がスタートしました。</span></li>
+              <li><span class="news_day">2024.03.08</span><span class="news_txt">星乃珈琲店 イオンモール幕張新都心店が3/8にオープン。</span>
+              </li>
+              <li><span class="news_day">2024.01.12</span><span class="news_txt">星乃珈琲店 Greenhills店（フィリピン）がオープン。</span>
+              </li>
+              <li><span class="news_day">2023.12.15</span><span class="news_txt">星乃珈琲店 CeeU Yokohama店がオープン。</span></li>
+            </ul>
+          </div>
+
+          <style type="text/css">
+            .coffeeday {
+              margin: 10px 0 30px;
+            }
+
+            .coffeeday p {
+              margin: 5px 0 0;
+            }
+
+            .coffeeday p a,
+            .coffeeday p a:link,
+            .coffeeday p a:visited {
+              color: #fff;
+            }
+          </style>
+          <div class="coffeeday">
+            <div><a href="images/pdf/260220news.pdf"><img src="images/bnr/251222coffeeday980240.png"
+                  alt="珈琲の日・シニアDay" /></a></div>
+            <p><a href="images/pdf/260220news.pdf">毎月1日・10日・15日にロードサイド店限定のお得なサービス！詳しくはこちら（PDF:6.8MB）</a></p>
+          </div>
+
+
+
+          <style type="text/css">
+            #top_menu ul {
+              display: grid;
+              grid-template-columns: repeat(4, 1fr);
+              gap: 20px 20px;
+            }
+
+            #top_menu ul li a {
+              display: block;
+              text-align: center;
+            }
+
+            #top_menu ul li a:hover img {
+              opacity: 0.8;
+            }
+
+            #top_menu ul li span {
+              display: inline-block;
+            }
+
+            #top_menu ul li img {
+              width: 100%;
+            }
+
+            #top_menu ul li .menu_txt {
+              margin: 10px 0 0;
+              font-size: 18px;
+            }
+          </style>
+
+          <h2 class="top_cont_ttl">メニュー</h2>
+          <div id="top_menu" class="png_bg">
+            <ul>
+              <li>
+                <a href="menu.html#seasonal">
+                  <span class="menu_img"><img src="images/parts/menu/menu_img04_seasonal.jpg" alt="" /></span>
+                  <span class="menu_txt">季節限定商品</span>
+                </a>
+              </li>
+              <li>
+                <a href="menu.html#drink">
+                  <span class="menu_img"><img src="images/parts/menu/menu_img01_drink.jpg" alt="" /></span>
+                  <span class="menu_txt">ドリンク</span>
+                </a>
+              </li>
+              <li>
+                <a href="menu.html#sweets">
+                  <span class="menu_img"><img src="images/parts/menu/menu_img04_sweets.jpg" alt="" /></span>
+                  <span class="menu_txt">スイーツ</span>
+                </a>
+              </li>
+              <li>
+                <a href="menu.html#spaghetti">
+                  <span class="menu_img"><img src="images/parts/menu/menu_img01_spaghetti.jpg" alt="" /></span>
+                  <span class="menu_txt">スパゲッティー</span>
+                </a>
+              </li>
+              <li>
+                <a href="menu.html#curry">
+                  <span class="menu_img"><img src="images/parts/menu/menu_img01_curry.jpg" alt="" /></span>
+                  <span class="menu_txt">オムライス、カレー、グラタン</span>
+                </a>
+              </li>
+              <li>
+                <a href="menu.html#lightmeal">
+                  <span class="menu_img"><img src="images/parts/menu/menu_img04_lightmeal.jpg" alt="" /></span>
+                  <span class="menu_txt">軽食</span>
+                </a>
+              </li>
+              <li>
+                <a href="menu.html#morning">
+                  <span class="menu_img"><img src="images/parts/menu/menu_img01_morning.jpg" alt="" /></span>
+                  <span class="menu_txt">モーニング</span>
+                </a>
+              </li>
+
+            </ul>
+
+
+          </div>
+
+          <div class="mt20" style="margin-left: -5px;"><a href="http://artcontest.hoshinocoffee.com/"><img
+                src="images/bnr/260501artcontest980150.webp" alt="星乃珈琲店絵画コンテスト 応募はこちら" /></a></div>
+          <div class="mt20" style="margin-left: -5px;"><a href="http://anshindo-d.com/fs/anshindo/c/345"><img
+                src="images/bnr/130114netshop985155.png"
+                alt="Coffee＆Goods 星乃珈琲店のコーヒー豆・オリジナルカップを販売。大切な人への贈り物にもどうぞ。" /></a></div>
+
+
+          <div id="all_pagetop_btn"><a href="#pagetop"><img src="images/parts/all_pagetop.png" alt="このページの先頭へ" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <style type="text/css">
+      #footer .sns {
+        text-align: center;
+        padding-bottom: 20px;
+      }
+    </style>
+
+    <div id="footer_wrapper">
+      <div id="footer">
+
+        <div class="sns">
+          <div class="instagram"><a href="https://www.instagram.com/hoshino_coffee_official" target="_blank"
+              rel="noopener noreferrer"><img src="images/bnr/sns_instagram.jpg" alt="" /></a></div>
+        </div>
+
+        <ul class="cbox fontsizes">
+          <li>｜&nbsp;<a href="index.html">ホーム</a>&nbsp;｜</li>
+          <li>&nbsp;<a href="menu.html">メニュー</a>&nbsp;</li>
+          <li>｜&nbsp;<a href="shop.html">店舗情報</a>&nbsp;｜</li>
+
+
+        </ul>
+        <p class="fontsizes">Copyrights Nippon Restaurant System,INC All Rights Reserved.</p>
+      </div>
+    </div>
+
+
+  </div>
+</body>
+
+</html>

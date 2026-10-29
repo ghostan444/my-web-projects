@@ -1,0 +1,401 @@
+/* 三頁共用：影片底圖、暖色文字與消息捲軸。修改透明度可調整影片亮度。 */
+:root {
+  --warm-text: #ead8bc;
+  --warm-muted: #cbb393;
+  --warm-gold: #efc88d;
+  --warm-rule: rgba(221, 179, 117, .38);
+}
+
+html {
+  background: #180f0c;
+}
+
+body {
+  color: var(--warm-text);
+  background: transparent;
+}
+
+#wrapper {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+}
+
+.site-ambience {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  background: #180f0c;
+}
+
+.site-ambience video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 70%;
+}
+
+.site-ambience:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(20, 12, 9, .58), rgba(20, 12, 9, .64));
+}
+
+#top_bg_wrapper,
+#main_bg_wrapper {
+  position: relative;
+  background: transparent;
+}
+
+/* 淺色區域留在影片前方；超出指定高度後即顯示影片。 */
+#top_bg_wrapper:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 430px;
+  background: url(../images/parts/top_bg_main.png) no-repeat top center;
+  pointer-events: none;
+}
+
+#main_bg_wrapper:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: url(../images/parts/all_bg_main.jpg) repeat-x top left;
+  pointer-events: none;
+}
+
+#contents_wrapper {
+  position: relative;
+}
+
+#footer_wrapper {
+  background: rgba(24, 15, 10, .78);
+  border-top: 1px solid var(--warm-rule);
+}
+
+#contents a {
+  color: var(--warm-text);
+  transition: color .18s ease;
+}
+
+#contents a:hover {
+  color: var(--warm-gold);
+}
+
+h2.top_cont_ttl,
+#menu .menu_ttl {
+  color: var(--warm-gold);
+  border-bottom-color: var(--warm-rule);
+}
+
+#menu,
+#menu .menu_txt,
+p#menu_txt_caution,
+#news ul#newslist li span {
+  color: var(--warm-text);
+}
+
+#news ul#newslist li span.news_day {
+  color: var(--warm-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+#news ul#newslist li {
+  line-height: 1.7;
+}
+
+#news ul#newslist {
+  height: 150px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 16px;
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: #b38b58 rgba(222, 188, 139, .08);
+}
+
+#newslist::-webkit-scrollbar {
+  width: 8px;
+}
+
+#newslist::-webkit-scrollbar-track {
+  background: rgba(222, 188, 139, .08);
+  border-radius: 20px;
+}
+
+#newslist::-webkit-scrollbar-thumb {
+  background: linear-gradient(#c8a36b, #9b7248);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  border-radius: 20px;
+}
+
+#newslist::-webkit-scrollbar-thumb:hover {
+  background-color: #e0bb80;
+}
+
+#newslist::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+#newslist:focus-visible {
+  outline: 1px solid var(--warm-gold);
+  outline-offset: 5px;
+  border-radius: 4px;
+}
+
+#menu .menu_txt {
+  line-height: 1.65;
+}
+
+#main_bg_wrapper #contents ol li,
+#main_bg_wrapper #contents ol li a {
+  color: #50331f;
+  text-shadow: none;
+}
+
+#main_bg_wrapper #contents ol li a:hover {
+  color: #8b501c;
+}
+
+#shop>div:first-child {
+  color: var(--warm-text) !important;
+  border-color: var(--warm-rule) !important;
+  background: rgba(29, 17, 11, .5);
+  border-radius: 8px;
+}
+
+#shop .shop_ttl_search {
+  color: var(--warm-gold);
+  border-bottom: 1px solid var(--warm-rule);
+}
+
+#shop .shop_search_ken ul li {
+  color: #af987a;
+}
+
+#shop .shop_search_ken a {
+  color: var(--warm-text);
+}
+
+#shop .shop_area {
+  background: rgba(38, 23, 15, .68);
+  border: 1px solid rgba(221, 179, 117, .15);
+  border-radius: 8px;
+}
+
+#shop .shop_area table caption {
+  color: var(--warm-gold);
+}
+
+#shop .shop_area table thead tr th {
+  color: #e7c89d;
+  background: #291b12;
+}
+
+#shop .shop_area table tbody tr {
+  background: #eadfc8;
+  border-color: #cdbb9b;
+}
+
+#shop .shop_area table tbody td,
+#shop .shop_area table tbody th {
+  color: #3b291b;
+}
+
+#shop .shop_area table tbody a {
+  color: #653b19;
+}
+
+#shop .shop_area table tbody a:hover {
+  color: #8b4a17;
+}
+
+#footer p,
+#footer ul li,
+#footer ul li a {
+  color: var(--warm-muted);
+}
+
+#contents #top_reco ul li {
+  background: #e9dcc4;
+}
+
+#contents #top_reco ul li .menu_txt,
+#contents #top_reco ul li a {
+  color: #53351e;
+}
+
+#ambience-toggle {
+  position: fixed;
+  bottom: 18px;
+  right: 18px;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(224, 188, 128, .55);
+  border-radius: 50%;
+  background: rgba(38, 23, 15, .85);
+  color: #e7c89d;
+  cursor: pointer;
+  font: 15px Arial, sans-serif;
+}
+
+#ambience-toggle:focus-visible {
+  outline: 2px solid var(--warm-gold);
+  outline-offset: 3px;
+}
+
+/* 優先於原頁面內嵌的白色樣式。 */
+#contents h2.top_cont_ttl {
+  color: var(--warm-gold);
+  border-bottom-color: var(--warm-rule);
+}
+
+#contents #news ul#newslist li span {
+  color: var(--warm-text);
+}
+
+#contents #news ul#newslist li span.news_day {
+  color: var(--warm-muted);
+}
+
+#contents #news ul#newslist {
+  height: 150px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+@supports selector(::-webkit-scrollbar) {
+  #news ul#newslist {
+    scrollbar-width: auto;
+    scrollbar-color: auto;
+  }
+}
+
+/* 暖棕色調：把原本明亮的圖像與淺色區塊融入書房背景。 */
+#header_wrapper {
+  background-image: linear-gradient(rgba(25, 15, 10, .28), rgba(25, 15, 10, .28)), url(../images/parts/all_bg_header.png);
+  background-repeat: repeat-x;
+  border-bottom: 1px solid rgba(203, 164, 110, .18);
+}
+
+#header h1 a {
+  filter: brightness(.83) sepia(.28);
+}
+
+#header ul#all_nav li a {
+  filter: brightness(.84) saturate(.8) sepia(.16);
+}
+
+#language-switch button {
+  border-color: #806344;
+  color: #c9b18c;
+  background: #2c1c13;
+}
+
+#language-switch button[aria-pressed="true"] {
+  background: #b79c73;
+  color: #2d1d12;
+  border-color: #b79c73;
+}
+
+#top_bg_wrapper:before {
+  background-image: linear-gradient(rgba(42, 24, 14, .62), rgba(42, 24, 14, .62)), url(../images/parts/top_bg_main.png);
+}
+
+#main_bg_wrapper:before {
+  background-image: linear-gradient(rgba(42, 25, 16, .76), rgba(42, 25, 16, .76)), url(../images/parts/all_bg_main.jpg);
+  border-bottom: 1px solid rgba(203, 164, 110, .16);
+}
+
+#main_bg_wrapper #contents ol li,
+#main_bg_wrapper #contents ol li a {
+  color: #e3cba6;
+}
+
+#main_bg_wrapper #contents ol li a:hover {
+  color: #f0d2a1;
+}
+
+#main_bg_wrapper #contents ol li.now {
+  background-image: none;
+  position: relative;
+}
+
+#main_bg_wrapper #contents ol li.now:before {
+  content: "›";
+  position: absolute;
+  left: 10px;
+  color: #bba17c;
+  font-weight: normal;
+}
+
+/* 圖片用濾鏡調色，文字不一起變暗。 */
+#topslider {
+  filter: brightness(.76) saturate(.78) sepia(.18);
+}
+
+#contents img {
+  filter: brightness(.78) saturate(.78) sepia(.19);
+  transition: filter .25s ease;
+}
+
+#menu .menu_img img {
+  filter: brightness(.81) saturate(.83) sepia(.16);
+}
+
+#menu .menu_img:hover img {
+  filter: brightness(.9) saturate(.86) sepia(.12);
+}
+
+#footer .sns img {
+  filter: brightness(.72) saturate(.66) sepia(.25);
+}
+
+#shop .shop_area table tbody tr {
+  background: #b39a77;
+  border-color: #8a7152;
+}
+
+#shop .shop_area table tbody tr:nth-child(even) {
+  background: #a9906e;
+}
+
+#shop .shop_area table tbody td,
+#shop .shop_area table tbody th {
+  color: #2d2016;
+}
+
+#shop .shop_area table tbody a {
+  color: #40250f;
+}
+
+#shop .shop_area table tbody img {
+  filter: brightness(.84) saturate(.7) sepia(.15);
+}
+
+#contents #top_reco ul li {
+  background: #b59c76;
+}
+
+@media (prefers-reduced-motion:reduce) {
+  #contents img {
+    transition: none;
+  }
+}
