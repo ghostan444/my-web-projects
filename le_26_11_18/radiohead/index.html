@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radiohead · 樂團介紹</title>
+<meta name="description" content="Radiohead 樂團介紹：簡介、成員、專輯與入門順序。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=VT323&family=DotGothic16&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- backmost layer: looping background video (already darkened) -->
+<video class="bg-video" src="video/bg.mp4" autoplay muted loop playsinline aria-hidden="true"></video>
+
+<!-- floating bear, bottom-left of the screen: black pixels recoloured deep red, the rest dropped out -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <filter id="tored" color-interpolation-filters="sRGB">
+    <feColorMatrix type="matrix" values="0 0 0 0 0.549  0 0 0 0 0.067  0 0 0 0 0.098  -1 0 0 1 0"/>
+  </filter>
+</svg>
+<img class="bear" src="images/bear.png" alt="" aria-hidden="true">
+<div class="bubble" aria-hidden="true"><span class="bubble-text">Let down again</span><span class="bubble-caret"></span></div>
+<script src="js/bubble.js" defer></script>
+<script src="js/close-video.js" defer></script>
+
+<!-- 1-bit dither: turbulence thresholded to black and deep red -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <filter id="dither" color-interpolation-filters="sRGB" x="0" y="0" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="11" result="n"/>
+    <feColorMatrix in="n" type="saturate" values="0" result="g"/>
+    <feComponentTransfer in="g">
+      <feFuncR type="discrete" tableValues="0.04 0.55"/>
+      <feFuncG type="discrete" tableValues="0.01 0.06"/>
+      <feFuncB type="discrete" tableValues="0.01 0.07"/>
+    </feComponentTransfer>
+  </filter>
+  <!-- figure: black lines become bone-coloured (alpha = alpha - red); white or transparent background drops out -->
+  <filter id="lineart" color-interpolation-filters="sRGB">
+    <feColorMatrix type="matrix" values="0 0 0 0 0.94  0 0 0 0 0.89  0 0 0 0 0.87  -1 0 0 1 0"/>
+  </filter>
+  <!-- logo: white becomes transparent (alpha = red - green), red stays red -->
+  <filter id="unwhite" color-interpolation-filters="sRGB">
+    <feColorMatrix type="matrix" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  1 -1 0 0 0"/>
+  </filter>
+</svg>
+
+<div class="win">
+
+  <div class="title-bar" role="banner">
+    <span class="ico" aria-hidden="true"></span>
+    <span class="name">Radiohead.txt - Notepad</span>
+    <span class="btns"><span aria-hidden="true">_</span><button class="win-x" type="button" aria-label="關閉" data-video="video/close.mp4">X</button><svg class="x-arrow" viewBox="0 0 7 5" aria-hidden="true" shape-rendering="crispEdges" fill="currentColor"><rect x="2" y="0" width="1" height="1"/><rect x="1" y="1" width="2" height="1"/><rect x="0" y="2" width="7" height="1"/><rect x="1" y="3" width="2" height="1"/><rect x="2" y="4" width="1" height="1"/></svg></span>
+  </div>
+
+  <nav aria-label="主要導覽">
+    <ul class="menu">
+      <li><a href="pages/intro.html">簡介</a></li>
+      <li><a href="pages/members.html">成員</a></li>
+      <li><a href="pages/archive.html">專輯</a></li>
+      <li><a href="pages/entry.html">入門順序</a></li>
+    </ul>
+  </nav>
+
+  <div class="stage">
+    <div class="dither" aria-hidden="true"></div>
+
+    <div class="hero-text">
+      <h1 class="hero-title"><img src="images/logo.webp" alt="RADIOHEAD" width="2000" height="2000"></h1>
+    </div>
+    <div class="figure-wrap" aria-hidden="true">
+      <img class="figure" src="images/figure.png" alt="">
+      <span class="tear t1"></span>
+      <span class="tear t2"></span>
+      <span class="tear t3"></span>
+      <span class="tear t4"></span>
+      <span class="tear t5"></span>
+      <span class="tear t6"></span>
+    </div>
+
+
+    <ul class="buttons">
+      <li><a href="pages/intro.html"><small>01</small>簡介</a></li>
+      <li><a href="pages/members.html"><small>02</small>成員</a></li>
+      <li><a href="pages/archive.html"><small>03</small>專輯</a></li>
+      <li><a href="pages/entry.html"><small>04</small>入門順序</a></li>
+    </ul>
+  </div>
+
+  <div class="statusbar">
+    <span>Ln 1, Col 1 · 100%</span>
+    <ul>
+      <li><a href="https://radiohead.com/library/">公共圖書館</a></li>
+      <li><a href="https://radiohead.com/deadairspace/">Dead Air Space</a></li>
+      <li><a href="https://wasteheadquarters.com/join">加入 W.A.S.T.E.</a></li>
+      <li><a href="https://wasteheadquarters.com/links/radiohead">相關連結</a></li>
+    </ul>
+  </div>
+
+</div>
+
+</body>
+</html>

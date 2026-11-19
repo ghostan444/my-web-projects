@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>專輯 · Radiohead</title>
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=VT323&family=DotGothic16&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<!-- backmost layer: looping background video (already darkened) -->
+<video class="bg-video" src="../video/bg.mp4" autoplay muted loop playsinline aria-hidden="true"></video>
+
+<!-- floating bear, bottom-left of the screen: black pixels recoloured deep red, the rest dropped out -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <filter id="tored" color-interpolation-filters="sRGB">
+    <feColorMatrix type="matrix" values="0 0 0 0 0.549  0 0 0 0 0.067  0 0 0 0 0.098  -1 0 0 1 0"/>
+  </filter>
+</svg>
+<img class="bear" src="../images/bear.png" alt="" aria-hidden="true">
+<div class="bubble" aria-hidden="true"><span class="bubble-text">Let down again</span><span class="bubble-caret"></span></div>
+<script src="../js/bubble.js" defer></script>
+<script src="../js/close-video.js" defer></script>
+
+<div class="win">
+
+  <div class="title-bar" role="banner">
+    <span class="ico" aria-hidden="true"></span>
+    <span class="name">專輯.txt - Notepad</span>
+    <span class="btns"><span aria-hidden="true">_</span><button class="win-x" type="button" aria-label="關閉" data-video="../video/close.mp4">X</button><svg class="x-arrow" viewBox="0 0 7 5" aria-hidden="true" shape-rendering="crispEdges" fill="currentColor"><rect x="2" y="0" width="1" height="1"/><rect x="1" y="1" width="2" height="1"/><rect x="0" y="2" width="7" height="1"/><rect x="1" y="3" width="2" height="1"/><rect x="2" y="4" width="1" height="1"/></svg></span>
+  </div>
+
+  <nav aria-label="主要導覽">
+    <ul class="menu">
+      <li><a href="intro.html">簡介</a></li>
+      <li><a href="members.html">成員</a></li>
+      <li><a href="archive.html" aria-current="page">專輯</a></li>
+      <li><a href="entry.html">入門順序</a></li>
+    </ul>
+  </nav>
+
+  <main class="page">
+    <article class="doc">
+      <h2><span class="no">03</span> 專輯</h2>
+      <ul class="albums">
+        <li><a class="card album" style="--art: url('../images/albums/pablo-honey.png')" href="https://open.spotify.com/album/3gBVdu4a1MMJVMy6vwPEb8" target="_blank" rel="noopener"><span class="tag">1993</span><p class="t">Pablo Honey</p><p class="n">首張專輯，收錄〈Creep〉</p><div class="bar"></div></a></li>
+        <li><a class="card album" style="--art: url('../images/albums/the-bends.png')" href="https://open.spotify.com/album/35UJLpClj5EDrhpNIi4DFg" target="_blank" rel="noopener"><span class="tag">1995</span><p class="t">The Bends</p><p class="n">吉他聲響與情緒的轉折</p><div class="bar"></div></a></li>
+        <li><a class="card album" style="--art: url('../images/albums/ok-computer.png')" href="https://open.spotify.com/album/6dVIqQ8qmQ5GBnJ9shOYGE" target="_blank" rel="noopener"><span class="tag">1997</span><p class="t">OK Computer</p><p class="n">常被視為時代代表作</p><div class="bar"></div></a></li>
+        <li><a class="card album" style="--art: url('../images/albums/kid-a.png')" href="https://open.spotify.com/album/6GjwtEZcfenmOf6l18N7T7" target="_blank" rel="noopener"><span class="tag">2000</span><p class="t">Kid A</p><p class="n">電子與實驗性的大幅轉向</p><div class="bar"></div></a></li>
+        <li><a class="card album" style="--art: url('../images/albums/amnesiac.png')" href="https://open.spotify.com/album/1HrMmB5useeZ0F5lHrMvl0" target="_blank" rel="noopener"><span class="tag">2001</span><p class="t">Amnesiac</p><p class="n">與 Kid A 同期錄製的延伸</p><div class="bar"></div></a></li>
+        <li><a class="card album" style="--art: url('../images/albums/hail-to-the-thief.png')" href="https://open.spotify.com/album/5mzoI3VH0ZWk1pLFR6RoYy" target="_blank" rel="noopener"><span class="tag">2003</span><p class="t">Hail to the Thief</p><p class="n">更激烈、碎片化的編排</p><div class="bar"></div></a></li>
+        <li><a class="card album" style="--art: url('../images/albums/in-rainbows.png')" href="https://open.spotify.com/album/5vkqYmiPBYLaalcmjujWxK" target="_blank" rel="noopener"><span class="tag">2007</span><p class="t">In Rainbows</p><p class="n">自行定價的網路發行方式</p><div class="bar"></div></a></li>
+        <li><a class="card album" style="--art: url('../images/albums/the-king-of-limbs.png')" href="https://open.spotify.com/album/3P17levwUPzmFfLYdAK3A7" target="_blank" rel="noopener"><span class="tag">2011</span><p class="t">The King of Limbs</p><p class="n">節奏與質地的細緻實驗</p><div class="bar"></div></a></li>
+        <li><a class="card album" style="--art: url('../images/albums/a-moon-shaped-pool.png')" href="https://open.spotify.com/album/2ix8vWvvSp2Yo7rKMiWpkg" target="_blank" rel="noopener"><span class="tag">2016</span><p class="t">A Moon Shaped Pool</p><p class="n">安靜、內斂的近期作品</p><div class="bar"></div></a></li>
+      </ul>
+      <a class="back" href="../index.html">← 回首頁</a>
+    </article>
+  </main>
+
+  <div class="statusbar">
+    <span>專輯 · 3 / 4</span>
+    <ul>
+      <li><a href="entry.html">下一頁：入門順序 →</a></li>
+    </ul>
+  </div>
+
+</div>
+
+</body>
+</html>

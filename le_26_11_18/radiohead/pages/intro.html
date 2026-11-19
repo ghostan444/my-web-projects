@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>簡介 · Radiohead</title>
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=VT323&family=DotGothic16&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<!-- backmost layer: looping background video (already darkened) -->
+<video class="bg-video" src="../video/bg.mp4" autoplay muted loop playsinline aria-hidden="true"></video>
+
+<!-- floating bear, bottom-left of the screen: black pixels recoloured deep red, the rest dropped out -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <filter id="tored" color-interpolation-filters="sRGB">
+    <feColorMatrix type="matrix" values="0 0 0 0 0.549  0 0 0 0 0.067  0 0 0 0 0.098  -1 0 0 1 0"/>
+  </filter>
+</svg>
+<img class="bear" src="../images/bear.png" alt="" aria-hidden="true">
+<div class="bubble" aria-hidden="true"><span class="bubble-text">Let down again</span><span class="bubble-caret"></span></div>
+<script src="../js/bubble.js" defer></script>
+<script src="../js/close-video.js" defer></script>
+
+<div class="win">
+
+  <div class="title-bar" role="banner">
+    <span class="ico" aria-hidden="true"></span>
+    <span class="name">簡介.txt - Notepad</span>
+    <span class="btns"><span aria-hidden="true">_</span><button class="win-x" type="button" aria-label="關閉" data-video="../video/close.mp4">X</button><svg class="x-arrow" viewBox="0 0 7 5" aria-hidden="true" shape-rendering="crispEdges" fill="currentColor"><rect x="2" y="0" width="1" height="1"/><rect x="1" y="1" width="2" height="1"/><rect x="0" y="2" width="7" height="1"/><rect x="1" y="3" width="2" height="1"/><rect x="2" y="4" width="1" height="1"/></svg></span>
+  </div>
+
+  <nav aria-label="主要導覽">
+    <ul class="menu">
+      <li><a href="intro.html" aria-current="page">簡介</a></li>
+      <li><a href="members.html">成員</a></li>
+      <li><a href="archive.html">專輯</a></li>
+      <li><a href="entry.html">入門順序</a></li>
+    </ul>
+  </nav>
+
+  <main class="page">
+    <article class="doc">
+      <h2><span class="no">01</span> 簡介</h2>
+      <div class="grid-3">
+        <div class="card"><span class="tag">EARLY · 1990s</span><p class="t">早期</p><p class="n">1990 年代初期崛起，以〈Creep〉在英美電台獲得大量播放，也一度被這首歌定型。</p></div>
+        <div class="card"><span class="tag">SHIFT · 1997–2000</span><p class="t">轉向</p><p class="n">之後逐步加入電子音樂、爵士與實驗聲響，《OK Computer》與《Kid A》是重要的分水嶺。</p></div>
+        <div class="card"><span class="tag">CURRENT</span><p class="t">現在</p><p class="n">持續發表作品，重視專輯作為完整作品的概念，也常以非傳統方式發行與推廣音樂。</p></div>
+      </div>
+      <p style="margin-top:18px">來自英格蘭牛津郡的搖滾樂團，以實驗性的聲響、不斷改變的編曲，以及對流行音樂框架的反覆拆解著稱。樂團於 1985 年以 On a Friday 之名成立，之後才改名為 Radiohead。</p>
+      <a class="back" href="../index.html">← 回首頁</a>
+    </article>
+  </main>
+
+  <div class="statusbar">
+    <span>簡介 · 1 / 4</span>
+    <ul>
+      <li><a href="members.html">下一頁：成員 →</a></li>
+    </ul>
+  </div>
+
+</div>
+
+</body>
+</html>

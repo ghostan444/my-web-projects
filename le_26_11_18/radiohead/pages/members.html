@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>成員 · Radiohead</title>
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=VT323&family=DotGothic16&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<!-- backmost layer: looping background video (already darkened) -->
+<video class="bg-video" src="../video/bg.mp4" autoplay muted loop playsinline aria-hidden="true"></video>
+
+<!-- floating bear, bottom-left of the screen: black pixels recoloured deep red, the rest dropped out -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <filter id="tored" color-interpolation-filters="sRGB">
+    <feColorMatrix type="matrix" values="0 0 0 0 0.549  0 0 0 0 0.067  0 0 0 0 0.098  -1 0 0 1 0"/>
+  </filter>
+</svg>
+<img class="bear" src="../images/bear.png" alt="" aria-hidden="true">
+<div class="bubble" aria-hidden="true"><span class="bubble-text">Let down again</span><span class="bubble-caret"></span></div>
+<script src="../js/bubble.js" defer></script>
+<script src="../js/close-video.js" defer></script>
+
+<div class="win">
+
+  <div class="title-bar" role="banner">
+    <span class="ico" aria-hidden="true"></span>
+    <span class="name">成員.txt - Notepad</span>
+    <span class="btns"><span aria-hidden="true">_</span><button class="win-x" type="button" aria-label="關閉" data-video="../video/close.mp4">X</button><svg class="x-arrow" viewBox="0 0 7 5" aria-hidden="true" shape-rendering="crispEdges" fill="currentColor"><rect x="2" y="0" width="1" height="1"/><rect x="1" y="1" width="2" height="1"/><rect x="0" y="2" width="7" height="1"/><rect x="1" y="3" width="2" height="1"/><rect x="2" y="4" width="1" height="1"/></svg></span>
+  </div>
+
+  <nav aria-label="主要導覽">
+    <ul class="menu">
+      <li><a href="intro.html">簡介</a></li>
+      <li><a href="members.html" aria-current="page">成員</a></li>
+      <li><a href="archive.html">專輯</a></li>
+      <li><a href="entry.html">入門順序</a></li>
+    </ul>
+  </nav>
+
+  <main class="page">
+    <article class="doc">
+      <h2><span class="no">02</span> 成員</h2>
+      <ul class="members">
+        <li class="card"><span class="avatar thom" role="img" aria-label="Thom Yorke"></span><p class="name">Thom Yorke</p><p class="role">主唱 · 鍵盤 · 吉他</p></li>
+        <li class="card"><span class="avatar jonny" role="img" aria-label="Jonny Greenwood"></span><p class="name">Jonny Greenwood</p><p class="role">主音吉他 · 鍵盤 · 配器</p></li>
+        <li class="card"><span class="avatar ed" role="img" aria-label="Ed O'Brien"></span><p class="name">Ed O'Brien</p><p class="role">吉他 · 和聲</p></li>
+        <li class="card"><span class="avatar colin" role="img" aria-label="Colin Greenwood"></span><p class="name">Colin Greenwood</p><p class="role">貝斯</p></li>
+        <li class="card"><span class="avatar phil" role="img" aria-label="Philip Selway"></span><p class="name">Philip Selway</p><p class="role">鼓手</p></li>
+      </ul>
+      <a class="back" href="../index.html">← 回首頁</a>
+    </article>
+  </main>
+
+  <div class="statusbar">
+    <span>成員 · 2 / 4</span>
+    <ul>
+      <li><a href="archive.html">下一頁：專輯 →</a></li>
+    </ul>
+  </div>
+
+</div>
+
+</body>
+</html>
